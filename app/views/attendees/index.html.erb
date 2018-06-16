@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Attendees</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Picture</th>
+      <th>Login</th>
+      <th>Name</th>
+      <th>Location</th>
+      <th>Last in</th>
+      <th>Last out</th>
+      <th>User</th>
+      <th colspan="7"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @attendees.each do |attendee| %>
+      <tr>
+        <td><%= link_to (image_tag  "https://cdn.intra.42.fr/users/medium_#{ attendee.login }.jpg", width: '64'), attendee  %></td>
+        <td><%=link_to (attendee.login), attendee %></td>
+        <td><%= attendee.name %></td>
+        <td> <%= get_pos(attendee.login) %> </td>
+        <% @time = Stamp.where(:attendee_id => attendee.id).last %>
+        <% if @time %>
+          <td><%= @time.sign_in.strftime "%B %e at %l:%M %p" unless @time.sign_in.nil? %></td>
+          <td><%= @time.sign_out.strftime "%B %e at %l:%M %p" unless @time.sign_out.nil? %></td>
+        <% else %>
+          <td></td>
+          <td></td>
+        <% end %>
+        <td><%= attendee.user.email %></td>
+        <td><%= link_to 'Show', attendee %></td>
+        <td><%= link_to 'Edit', edit_attendee_path(attendee) %></td>
+        <td><%= link_to 'Destroy', attendee, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Attendee', new_attendee_path %>
