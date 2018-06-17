@@ -17,4 +17,8 @@ class HomeController < ApplicationController
     # )
     # @image = JSON.parse(response)
   end
+  def home
+  end
+  def new
+  end
 end

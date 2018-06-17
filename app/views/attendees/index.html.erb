@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<%= @user_quest %>
 <h1>Attendees</h1>
 
 <table>
@@ -21,7 +21,13 @@
         <td><%= link_to (image_tag  "https://cdn.intra.42.fr/users/medium_#{ attendee.login }.jpg", width: '64'), attendee  %></td>
         <td><%=link_to (attendee.login), attendee %></td>
         <td><%= attendee.name %></td>
-        <td> <%= get_pos(attendee.login) %> </td>
+
+        <td>
+
+          <%= get_pos(attendee.login) %>
+
+
+           </td>
         <% @time = Stamp.where(:attendee_id => attendee.id).last %>
         <% if @time %>
           <td><%= @time.sign_in.strftime "%B %e at %l:%M %p" unless @time.sign_in.nil? %></td>

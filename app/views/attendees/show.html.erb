@@ -45,7 +45,7 @@
   <% @current_user.stamps.each do |t| %>
   <p> <strong>Sign_in:</strong> <%= t.sign_in.strftime "%B %e at %l:%M %p" unless t.sign_in.nil?  %>
     <strong>Sign_out: </strong><%= t.sign_out.strftime "%B %e at %l:%M %p" unless t.sign_out.nil? %>
-<%= link_to 'Update Sign_out', edit_attendee_stamp_path(attendee_id: @current_user.id, id: t.id) %>
+<%= link_to 'Update Sign_out', edit_attendee_stamp_path(attendee_id: @current_user.id, id: t.id), id: "sign_out" %>
   </p>
 
   <% end %>

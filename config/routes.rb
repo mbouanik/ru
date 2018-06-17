@@ -5,6 +5,8 @@ end
 # put "update_stamp" =>'stamps#update'
   # devise_for :users
   root 'attendees#index'
+  # get '/home' => 'home#home'
+  # get '/new' => 'home#home'
   # post 'search' => 'home#index'
   devise_for :users, controllers: { omniauth_callbacks: "users/omniauth_callbacks" }
 

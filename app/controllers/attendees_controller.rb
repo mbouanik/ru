@@ -1,5 +1,6 @@
 require "oauth2"
 require "json"
+require 'thread'
 class AttendeesController < ApplicationController
   before_action :authenticate_user!, only: [:index, :new, :create, :show, :edit, :update, :destroy]
   before_action :set_attendee, only: [:show, :edit, :update, :destroy]
@@ -9,16 +10,23 @@ class AttendeesController < ApplicationController
   def index
     @attendees = current_user.attendees
     @time
-    end
+    #  @cool = Thread.new {
+    #   client = OAuth2::Client.new( ENV["FT_ID"],  ENV["FT_SECRET"], site:"https://api.intra.42.fr")
+    #   token = client.client_credentials.get_token
+    #
+    #   @user_quest = token.get("/v2/users/" ).parsed
+    # }
+  end
 
 
   # GET /attendees/1
   # GET /attendees/1.json
   def show
     @current_user = current_user.attendees.find(params[:id])
-    uid = "50b91441f58131657de6d144fc94b37c73ddde63f19ab3ccaa163ef563cd1559"
-    secret = "20980f768aababbadfa8f851b990ec9ee70c5fac0f48fc02598264d9a5f247ef"
-    client = OAuth2::Client.new(uid, secret, site:"https://api.intra.42.fr")
+    # uid = "50b91441f58131657de6d144fc94b37c73ddde63f19ab3ccaa163ef563cd1559"
+    # secret = "20980f768aababbadfa8f851b990ec9ee70c5fac0f48fc02598264d9a5f247ef"
+
+    client = OAuth2::Client.new( ENV["FT_ID"],  ENV["FT_SECRET"], site:"https://api.intra.42.fr")
     token = client.client_credentials.get_token
 
     @user_quest = token.get("/v2/users/" + @current_user.login).parsed
