@@ -45,13 +45,13 @@
   <% @current_user.stamps.each do |t| %>
   <p> <strong>Sign_in:</strong> <%= t.sign_in.strftime "%B %e at %l:%M %p" unless t.sign_in.nil?  %>
     <strong>Sign_out: </strong><%= t.sign_out.strftime "%B %e at %l:%M %p" unless t.sign_out.nil? %>
-<%= link_to 'Update Sign_out', edit_attendee_stamp_path(attendee_id: @current_user.id, id: t.id), id: "sign_out" %>
+<%= link_to 'Update Sign_out', sign_out_path(id: t.id), id: 'sign_out', remote: true%>
   </p>
 
   <% end %>
 </p>
 
-<%= link_to 'Add TimeStamp', new_attendee_stamp_path(@current_user.id) %>
+<%= link_to 'Add TimeStamp', sign_in_path(attendee_id: @attendee.id), class: "btn btn-outline-primary" %>
 
 
 

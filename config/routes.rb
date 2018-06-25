@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  resources :attendees do
-  resources :stamps, only: [:create, :new, :update, :edit]
-end
+	resources :attendees #do
+    # resources :stamps, only: [:create, :new, :update, :edit]
+  # end
+  get '/sign_in' => 'attendees#sign_in'
+  get '/sign_out' => 'attendees#sign_out'
 # put "update_stamp" =>'stamps#update'
   # devise_for :users
   root 'attendees#index'

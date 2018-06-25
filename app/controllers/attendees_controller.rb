@@ -32,6 +32,29 @@ class AttendeesController < ApplicationController
     @user_quest = token.get("/v2/users/" + @current_user.login).parsed
   end
 
+  def sign_in
+  	@attendee = current_user.attendees.find(params[:attendee_id]).stamps.build
+  	@attendee.sign_in = Time.now
+  	respond_to do |format|
+  		if @attendee.save
+  			format.html { redirect_to  '/attendees/' + params[:attendee_id], notice: 'Stamp was successfully created.' }
+  			format.json { render :show, status: :updated, location:  @attendee }
+  			format.js {}
+  		end
+  	end
+  end
+
+  def sign_out
+  	@attendee = Stamp.find(params[:id])
+  	@attendee.sign_out = Time.now
+  	respond_to do |format|
+  		if @attendee.save
+  			format.html { redirect_to  '/attendees/' + @attendee.attendee_id.to_s, notice: 'Stamp was successfully updated.' }
+  			format.json { render :show, status: :updated, location:  @attendee }
+  			format.js {}
+  		end
+  	end
+  end
   # GET /attendees/new
   def new
     @attendee = current_user.attendees.build

@@ -24,7 +24,7 @@
 
         <td>
 
-          <%= get_pos(attendee.login) %>
+
 
 
            </td>
@@ -36,7 +36,7 @@
           <td></td>
           <td></td>
         <% end %>
-        <td><%= attendee.user.email %></td>
+        <td><%= attendee.user.nickname %></td>
         <td><%= link_to 'Show', attendee %></td>
         <td><%= link_to 'Edit', edit_attendee_path(attendee) %></td>
         <td><%= link_to 'Destroy', attendee, method: :delete, data: { confirm: 'Are you sure?' } %></td>
