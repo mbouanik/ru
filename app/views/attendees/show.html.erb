@@ -1,24 +1,61 @@
 <p id="notice"><%= notice %></p>
 <!-- <%= @user_quest["projects_users"][-1] %> -->
+
 <p>
   <strong>Mentor:</strong>
-  <%= @current_user.user.email %>
+  <%= @attendee.user.nickname %>
 </p>
 
-<strong>Attendee</strong>
+<!-- <table>
+	<thead>
+		<th>Picture</th>
+		<th>Name</th>
+		<th>Location</th>
+		<th>Grade</th>
+		<th>Level</th>
+		<th>Correction Points</th>
+		<th colspan="6"></th>
+	</thead>
+
+	<td><%= image_tag  "https://cdn.intra.42.fr/users/medium_#{ @attendee.login }.jpg", width: '256' %></td>
+	<td><%= @attendee.name %></td>
+	<td> <%= @attendee.login %></td>
+	<td><%= @user_quest["location"] %></td>
+	<td><%= @user_quest["cursus_users"][0]["grade"] %></td>
+	<td><%= @user_quest["cursus_users"][0]["level"] %></td>
+	<td><%= @user_quest["correction_point"] %></td>
+</table> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <p>
 
-    <%= image_tag  "https://cdn.intra.42.fr/users/medium_#{ @current_user.login }.jpg"%>
+    <%= image_tag  "https://cdn.intra.42.fr/users/medium_#{ @attendee.login }.jpg"%>
 </p>
 
 <p>
   <strong>Name:</strong>
-    <%= @current_user.name %>
+    <%= @attendee.name %>
 </p>
 
 <p>
   <strong>Login:</strong>
-  <%= @current_user.login %>
+  <%= @attendee.login %>
 </p>
 <p>
   <strong>Location:</strong>
@@ -41,20 +78,22 @@
   <%= @user_quest["projects_users"][-1]['project']['name'] %>
 </p>
 <p>
-  <strong>Time:</strong>
-  <% @current_user.stamps.each do |t| %>
-  <p> <strong>Sign_in:</strong> <%= t.sign_in.strftime "%B %e at %l:%M %p" unless t.sign_in.nil?  %>
-    <strong>Sign_out: </strong><%= t.sign_out.strftime "%B %e at %l:%M %p" unless t.sign_out.nil? %>
-<%= link_to 'Update Sign_out', sign_out_path(id: t.id), id: 'sign_out', remote: true%>
-  </p>
+	<strong>Time:</strong>
+	<div id="sign_in">
+		<% @attendee.stamps.each do |t| %>
 
-  <% end %>
+		<p > <strong>Sign_in:</strong> <span> <%= t.sign_in.strftime "%B %e at %l:%M %p" unless t.sign_in.nil? %> </span>
+			<strong>Sign_out: </strong> <span id='sign_out<%=t.id %>'> <%= t.sign_out.strftime "%B %e at %l:%M %p" unless t.sign_out.nil? %></span>
+			<%= link_to 'Update Sign_out', sign_out_path(id: t.id), class: 'waves-effect waves-light btn', remote: true %>
+		</p>
+	  <% end %>
+	</div>
+
 </p>
 
-<%= link_to 'Add TimeStamp', sign_in_path(attendee_id: @attendee.id), class: "btn btn-outline-primary" %>
+<div id="link">
+	<%= link_to 'Add TimeStamp', sign_in_path(attendee_id: @attendee.id), class: 'waves-effect waves-light btn', remote: true %>
+	<%= link_to 'Edit', edit_attendee_path(@attendee),  class: 'waves-effect waves-light btn' %> |
+	<%= link_to 'Back', attendees_path, class: 'waves-effect waves-light btn' %>
 
-
-
-
-<%= link_to 'Edit', edit_attendee_path(@current_user) %> |
-<%= link_to 'Back', attendees_path %>
+</div>

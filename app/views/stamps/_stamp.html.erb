@@ -1,0 +1,5 @@
+<p>
+	<strong>Sign_in:</strong> <span> <%= @attendee.sign_in.strftime "%B %e at %l:%M %p" unless @attendee.sign_in.nil? %> </span>
+ 	<strong>Sign_out: </strong> <span id='sign_out<%=@attendee.id %>'> <%= @attendee.sign_out.strftime "%B %e at %l:%M %p" unless @attendee.sign_out.nil? %></span>
+	<%= link_to 'Update Sign_out', sign_out_path(id: @attendee.id), class: 'btn btn-outline-primary', remote: true %>
+</p>

@@ -7,42 +7,42 @@ class AttendeesController < ApplicationController
 
   # GET /attendees
   # GET /attendees.json
-  def index
-    @attendees = current_user.attendees
-    @time
+	def index
+		@attendees = current_user.attendees
+		@time
     #  @cool = Thread.new {
     #   client = OAuth2::Client.new( ENV["FT_ID"],  ENV["FT_SECRET"], site:"https://api.intra.42.fr")
     #   token = client.client_credentials.get_token
     #
     #   @user_quest = token.get("/v2/users/" ).parsed
     # }
-  end
+	end
 
 
   # GET /attendees/1
   # GET /attendees/1.json
-  def show
-    @current_user = current_user.attendees.find(params[:id])
-    # uid = "50b91441f58131657de6d144fc94b37c73ddde63f19ab3ccaa163ef563cd1559"
-    # secret = "20980f768aababbadfa8f851b990ec9ee70c5fac0f48fc02598264d9a5f247ef"
+	def show
+	@attendee = current_user.attendees.find(params[:id])
+	# if @current_user.nil?
+		client = OAuth2::Client.new( ENV["FT_ID"],  ENV["FT_SECRET"], site:"https://api.intra.42.fr")
+		token = client.client_credentials.get_token
+		@user_quest = token.get("/v2/users/" + @attendee.login).parsed
+	# else
+		# redirect_to '/'
+	# end
+end
 
-    client = OAuth2::Client.new( ENV["FT_ID"],  ENV["FT_SECRET"], site:"https://api.intra.42.fr")
-    token = client.client_credentials.get_token
-
-    @user_quest = token.get("/v2/users/" + @current_user.login).parsed
-  end
-
-  def sign_in
-  	@attendee = current_user.attendees.find(params[:attendee_id]).stamps.build
-  	@attendee.sign_in = Time.now
-  	respond_to do |format|
-  		if @attendee.save
-  			format.html { redirect_to  '/attendees/' + params[:attendee_id], notice: 'Stamp was successfully created.' }
-  			format.json { render :show, status: :updated, location:  @attendee }
-  			format.js {}
-  		end
-  	end
-  end
+def sign_in
+	@attendee = current_user.attendees.find(params[:attendee_id]).stamps.build
+	@attendee.sign_in = Time.now
+	respond_to do |format|
+		if @attendee.save
+			format.html { redirect_to  '/attendees/' + params[:attendee_id], notice: 'Stamp was successfully created.' }
+			format.json { render :show, status: :updated, location:  @attendee }
+			format.js
+		end
+	end
+end
 
   def sign_out
   	@attendee = Stamp.find(params[:id])
@@ -50,8 +50,8 @@ class AttendeesController < ApplicationController
   	respond_to do |format|
   		if @attendee.save
   			format.html { redirect_to  '/attendees/' + @attendee.attendee_id.to_s, notice: 'Stamp was successfully updated.' }
-  			format.json { render :show, status: :updated, location:  @attendee }
-  			format.js {}
+  			format.json { render :show, status: :updated, location:  @attendee.id }
+  			format.js
   		end
   	end
   end
@@ -76,6 +76,7 @@ class AttendeesController < ApplicationController
       else
         format.html { render :new }
         format.json { render json: @attendee.errors, status: :unprocessable_entity }
+		format.js
       end
     end
   end

@@ -1,8 +1,22 @@
 <p id="notice"><%= notice %></p>
-<%= @user_quest %>
+
+<!-- Modal Trigger -->
+ <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+
+ <!-- Modal Structure -->
+ <div id="modal1" class="modal">
+   <div class="modal-content">
+	 <h4>Modal Header</h4>
+	 <p>A bunch of text</p>
+   </div>
+   <div class="modal-footer">
+	 <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+   </div>
+ </div>
+
 <h1>Attendees</h1>
 
-<table>
+<table class="striped">
   <thead>
     <tr>
       <th>Picture</th>
@@ -47,4 +61,4 @@
 
 <br>
 
-<%= link_to 'New Attendee', new_attendee_path %>
+<%= link_to 'New Attendee', new_attendee_path, class: 'waves-effect waves-light btn'%>
