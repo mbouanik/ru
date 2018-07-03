@@ -11,14 +11,14 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+  <div class="input-field">
+    <%= form.text_field :name, class: 'active'  %>
+	<%= form.label :name, class: :active%>
   </div>
 
-  <div class="field">
-    <%= form.label :login %>
+  <div class="input-field">
     <%= form.text_field :login %>
+	<%= form.label :login, class: 'active' %>
   </div>
 
   <!-- <div class="field">
@@ -26,7 +26,7 @@
     <%= form.text_field :user_id %>
   </div> -->
 
-  <div class="actions">
-    <%= form.submit "Add/Update Attendee", class: 'waves-effect waves-light btn' %>
+  <div class="waves-effect waves-light btn">
+    <%= form.submit "Add/Update Attendee", class: ' white-text' %>
   </div>
 <% end %>

@@ -1,12 +1,8 @@
 Rails.application.routes.draw do
-	resources :attendees #do
-    # resources :stamps, only: [:create, :new, :update, :edit]
-  # end
-  get '/sign_in' => 'attendees#sign_in'
-  get '/sign_out' => 'attendees#sign_out'
-# put "update_stamp" =>'stamps#update'
-  # devise_for :users
-  root 'attendees#index'
+	resources :attendees
+	get '/sign_in' => 'attendees#sign_in'
+	get '/sign_out' => 'attendees#sign_out'
+	root 'attendees#index'
   # get '/home' => 'home#home'
   # get '/new' => 'home#home'
   # post 'search' => 'home#index'

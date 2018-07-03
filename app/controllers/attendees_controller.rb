@@ -3,13 +3,14 @@ require "json"
 require 'thread'
 class AttendeesController < ApplicationController
   before_action :authenticate_user!, only: [:index, :new, :create, :show, :edit, :update, :destroy]
-  before_action :set_attendee, only: [:show, :edit, :update, :destroy]
+  before_action :set_attendee, only: [:show, :edit, :update, :destroy, :new]
 
   # GET /attendees
   # GET /attendees.json
 	def index
 		@attendees = current_user.attendees
 		@time
+		# @attendee = current_user.attendees.build
     #  @cool = Thread.new {
     #   client = OAuth2::Client.new( ENV["FT_ID"],  ENV["FT_SECRET"], site:"https://api.intra.42.fr")
     #   token = client.client_credentials.get_token
@@ -56,9 +57,9 @@ end
   	end
   end
   # GET /attendees/new
-  def new
-    @attendee = current_user.attendees.build
-  end
+def new
+	@attendee = current_user.attendees.build
+end
 
   # GET /attendees/1/edit
   def edit
