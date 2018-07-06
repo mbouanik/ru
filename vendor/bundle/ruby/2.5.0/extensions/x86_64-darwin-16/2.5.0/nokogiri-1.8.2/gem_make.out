@@ -1,5 +1,5 @@
 current directory: /Users/mbouanik/ru/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.2/ext/nokogiri
-/Users/mbouanik/.brew/opt/ruby/bin/ruby -r ./siteconf20180628-73297-zbxiht.rb extconf.rb
+/Users/mbouanik/.brew/opt/ruby/bin/ruby -r ./siteconf20180706-58025-97v5gt.rb extconf.rb
 checking if the C compiler accepts ... yes
 checking if the C compiler accepts -Wno-error=unused-command-line-argument-hard-error-in-future... no
 Building nokogiri using packaged libraries.
@@ -189,4 +189,4 @@ rm -rf /Users/mbouanik/ru/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.2/ports
 
 current directory: /Users/mbouanik/ru/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.2/ext/nokogiri
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 nokogiri.bundle ./.gem.20180628-73297-8xuw7o/nokogiri
+/usr/bin/install -c -m 0755 nokogiri.bundle ./.gem.20180706-58025-1wxrbqj/nokogiri

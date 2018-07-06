@@ -1,12 +1,12 @@
-current directory: /Users/mbouanik/Documents/ru/vendor/bundle/ruby/2.5.0/gems/unf_ext-0.0.7.5/ext/unf_ext
-/goinfre/versions/2.5.1/bin/ruby -r ./siteconf20180625-45097-bokayy.rb extconf.rb
+current directory: /Users/mbouanik/ru/vendor/bundle/ruby/2.5.0/gems/unf_ext-0.0.7.5/ext/unf_ext
+/goinfre/versions/2.5.1/bin/ruby -r ./siteconf20180704-67372-155uife.rb extconf.rb
 checking for -lstdc++... yes
 creating Makefile
 
-current directory: /Users/mbouanik/Documents/ru/vendor/bundle/ruby/2.5.0/gems/unf_ext-0.0.7.5/ext/unf_ext
+current directory: /Users/mbouanik/ru/vendor/bundle/ruby/2.5.0/gems/unf_ext-0.0.7.5/ext/unf_ext
 make "DESTDIR=" clean
 
-current directory: /Users/mbouanik/Documents/ru/vendor/bundle/ruby/2.5.0/gems/unf_ext-0.0.7.5/ext/unf_ext
+current directory: /Users/mbouanik/ru/vendor/bundle/ruby/2.5.0/gems/unf_ext-0.0.7.5/ext/unf_ext
 make "DESTDIR="
 compiling unf.cc
 In file included from unf.cc:1:
@@ -33,6 +33,6 @@ In file included from unf.cc:1:
 5 warnings generated.
 linking shared-object unf_ext.bundle
 
-current directory: /Users/mbouanik/Documents/ru/vendor/bundle/ruby/2.5.0/gems/unf_ext-0.0.7.5/ext/unf_ext
+current directory: /Users/mbouanik/ru/vendor/bundle/ruby/2.5.0/gems/unf_ext-0.0.7.5/ext/unf_ext
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 unf_ext.bundle ./.gem.20180625-45097-1lvylms
+/usr/bin/install -c -m 0755 unf_ext.bundle ./.gem.20180704-67372-13fgqaw

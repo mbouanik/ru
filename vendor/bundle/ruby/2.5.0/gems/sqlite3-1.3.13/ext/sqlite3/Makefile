@@ -31,8 +31,8 @@ rubyhdrdir = $(includedir)/$(RUBY_VERSION_NAME)
 vendorarchdir = $(vendorlibdir)/$(sitearch)
 vendorlibdir = $(vendordir)/$(ruby_version)
 vendordir = $(DESTDIR)/Users/mbouanik/.brew/lib/ruby/vendor_ruby
-sitearchdir = $(DESTDIR)./.gem.20180628-73297-1sv63xf
-sitelibdir = $(DESTDIR)./.gem.20180628-73297-1sv63xf
+sitearchdir = $(DESTDIR)./.gem.20180706-58025-1jv4o2t
+sitelibdir = $(DESTDIR)./.gem.20180706-58025-1jv4o2t
 sitedir = $(DESTDIR)/Users/mbouanik/.brew/lib/ruby/site_ruby
 rubyarchdir = $(rubylibdir)/$(arch)
 rubylibdir = $(rubylibprefix)/$(ruby_version)
@@ -82,11 +82,11 @@ debugflags = -ggdb3
 warnflags = -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wno-tautological-compare -Wno-parentheses-equality -Wno-constant-logical-operand -Wno-self-assign -Wunused-variable -Wimplicit-int -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration -Wdivision-by-zero -Wdeprecated-declarations -Wextra-tokens
 CCDLFLAGS = -fno-common
 CFLAGS   = $(CCDLFLAGS) $(cflags)  -fno-common -pipe  $(ARCH_FLAG)
-INCFLAGS = -I. -I$(arch_hdrdir) -I$(hdrdir)/ruby/backward -I$(hdrdir) -I$(srcdir) -I/Users/mbouanik/.brew/Cellar/sqlite/3.24.0/include
+INCFLAGS = -I. -I$(arch_hdrdir) -I$(hdrdir)/ruby/backward -I$(hdrdir) -I$(srcdir) 
 DEFS     = 
-CPPFLAGS = -DHAVE_RB_PROC_ARITY -DHAVE_RB_INTEGER_PACK -DHAVE_SQLITE3_INITIALIZE -DHAVE_SQLITE3_BACKUP_INIT -DHAVE_SQLITE3_COLUMN_DATABASE_NAME -DHAVE_SQLITE3_ENABLE_LOAD_EXTENSION -DHAVE_SQLITE3_LOAD_EXTENSION -DHAVE_SQLITE3_OPEN_V2 -DHAVE_SQLITE3_PREPARE_V2 -DHAVE_TYPE_SQLITE3_INT64 -DHAVE_TYPE_SQLITE3_UINT64 -I/Users/mbouanik/.brew/opt/sqlite/include  -I/Users/mbouanik/.brew/opt/libyaml/include -I/Users/mbouanik/.brew/opt/openssl/include -I/Users/mbouanik/.brew/opt/readline/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT $(DEFS) $(cppflags)
+CPPFLAGS = -DHAVE_RB_PROC_ARITY -DHAVE_RB_INTEGER_PACK -DHAVE_SQLITE3_INITIALIZE -DHAVE_SQLITE3_BACKUP_INIT -DHAVE_SQLITE3_OPEN_V2 -DHAVE_SQLITE3_PREPARE_V2 -DHAVE_TYPE_SQLITE3_INT64 -DHAVE_TYPE_SQLITE3_UINT64 -I/Users/mbouanik/.brew/Cellar/sqlite/3.24.0/include  -I/Users/mbouanik/.brew/opt/libyaml/include -I/Users/mbouanik/.brew/opt/openssl/include -I/Users/mbouanik/.brew/opt/readline/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT $(DEFS) $(cppflags)
 CXXFLAGS = $(CCDLFLAGS) $(cxxflags)  $(ARCH_FLAG)
-ldflags  = -L. -fstack-protector -L/Users/mbouanik/.brew/lib -L/usr/local/lib -L/Users/mbouanik/.brew/opt/libyaml/lib -L/Users/mbouanik/.brew/opt/openssl/lib -L/Users/mbouanik/.brew/opt/readline/lib -L/Users/mbouanik/.brew/Cellar/sqlite/3.24.0/lib
+ldflags  = -L. -fstack-protector -L/Users/mbouanik/.brew/lib -L/usr/local/lib -L/Users/mbouanik/.brew/opt/libyaml/lib -L/Users/mbouanik/.brew/opt/openssl/lib -L/Users/mbouanik/.brew/opt/readline/lib 
 dldflags = -Wl,-undefined,dynamic_lookup -Wl,-multiply_defined,suppress -L/Users/mbouanik/.brew/opt/libyaml/lib -L/Users/mbouanik/.brew/opt/openssl/lib -L/Users/mbouanik/.brew/opt/readline/lib 
 ARCH_FLAG = 
 DLDFLAGS = $(ldflags) $(dldflags) $(ARCH_FLAG)
@@ -122,8 +122,8 @@ TOUCH = exit >
 #### End of system configuration section. ####
 
 preload = 
-libpath = . $(libdir) /Users/mbouanik/.brew/opt/sqlite/lib /Users/mbouanik/.brew/opt/libyaml/lib /Users/mbouanik/.brew/opt/openssl/lib /Users/mbouanik/.brew/opt/readline/lib
-LIBPATH =  -L. -L$(libdir) -L/Users/mbouanik/.brew/opt/sqlite/lib -L/Users/mbouanik/.brew/opt/libyaml/lib -L/Users/mbouanik/.brew/opt/openssl/lib -L/Users/mbouanik/.brew/opt/readline/lib
+libpath = . $(libdir) /Users/mbouanik/.brew/Cellar/sqlite/3.24.0/lib /Users/mbouanik/.brew/opt/libyaml/lib /Users/mbouanik/.brew/opt/openssl/lib /Users/mbouanik/.brew/opt/readline/lib
+LIBPATH =  -L. -L$(libdir) -L/Users/mbouanik/.brew/Cellar/sqlite/3.24.0/lib -L/Users/mbouanik/.brew/opt/libyaml/lib -L/Users/mbouanik/.brew/opt/openssl/lib -L/Users/mbouanik/.brew/opt/readline/lib
 DEFFILE = 
 
 CLEANFILES = mkmf.log

@@ -1,5 +1,5 @@
 current directory: /Users/mbouanik/ru/vendor/bundle/ruby/2.5.0/gems/msgpack-1.2.4/ext/msgpack
-/Users/mbouanik/.brew/opt/ruby/bin/ruby -r ./siteconf20180628-73297-1781v1i.rb extconf.rb
+/Users/mbouanik/.brew/opt/ruby/bin/ruby -r ./siteconf20180706-58025-1vmlly1.rb extconf.rb
 checking for ruby/st.h... yes
 checking for st.h... yes
 checking for rb_str_replace() in ruby.h... yes
@@ -36,4 +36,4 @@ linking shared-object msgpack/msgpack.bundle
 
 current directory: /Users/mbouanik/ru/vendor/bundle/ruby/2.5.0/gems/msgpack-1.2.4/ext/msgpack
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 msgpack.bundle ./.gem.20180628-73297-1nl5c9s/msgpack
+/usr/bin/install -c -m 0755 msgpack.bundle ./.gem.20180706-58025-15u2k0w/msgpack

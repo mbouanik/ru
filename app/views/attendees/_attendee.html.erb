@@ -1,13 +1,47 @@
-<!-- Modal Trigger -->
-  <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
 
-  <!-- Modal Structure -->
-  <div id="modal1" class="modal">
-    <div class="modal-content">
-      <h4>Modal Header</h4>
-      <p>A bunch of text</p>
-    </div>
-    <div class="modal-footer">
-      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-    </div>
+
+  <tr class="attendee<%=@attendee.id%>">
+	<td><%= link_to (image_tag  "https://cdn.intra.42.fr/users/medium_#{ @attendee.login }.jpg", width: '64', class: "circle responsive-img"), @attendee  %></td>
+	<td><%= link_to (@attendee.login), @attendee %></td>
+	<td><%= @attendee.name %></td>
+
+	<td>
+	</td>
+	<% @time = Stamp.where(:attendee_id => @attendee.id).last %>
+	<% if @time %>
+	  <td><%= @time.sign_in.strftime "%B %e at %l:%M %p" unless @time.sign_in.nil? %></td>
+	  <td><%= @time.sign_out.strftime "%B %e at %l:%M %p" unless @time.sign_out.nil? %></td>
+	<% else %>
+	  <td></td>
+	  <td></td>
+	<% end %>
+	<td><%= @attendee.user.nickname %></td>
+	<td><%= link_to 'Show', @attendee %></td>
+	<!-- <td><a class="waves-effect waves-light btn modal-trigger" data-target="#attendee<%=@attendee.id%>">Edit</a></td> -->
+	<td><button data-target="attendee<%=@attendee.id%>" data-toggle='modal' class="btn modal-trigger">Edit</button> </td>
+	<!-- <td><%= link_to 'Edit', edit_attendee_path(@attendee) %></td> -->
+	<td><%= link_to 'Destroy', @attendee, method: :delete, class: 'waves-effect waves-light btn red', remote: true%></td>
+
+
+
+  	  <%= form_for(attendee, :method => :put, remote: true) do |form| %>
+	  <div class="modal" id="attendee<%=attendee.id%>">
+	  <div class="modal-content">
+  	    <div class="input-field">
+  		<%= form.text_field :name, class: 'attendee_name'  %>
+  	   <%= form.label :name, class: :active%>
+  	  </div>
+
+  	  <div class="input-field">
+  		<%= form.text_field :login, class: 'attendee_login' %>
+  	   <%= form.label :login, class: 'active' %>
+  	  </div>
+
+  	 <div class="waves-effect waves-light btn purple darken-4">
+  		<%= form.submit "Add/Update Attendee", class: "modal-close  white-text" %>
+  	  </div>
   </div>
+  </div>
+	<% end %>
+</div>
+ </tr>

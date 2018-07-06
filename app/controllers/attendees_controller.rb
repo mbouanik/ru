@@ -8,9 +8,10 @@ class AttendeesController < ApplicationController
   # GET /attendees
   # GET /attendees.json
 	def index
+		@attendee = Attendee.new
 		@attendees = current_user.attendees
-		@time
-		# @attendee = current_user.attendees.build
+		# @time
+
     #  @cool = Thread.new {
     #   client = OAuth2::Client.new( ENV["FT_ID"],  ENV["FT_SECRET"], site:"https://api.intra.42.fr")
     #   token = client.client_credentials.get_token
@@ -74,6 +75,7 @@ end
       if @attendee.save
         format.html { redirect_to @attendee, notice: 'Attendee was successfully created.' }
         format.json { render :show, status: :created, location: @attendee }
+		format.js
       else
         format.html { render :new }
         format.json { render json: @attendee.errors, status: :unprocessable_entity }
@@ -89,9 +91,11 @@ end
       if @attendee.update(attendee_params)
         format.html { redirect_to @attendee, notice: 'Attendee was successfully updated.' }
         format.json { render :show, status: :ok, location: @attendee }
+		format.js
       else
         format.html { render :edit }
         format.json { render json: @attendee.errors, status: :unprocessable_entity }
+		format.js
       end
     end
   end
@@ -103,7 +107,8 @@ end
     respond_to do |format|
       format.html { redirect_to attendees_url, notice: 'Attendee was successfully destroyed.' }
       format.json { head :no_content }
-    end
+	format.js
+	end
   end
 
   private

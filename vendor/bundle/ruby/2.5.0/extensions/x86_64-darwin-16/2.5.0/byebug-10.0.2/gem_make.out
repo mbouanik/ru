@@ -1,5 +1,5 @@
 current directory: /Users/mbouanik/ru/vendor/bundle/ruby/2.5.0/gems/byebug-10.0.2/ext/byebug
-/Users/mbouanik/.brew/opt/ruby/bin/ruby -r ./siteconf20180628-73297-613429.rb extconf.rb
+/Users/mbouanik/.brew/opt/ruby/bin/ruby -r ./siteconf20180706-58025-19qimuw.rb extconf.rb
 creating Makefile
 
 current directory: /Users/mbouanik/ru/vendor/bundle/ruby/2.5.0/gems/byebug-10.0.2/ext/byebug
@@ -16,4 +16,4 @@ linking shared-object byebug/byebug.bundle
 
 current directory: /Users/mbouanik/ru/vendor/bundle/ruby/2.5.0/gems/byebug-10.0.2/ext/byebug
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 byebug.bundle ./.gem.20180628-73297-16ty5xk/byebug
+/usr/bin/install -c -m 0755 byebug.bundle ./.gem.20180706-58025-sgg48o/byebug

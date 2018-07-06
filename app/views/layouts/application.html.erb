@@ -34,14 +34,7 @@
           <!-- <li><a href="sass.html">Sass</a></li> -->
 		   <% if current_user %>
           <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %> >Sign out</li>
-		  <% else %>
-		  <li><%- if devise_mapping.omniauthable? %>
-		    <%- resource_class.omniauth_providers.each do |provider| %>
-		      <%= link_to "Sign in with #{OmniAuth::Utils.camelize(provider)}", omniauth_authorize_path(resource_name, provider)%>
-		    <% end -%>
-		  <% end -%>
-	  	</li>
-		  <% end %>
+		    <% end %>
 			 </div>
         </ul>
       </div>

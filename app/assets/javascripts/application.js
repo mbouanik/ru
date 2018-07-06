@@ -16,6 +16,7 @@
 //= require materialize-sprockets
 //= require_tree .
 
-// $(document).ready(function(){
-// 	$('.modal').modal();
-// });
+$(document).ready(function(){
+	$('.modal').modal();
+	// $('#attendee<%=@attendee.id%').modal();
+});
