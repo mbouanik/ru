@@ -5,6 +5,16 @@
 <!-- Modal Trigger -->
 <!-- <button data-target="#modal1" data-toggle='modal' class="btn modal-trigger">NEW NEW</button> -->
 
+<h1>Attendees</h1>
+
+
+<div class="container_attendees">
+	<%= render @attendees %>
+</div>
+
+
+
+
 <!-- Modal Structure -->
 <div id="modal1" class="modal">
   <div class="modal-content">
@@ -38,60 +48,3 @@
 
   </div>
 </div>
-
-
-
-
-<h1>Attendees</h1>
-
-<table class="striped responsive-table">
-  <thead>
-    <tr>
-      <th>Picture</th>
-      <th>Login</th>
-      <th>Name</th>
-      <th>Location</th>
-      <th>Last in</th>
-      <th>Last out</th>
-      <th>User</th>
-      <th colspan="7"></th>
-    </tr>
-  </thead>
-  <tbody id="attendee">
-
-
-	<% @attendees.each do |attendee| %>
-	<div class="container" id="<%=attendee.id%>">
-	      <tr class="attendee<%=attendee.id%>">
-  	        <td><%= link_to (image_tag  "https://cdn.intra.42.fr/users/medium_#{ attendee.login }.jpg", width: '64', class: "circle responsive-img"), attendee  %></td>
-  	        <td><%=link_to (attendee.login), attendee %></td>
-  	        <td><%= attendee.name %></td>
-
-  	        <td>
-
-
-
-
-  	           </td>
-  	        <% @time = Stamp.where(:attendee_id => attendee.id).last %>
-  	        <% if @time %>
-  	          <td><%= @time.sign_in.strftime "%B %e at %l:%M %p" unless @time.sign_in.nil? %></td>
-  	          <td><%= @time.sign_out.strftime "%B %e at %l:%M %p" unless @time.sign_out.nil? %></td>
-  	        <% else %>
-  	          <td></td>
-  	          <td></td>
-  	        <% end %>
-  	        <td><%= attendee.user.nickname %></td>
-  	        <td><%= link_to 'Show', attendee %></td>
-		
-		<!-- <td>	<button data-target="#edit_modal" data-toggle='modal' class="btn modal-trigger">Edit</button></td> -->
-			<td><button data-target="attendee<%=attendee.id%>" data-toggle='modal' class="btn modal-trigger">Edit</button> </td>
-  	        <!-- <td><%= link_to 'Edit', edit_attendee_path(attendee) %></td> -->
-  	        <td ><%= link_to 'Destroy', attendee, method: :delete,  remote: true, class: 'waves-effect waves-light btn red'%></td>
-  	      </tr>
-
-	    <% end %>
-</div>
-
-  </tbody>
-</table>

@@ -1,31 +1,39 @@
 
+<div id="attendee<%=attendee.id%>">
 
-  <tr class="attendee<%=@attendee.id%>">
-	<td><%= link_to (image_tag  "https://cdn.intra.42.fr/users/medium_#{ @attendee.login }.jpg", width: '64', class: "circle responsive-img"), @attendee  %></td>
-	<td><%= link_to (@attendee.login), @attendee %></td>
-	<td><%= @attendee.name %></td>
 
-	<td>
-	</td>
-	<% @time = Stamp.where(:attendee_id => @attendee.id).last %>
-	<% if @time %>
-	  <td><%= @time.sign_in.strftime "%B %e at %l:%M %p" unless @time.sign_in.nil? %></td>
-	  <td><%= @time.sign_out.strftime "%B %e at %l:%M %p" unless @time.sign_out.nil? %></td>
-	<% else %>
-	  <td></td>
-	  <td></td>
-	<% end %>
-	<td><%= @attendee.user.nickname %></td>
-	<td><%= link_to 'Show', @attendee %></td>
-	<!-- <td><a class="waves-effect waves-light btn modal-trigger" data-target="#attendee<%=@attendee.id%>">Edit</a></td> -->
-	<td><button data-target="attendee<%=@attendee.id%>" data-toggle='modal' class="btn modal-trigger">Edit</button> </td>
-	<!-- <td><%= link_to 'Edit', edit_attendee_path(@attendee) %></td> -->
-	<td><%= link_to 'Destroy', @attendee, method: :delete, class: 'waves-effect waves-light btn red', remote: true%></td>
+
+	<div class="row" >
+	    <div class="col s12 m6">
+	      <div class="card blue-grey darken-1">
+	        <div class="card-content white-text">
+	          <span class="card-title"><%= attendee.name %></span>
+	          <%= link_to (image_tag  "https://cdn.intra.42.fr/users/medium_#{ attendee.login }.jpg", width: '128', class: "circle responsive-img"), attendee  %>
+			  <%=link_to (attendee.login), attendee %>
+			  <% @time = Stamp.where(:attendee_id => attendee.id).last %>
+			  <% if @time %>
+			  <div class="right">
+			 	<p>Sign in: <%= @time.sign_in.strftime "%B %e at %l:%M %p" unless @time.sign_in.nil? %> </p>
+				<p >Sign out: <%= @time.sign_out.strftime "%B %e at %l:%M %p" unless @time.sign_out.nil? %> </p>
+				 </div>
+			  <% else %>
+			  	<%= "No time logged yet" %>
+			  <% end %>
+			</div>
+	        <div class="card-action">
+	         <button data-target="modal_attendee<%=attendee.id%>" data-toggle='modal' class="btn modal-trigger">Edit</button>
+	          <%= link_to 'Destroy', attendee, method: :delete,  remote: true, class: 'waves-effect waves-light btn red'%>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+
+</div>
 
 
 
   	  <%= form_for(attendee, :method => :put, remote: true) do |form| %>
-	  <div class="modal" id="attendee<%=attendee.id%>">
+	  <div class="modal" id="modal_attendee<%=attendee.id%>">
 	  <div class="modal-content">
   	    <div class="input-field">
   		<%= form.text_field :name, class: 'attendee_name'  %>
@@ -37,11 +45,9 @@
   	   <%= form.label :login, class: 'active' %>
   	  </div>
 
-  	 <div class="waves-effect waves-light btn purple darken-4">
-  		<%= form.submit "Add/Update Attendee", class: "modal-close  white-text" %>
-  	  </div>
-  </div>
-  </div>
+  	 	<div class="waves-effect waves-light btn purple darken-4">
+  			<%= form.submit "Add/Update Attendee", class: "modal-close  white-text" %>
+  	  	</div>
+		</div>
+	</div>
 	<% end %>
-</div>
- </tr>

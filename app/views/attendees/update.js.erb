@@ -1,2 +1,2 @@
-alert("attendee<%=@attendee.id%>")
-$("#attendee<%=@attendee.id%>").modal();
+$('#attendee<%=@attendee.id%>').remove();
+$('.container_attendees').append('<%= j render @attendee %>');
