@@ -1,5 +1,5 @@
 current directory: /Users/mbouanik/ru/vendor/bundle/ruby/2.5.0/gems/unf_ext-0.0.7.5/ext/unf_ext
-/goinfre/versions/2.5.1/bin/ruby -r ./siteconf20180704-67372-155uife.rb extconf.rb
+/goinfre/versions/2.5.1/bin/ruby -r ./siteconf20180707-21618-17oybei.rb extconf.rb
 checking for -lstdc++... yes
 creating Makefile
 
@@ -35,4 +35,4 @@ linking shared-object unf_ext.bundle
 
 current directory: /Users/mbouanik/ru/vendor/bundle/ruby/2.5.0/gems/unf_ext-0.0.7.5/ext/unf_ext
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 unf_ext.bundle ./.gem.20180704-67372-13fgqaw
+/usr/bin/install -c -m 0755 unf_ext.bundle ./.gem.20180707-21618-opz0ov
