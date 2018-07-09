@@ -1,6 +1,8 @@
 // @import "materialize";
 // @import "materialize/extras/nouislider";
 body {
+	background-color: #f4f4f4;
+	color: #555;
   display: flex;
   min-height: 100vh;
   flex-direction: column;
@@ -8,4 +10,23 @@ body {
 
 main {
   flex: 1 0 auto;
+}
+
+.attendee_card{
+	float: left;
+	width: 33.3%;
+	// border: 1px solid #ccc;
+	padding: 0;
+	margin: 0
+	// box-sizing: border-box;
+	// display: inline-block;
+
+}
+
+.card-image{
+	// border: 1px solid #ddd;
+    // border-radius: 4px;
+    // padding: 5px;
+    // width: 350px;
+
 }

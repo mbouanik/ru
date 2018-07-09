@@ -17,6 +17,5 @@
 //= require_tree .
 
 $(document).ready(function(){
-	$('.modal').modal();
-	// $('#attendee<%=@attendee.id%').modal();
+	$('.modal').on('click').modal();
 });

@@ -1,5 +1,6 @@
-// $('#modal_attendee').modal('hide')
+
+
 $('.attendee_name').val('')
 $('.attendee_login').val('')
 $('.container_attendees').append('<%= j render @attendee %>');
-// $('#attendee<%=@attendee.id%>').hide().fadeIn();
+$('#attendee<%=@attendee.id%>').hide().show(1000);

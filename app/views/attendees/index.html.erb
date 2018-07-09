@@ -3,9 +3,9 @@
 
 <a class="waves-effect waves-light btn modal-trigger" href="#modal1">New Attendee</a>
 <!-- Modal Trigger -->
-<!-- <button data-target="#modal1" data-toggle='modal' class="btn modal-trigger">NEW NEW</button> -->
+<!-- <button data-target="modal1" data-toggle='modal' class="btn modal-trigger">NEW NEW</button> -->
 
-<h1>Attendees</h1>
+<h5>Attendees</h5>
 
 
 <div class="container_attendees">
@@ -18,6 +18,9 @@
 <!-- Modal Structure -->
 <div id="modal1" class="modal">
   <div class="modal-content">
+	  <div class="modal-header">
+		Add New Attendee
+	  </div>
 	  <%= form_for(@attendee , remote: true) do |form| %>
 	  <% if @attendee.errors.any? %>
 		<div id="error_explanation">
@@ -30,20 +33,23 @@
 		  </ul>
 		</div>
 	  <% end %>
+	  <div class="modal-body">
+		  <div class="input-field">
+    		<%= form.text_field :name, class: 'attendee_name'  %>
+    	   <%= form.label :name, class: :active%>
+    	  </div>
 
-	  <div class="input-field">
-		<%= form.text_field :name, class: 'attendee_name'  %>
-	   <%= form.label :name, class: :active%>
+    	  <div class="input-field">
+    		<%= form.text_field :login, class: 'attendee_login' %>
+    	   <%= form.label :login, class: 'active' %>
+    	  </div>
 	  </div>
+	  	<div class="modal-footer">
+			<div class="waves-effect waves-light btn ">
+	   		<%= form.submit "Add Attendee", class: "modal-close  white-text" %>
+	   	  </div>
+	  	</div>
 
-	  <div class="input-field">
-		<%= form.text_field :login, class: 'attendee_login' %>
-	   <%= form.label :login, class: 'active' %>
-	  </div>
-
-	 <div class="waves-effect waves-light btn purple darken-4">
-		<%= form.submit "Add/Update Attendee", class: "modal-close  white-text" %>
-	  </div>
 	<% end %>
 
   </div>
