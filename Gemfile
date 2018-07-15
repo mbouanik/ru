@@ -3,7 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.1'
 
-
+gem 'jquery-turbolinks'
 
 gem 'materialize-sass' , '~> 1.0.0.rc2'
 gem 'rest-client'

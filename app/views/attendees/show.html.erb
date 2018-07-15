@@ -1,30 +1,10 @@
-<p id="notice"><%= notice %></p>
+<!-- <p id="notice"><%= notice %></p> -->
 <!-- <%= @user_quest["projects_users"][-1] %> -->
 
-<p>
+<!-- <p>
   <strong>Mentor:</strong>
   <%= @attendee.user.nickname %>
-</p>
-
-<!-- <table>
-	<thead>
-		<th>Picture</th>
-		<th>Name</th>
-		<th>Location</th>
-		<th>Grade</th>
-		<th>Level</th>
-		<th>Correction Points</th>
-		<th colspan="6"></th>
-	</thead>
-
-	<td><%= image_tag  "https://cdn.intra.42.fr/users/medium_#{ @attendee.login }.jpg", width: '256' %></td>
-	<td><%= @attendee.name %></td>
-	<td> <%= @attendee.login %></td>
-	<td><%= @user_quest["location"] %></td>
-	<td><%= @user_quest["cursus_users"][0]["grade"] %></td>
-	<td><%= @user_quest["cursus_users"][0]["level"] %></td>
-	<td><%= @user_quest["correction_point"] %></td>
-</table> -->
+</p> -->
 
 
 
@@ -41,59 +21,131 @@
 
 
 
+<!--
+<hr> -->
 
 
-<p>
 
-    <%= image_tag  "https://cdn.intra.42.fr/users/medium_#{ @attendee.login }.jpg", class: 'circle responsive-img'%>
-</p>
+<div class="container_info  white-text">
+	<%= image_tag  "https://cdn.intra.42.fr/users/medium_#{ @attendee.login }.jpg", size: '512', class: 'responsive-img', style: 'border-radius: 100%'%>
+	<div class="container center left">
+		<p><strong>Name: </strong>  <%= @attendee.name %> </p>
 
-<p>
-  <strong>Name:</strong>
-    <%= @attendee.name %>
-</p>
+		<p><strong>Login: </strong> <%= @attendee.login %> </p>
 
-<p>
-  <strong>Login:</strong>
-  <%= @attendee.login %>
-</p>
-<p>
-  <strong>Location:</strong>
-  <%= @user_quest["location"] %>
-</p>
-<p>
-  <strong>Grade:</strong>
-  <%= @user_quest["cursus_users"][0]["grade"] %>
-</p>
-<p>
-  <strong>Level:</strong>
-  <%= @user_quest["cursus_users"][0]["level"] %>
-</p>
-<p>
-  <strong>Correction point:</strong>
-  <%= @user_quest["correction_point"] %>
-</p>
-<p>
-  <strong>Last Project:</strong>
-  <%= @user_quest["projects_users"][-1]['project']['name'] %>
-</p>
-<p>
-	<strong>Time:</strong>
-	<div id="sign_in">
-		<% @attendee.stamps.each do |t| %>
-
-		<p > <strong>Sign_in:</strong> <span> <%= t.sign_in.strftime "%B %e at %l:%M %p" unless t.sign_in.nil? %> </span>
-			<strong>Sign_out: </strong> <span id='sign_out<%=t.id %>'> <%= t.sign_out.strftime "%B %e at %l:%M %p" unless t.sign_out.nil? %></span>
-			<%= link_to 'Update Sign_out', sign_out_path(id: t.id), class: 'waves-effect waves-light btn', remote: true %>
-		</p>
-	  <% end %>
+		<p><strong>Location: </strong><%= @user_quest["location"] %> </p>
 	</div>
 
+	<div class="container center">
+		</p> <strong>Grade: </strong> <%= @user_quest["cursus_users"][0]["grade"] %>  </p>
+
+		<p> <strong>Level:</strong> <%= @user_quest["cursus_users"][0]["level"] %> </p>
+
+ 		<p> <strong>Correction points: </strong> <%= @user_quest["correction_point"] %> </p>
+  <!-- <strong>Last Project: </strong>
+  <%= @user_quest["projects_users"][-1]['project']['name'] %>
+  </p> -->
+	</div>
+</div>
+
+<p >
+
+	<div class="card-image z-depth-2 white"  id="sign_in" >
+		<div class="card-content">
+		<table class="time-stamps highlight white centered">
+			<thead>
+				<tr>
+					<th>Sign in</th>
+					<th>Sign out</th>
+					<th colspan="3"></th>
+				</tr>
+
+			</thead>
+		<% @attendee.stamps.each do |t| %>
+
+		<tbody>
+			<div >
+				<td> <%= t.sign_in.strftime "%B %e at %l:%M %p" unless t.sign_in.nil? %> </td>
+				<td><span id='sign_out<%=t.id %>'> <%= t.sign_out.strftime "%B %e at %l:%M %p" unless t.sign_out.nil? %></td>
+				<td><%= link_to 'Update Sign_out', sign_out_path(id: t.id), class: 'waves-effect waves-light btn blue darken-2', remote: true %></td>
+		</tbody>
+		</div>
+		<% end %>
+	</table>
+	</div>
+</div>
+
 </p>
 
-<div id="link">
-	<%= link_to 'Add TimeStamp', sign_in_path(attendee_id: @attendee.id), class: 'waves-effect waves-light btn', remote: true %>
-	<%= link_to 'Edit', edit_attendee_path(@attendee),  class: 'waves-effect waves-light btn' %> |
-	<%= link_to 'Back', attendees_path, class: 'waves-effect waves-light btn' %>
+<div id="link" onClick="history.go(0)">
+	<%= link_to 'Add TimeStamp', sign_in_path(attendee_id: @attendee.id), class: 'waves-effect waves-light btn blue darken-2', remote: true %>
+	<%= link_to 'Back', attendees_path, class: 'waves-effect waves-light btn blue darken-2' %>
 
 </div>
+<br>
+
+<!-- <div class="parallax-container">
+      <div class="parallax"><img src="images/parallax1.jpg"></div>
+    </div>
+    <div class="section white">
+      <div class="row container">
+        <h2 class="header">  <%= @attendee.name %></h2>
+        <p class="grey-text text-darken-3 lighten-3"><p>
+
+		    <%= image_tag  "https://cdn.intra.42.fr/users/medium_#{ @attendee.login }.jpg", class: 'circle responsive-img'%>
+		</p>
+
+		<p>
+		  <strong>Name:</strong>
+		    <%= @attendee.name %>
+		</p>
+
+		<p>
+		  <strong>Login:</strong>
+
+		</p>
+		<p>
+		  <strong>Location:</strong>
+		  <%= @user_quest["location"] %>
+		</p>
+		<p>
+		  <strong>Grade:</strong>
+		  <%= @user_quest["cursus_users"][0]["grade"] %>
+		</p>
+		<p>
+		  <strong>Level:</strong>
+		  <%= @user_quest["cursus_users"][0]["level"] %>
+		</p>
+		<p>
+		  <strong>Correction point:</strong>
+		  <%= @user_quest["correction_point"] %>
+		</p>
+		<p>
+		  <strong>Last Project:</strong>
+		  <%= @user_quest["projects_users"][-1]['project']['name'] %>
+		</p>
+		<p>
+			<strong>Time:</strong>
+			<div id="sign_in">
+				<% @attendee.stamps.each do |t| %>
+
+				<p > <strong>Sign_in:</strong> <span> <%= t.sign_in.strftime "%B %e at %l:%M %p" unless t.sign_in.nil? %> </span>
+					<strong>Sign_out: </strong> <span id='sign_out<%=t.id %>'> <%= t.sign_out.strftime "%B %e at %l:%M %p" unless t.sign_out.nil? %></span>
+					<%= link_to 'Update Sign_out', sign_out_path(id: t.id), class: 'waves-effect waves-light btn', remote: true %>
+				</p>
+			  <% end %>
+			</div>
+
+		</p>
+
+		<div id="link">
+			<%= link_to 'Add TimeStamp', sign_in_path(attendee_id: @attendee.id), class: 'waves-effect waves-light btn', remote: true %>
+			<%= link_to 'Edit', edit_attendee_path(@attendee),  class: 'waves-effect waves-light btn' %> |
+			<%= link_to 'Back', attendees_path, class: 'waves-effect waves-light btn' %>
+
+		</div></p>
+      </div>
+    </div>
+    <div class="parallax-container">
+      <div class="parallax"><img src="images/parallax2.jpg"></div>
+    </div> -->

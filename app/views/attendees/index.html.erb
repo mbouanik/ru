@@ -1,14 +1,19 @@
-<p id="notice"><%= notice %></p>
+
+	<!-- <p id="notice"><%= notice %></p> -->
 
 
-<a class="waves-effect waves-light btn modal-trigger" href="#modal1">New Attendee</a>
+
+
+<a class="btn waves-effect waves-light modal-trigger purple lighten-2" href="#modal1">New Attendee</a>
 <!-- Modal Trigger -->
 <!-- <button data-target="modal1" data-toggle='modal' class="btn modal-trigger">NEW NEW</button> -->
+<div class="container center">
+	<h5 class="white-text ">Attendees </h5>
+</div>
 
-<h5>Attendees</h5>
 
 
-<div class="container_attendees">
+<div id="container_attendees">
 	<%= render @attendees %>
 </div>
 
@@ -16,7 +21,7 @@
 
 
 <!-- Modal Structure -->
-<div id="modal1" class="modal">
+<div id="modal1" class="modal" tabindex="-1" role="dialog">
   <div class="modal-content">
 	  <div class="modal-header">
 		Add New Attendee
@@ -45,8 +50,8 @@
     	  </div>
 	  </div>
 	  	<div class="modal-footer">
-			<div class="waves-effect waves-light btn ">
-	   		<%= form.submit "Add Attendee", class: "modal-close  white-text" %>
+			<div class="btn waves-effect waves-light  blue darken-2 modal-close">
+	   		<%= form.submit "Add Attendee", class: " white-text" %>
 	   	  </div>
 	  	</div>
 

@@ -1,5 +1,5 @@
 current directory: /Users/mbouanik/ru/vendor/bundle/ruby/2.5.0/gems/bootsnap-1.3.0/ext/bootsnap
-/goinfre/versions/2.5.1/bin/ruby -r ./siteconf20180707-21618-yw944p.rb extconf.rb
+/goinfre/versions/2.5.1/bin/ruby -r ./siteconf20180714-32392-7xjidz.rb extconf.rb
 creating Makefile
 
 current directory: /Users/mbouanik/ru/vendor/bundle/ruby/2.5.0/gems/bootsnap-1.3.0/ext/bootsnap
@@ -12,4 +12,4 @@ linking shared-object bootsnap/bootsnap.bundle
 
 current directory: /Users/mbouanik/ru/vendor/bundle/ruby/2.5.0/gems/bootsnap-1.3.0/ext/bootsnap
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 bootsnap.bundle ./.gem.20180707-21618-nq58xm/bootsnap
+/usr/bin/install -c -m 0755 bootsnap.bundle ./.gem.20180714-32392-rnrjjg/bootsnap

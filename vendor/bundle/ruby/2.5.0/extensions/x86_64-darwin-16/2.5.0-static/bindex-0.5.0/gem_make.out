@@ -1,5 +1,5 @@
 current directory: /Users/mbouanik/ru/vendor/bundle/ruby/2.5.0/gems/bindex-0.5.0/ext/bindex
-/goinfre/versions/2.5.1/bin/ruby -r ./siteconf20180707-21618-swk3ws.rb extconf.rb
+/goinfre/versions/2.5.1/bin/ruby -r ./siteconf20180714-32392-8c42fw.rb extconf.rb
 creating Makefile
 
 current directory: /Users/mbouanik/ru/vendor/bundle/ruby/2.5.0/gems/bindex-0.5.0/ext/bindex
@@ -12,4 +12,4 @@ linking shared-object bindex/cruby.bundle
 
 current directory: /Users/mbouanik/ru/vendor/bundle/ruby/2.5.0/gems/bindex-0.5.0/ext/bindex
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 cruby.bundle ./.gem.20180707-21618-6mxdrx/bindex
+/usr/bin/install -c -m 0755 cruby.bundle ./.gem.20180714-32392-13yglj3/bindex
