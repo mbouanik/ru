@@ -1,15 +1,18 @@
+<p class="white-text"> <%= @user_quest[100] %></p>
 
-<div class="attendee_card" id="attendee<%=attendee.id%>">
+ <div class="attendee_card" id="attendee<%=attendee.id%>">
 	<div class="row" >
 	    <div class="col s12 m10">
-	      <div class="card z-depth-2">
-			<div class="card-image">
+	      <div class="card_attedee card z-depth-2">
+			<div class="card-image responsive-img" >
+				<!-- <img class="responsive-img" src="https://cdn.intra.42.fr/users/medium_<%=attendee.login%>.jpg" alt="" size='256'> -->
 				  <%= link_to (image_tag  "https://cdn.intra.42.fr/users/medium_#{ attendee.login }.jpg", size: '256'), attendee  %>
 	 	  	</div>
 	        <div class="card-content white-text">
 	          <span class="card-title"><%= attendee.name %></span>
 	          <!-- <%= link_to (image_tag  "https://cdn.intra.42.fr/users/medium_#{ attendee.login }.jpg", width: '64', class: "circle responsive-img"), attendee  %> -->
 			  <%=link_to (attendee.login), attendee, class: "center" %>
+
 			  <% @time = Stamp.where(:attendee_id => attendee.id).last %>
 			  <% if @time %>
 			  <div class="stamps right">
@@ -62,7 +65,7 @@
 					</div>
 				</div>
 				<div class="modal-footer">
-					<div class="waves-effect waves-light btn blue darken-2 modal-close" onClick="history.go(0)">
+					<div class="waves-effect waves-light btn blue darken-2 modal-close onClick="history.go(0)"">
 						<%= form.submit "Update Attendee", class: "white-text" %>
 					</div>
 				</div>

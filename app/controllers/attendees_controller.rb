@@ -10,14 +10,14 @@ class AttendeesController < ApplicationController
 	def index
 		@attendee = Attendee.new
 		@attendees = current_user.attendees
-		# @time
+		@time
 
-    #  @cool = Thread.new {
-    #   client = OAuth2::Client.new( ENV["FT_ID"],  ENV["FT_SECRET"], site:"https://api.intra.42.fr")
-    #   token = client.client_credentials.get_token
-    #
-    #   @user_quest = token.get("/v2/users/" ).parsed
-    # }
+
+      client = OAuth2::Client.new( ENV["FT_ID"],  ENV["FT_SECRET"], site:"https://api.intra.42.fr")
+      token = client.client_credentials.get_token
+
+      @user_quest = token.get("/v2/users/").parsed
+
 	end
 
 

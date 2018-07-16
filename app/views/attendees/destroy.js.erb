@@ -1,1 +1,3 @@
-$('#attendee<%=@attendee.id%>').remove();
+$('#attendee<%=@attendee.id%>').fadeOut(500, function(){
+	$(this).remove();
+});

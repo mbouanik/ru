@@ -1,47 +1,21 @@
-<!-- <p id="notice"><%= notice %></p> -->
-<!-- <%= @user_quest["projects_users"][-1] %> -->
-
-<!-- <p>
-  <strong>Mentor:</strong>
-  <%= @attendee.user.nickname %>
-</p> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--
-<hr> -->
-
-
+<!-- <p class="notice"><%= notice %></p> -->
 
 <div class="container_info  white-text">
 	<%= image_tag  "https://cdn.intra.42.fr/users/medium_#{ @attendee.login }.jpg", size: '512', class: 'responsive-img', style: 'border-radius: 100%'%>
 	<div class="container center left">
-		<p><strong>Name: </strong>  <%= @attendee.name %> </p>
+		<h5><strong><%= @user_quest["first_name"] %> <%= @user_quest["last_name"]%> </strong> </h5>
 
-		<p><strong>Login: </strong> <%= @attendee.login %> </p>
-
-		<p><strong>Location: </strong><%= @user_quest["location"] %> </p>
+		<h5><strong><%= @attendee.login %> </strong> </h5>
+		  <h3 class="right"><strong> <%= get_pos(@attendee.login) %></strong></h3>
+		<!-- <p><strong>Location: </strong><%= @user_quest["location"] %> </p> -->
 	</div>
 
 	<div class="container center">
-		</p> <strong>Grade: </strong> <%= @user_quest["cursus_users"][0]["grade"] %>  </p>
+	<h5> <strong>Grade: </strong> <%= @user_quest["cursus_users"][0]["grade"] %>  </h5>
 
-		<p> <strong>Level:</strong> <%= @user_quest["cursus_users"][0]["level"] %> </p>
+		<h5> <strong>Level:</strong> <%= @user_quest["cursus_users"][0]["level"] %> </h5>
 
- 		<p> <strong>Correction points: </strong> <%= @user_quest["correction_point"] %> </p>
+ 		<h5> <strong>Correction points: </strong> <%= @user_quest["correction_point"] %> </h5>
   <!-- <strong>Last Project: </strong>
   <%= @user_quest["projects_users"][-1]['project']['name'] %>
   </p> -->
@@ -83,69 +57,3 @@
 
 </div>
 <br>
-
-<!-- <div class="parallax-container">
-      <div class="parallax"><img src="images/parallax1.jpg"></div>
-    </div>
-    <div class="section white">
-      <div class="row container">
-        <h2 class="header">  <%= @attendee.name %></h2>
-        <p class="grey-text text-darken-3 lighten-3"><p>
-
-		    <%= image_tag  "https://cdn.intra.42.fr/users/medium_#{ @attendee.login }.jpg", class: 'circle responsive-img'%>
-		</p>
-
-		<p>
-		  <strong>Name:</strong>
-		    <%= @attendee.name %>
-		</p>
-
-		<p>
-		  <strong>Login:</strong>
-
-		</p>
-		<p>
-		  <strong>Location:</strong>
-		  <%= @user_quest["location"] %>
-		</p>
-		<p>
-		  <strong>Grade:</strong>
-		  <%= @user_quest["cursus_users"][0]["grade"] %>
-		</p>
-		<p>
-		  <strong>Level:</strong>
-		  <%= @user_quest["cursus_users"][0]["level"] %>
-		</p>
-		<p>
-		  <strong>Correction point:</strong>
-		  <%= @user_quest["correction_point"] %>
-		</p>
-		<p>
-		  <strong>Last Project:</strong>
-		  <%= @user_quest["projects_users"][-1]['project']['name'] %>
-		</p>
-		<p>
-			<strong>Time:</strong>
-			<div id="sign_in">
-				<% @attendee.stamps.each do |t| %>
-
-				<p > <strong>Sign_in:</strong> <span> <%= t.sign_in.strftime "%B %e at %l:%M %p" unless t.sign_in.nil? %> </span>
-					<strong>Sign_out: </strong> <span id='sign_out<%=t.id %>'> <%= t.sign_out.strftime "%B %e at %l:%M %p" unless t.sign_out.nil? %></span>
-					<%= link_to 'Update Sign_out', sign_out_path(id: t.id), class: 'waves-effect waves-light btn', remote: true %>
-				</p>
-			  <% end %>
-			</div>
-
-		</p>
-
-		<div id="link">
-			<%= link_to 'Add TimeStamp', sign_in_path(attendee_id: @attendee.id), class: 'waves-effect waves-light btn', remote: true %>
-			<%= link_to 'Edit', edit_attendee_path(@attendee),  class: 'waves-effect waves-light btn' %> |
-			<%= link_to 'Back', attendees_path, class: 'waves-effect waves-light btn' %>
-
-		</div></p>
-      </div>
-    </div>
-    <div class="parallax-container">
-      <div class="parallax"><img src="images/parallax2.jpg"></div>
-    </div> -->

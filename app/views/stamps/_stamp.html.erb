@@ -6,24 +6,9 @@
 
 
 <table class="highlight white centered">
-	<thead>
-
-
-	</thead>
-<% @attendee.stamps.each do |t| %>
-	<div class="container">
-<tbody>
-
-		<td> <%= t.sign_in.strftime "%B %e at %l:%M %p" unless t.sign_in.nil? %> </td>
-		<td><span id='sign_out<%=t.id %>'> <%= t.sign_out.strftime "%B %e at %l:%M %p" unless t.sign_out.nil? %></td>
-		<td><%= link_to 'Update Sign_out', sign_out_path(id: t.id), class: 'waves-effect waves-light btn blue darken-4', remote: true %></td>
-
-
-
-
-
-</tbody>
-</div>
-<% end %>
+	<tbody>
+		<td><%= @attendee.sign_in.strftime "%B %e at %l:%M %p" unless @attendee.sign_in.nil? %></td>
+		<td><span id='sign_out<%=@attendee.id %>'> <%= @attendee.sign_out.strftime "%B %e at %l:%M %p" unless @attendee.sign_out.nil?%></td>
+		<td><%= link_to 'Update Sign_out', sign_out_path(id: @attendee.id), class: 'waves-effect waves-light btn blue darken-2', remote: true %></td>
+	</tbody>
 </table>
-</div>

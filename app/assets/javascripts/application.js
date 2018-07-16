@@ -17,12 +17,21 @@
 //= require materialize-sprockets
 //= require_tree .
 
-$(document).ready(function(){
-	// location.reload();
+// $(document).ready(function(){
+// 	$('.modal').modal();
+// });
+
+$( document ).on('turbolinks:load', function() {
 	$('.modal').modal();
-
-
-	// $(window).on('popstate', function() {
-      // location.reload(true);
-   // });
+	$('.notice').fadeOut(3000);
+	$('.alert').fadeOut(3000);
 });
+
+// var ready;
+// ready = function() {
+//
+//   $('.modal').modal();
+// };
+//
+// $(document).ready(ready);
+// $(document).on('page:load', ready);

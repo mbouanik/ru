@@ -1,5 +1,5 @@
 current directory: /Users/mbouanik/ru/vendor/bundle/ruby/2.5.0/gems/sqlite3-1.3.13/ext/sqlite3
-/goinfre/versions/2.5.1/bin/ruby -r ./siteconf20180714-18698-15bnwsd.rb extconf.rb
+/goinfre/versions/2.5.1/bin/ruby -r ./siteconf20180716-22801-mwzbz8.rb extconf.rb
 Error: /Users/mbouanik/.brew/Library/Taps/homebrew/homebrew-core/Formula/sqlite.rb:94: syntax error, unexpected <<
       s += <<~EOS
              ^

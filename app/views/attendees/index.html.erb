@@ -1,8 +1,4 @@
-
-	<!-- <p id="notice"><%= notice %></p> -->
-
-
-
+<!-- <p class="notice "id="notice"><%= notice %></p> -->
 
 <a class="btn waves-effect waves-light modal-trigger purple lighten-2" href="#modal1">New Attendee</a>
 <!-- Modal Trigger -->
@@ -21,7 +17,7 @@
 
 
 <!-- Modal Structure -->
-<div id="modal1" class="modal" tabindex="-1" role="dialog">
+<div id="modal1" class="modal">
   <div class="modal-content">
 	  <div class="modal-header">
 		Add New Attendee
@@ -50,7 +46,7 @@
     	  </div>
 	  </div>
 	  	<div class="modal-footer">
-			<div class="btn waves-effect waves-light  blue darken-2 modal-close">
+			<div class="btn waves-effect waves-light  blue darken-2 modal-close" onClick="history.go(0)">
 	   		<%= form.submit "Add Attendee", class: " white-text" %>
 	   	  </div>
 	  	</div>
