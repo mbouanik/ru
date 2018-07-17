@@ -1,13 +1,14 @@
-<p class="white-text"> <%= @user_quest[100] %></p>
-
  <div class="attendee_card" id="attendee<%=attendee.id%>">
 	<div class="row" >
 	    <div class="col s12 m10">
-	      <div class="card_attedee card z-depth-2">
-			<div class="card-image responsive-img" >
+	      <div class="card_attedee card z-depth-2 ">
+			<!-- <div class="container " > -->
+				<div class="center  picture_index ">
+					<%= link_to (image_tag  "https://cdn.intra.42.fr/users/medium_#{ attendee.login }.jpg", size: '256', class: 'circle'), attendee  %>
+  	 	  	</div>
+				<!-- </div> -->
 				<!-- <img class="responsive-img" src="https://cdn.intra.42.fr/users/medium_<%=attendee.login%>.jpg" alt="" size='256'> -->
-				  <%= link_to (image_tag  "https://cdn.intra.42.fr/users/medium_#{ attendee.login }.jpg", size: '256'), attendee  %>
-	 	  	</div>
+
 	        <div class="card-content white-text">
 	          <span class="card-title"><%= attendee.name %></span>
 	          <!-- <%= link_to (image_tag  "https://cdn.intra.42.fr/users/medium_#{ attendee.login }.jpg", width: '64', class: "circle responsive-img"), attendee  %> -->
@@ -16,7 +17,7 @@
 			  <% @time = Stamp.where(:attendee_id => attendee.id).last %>
 			  <% if @time %>
 			  <div class="stamps right">
-			 	<p>Sign in: <%= @time.sign_in.strftime "%B %e at %l:%M %p" unless @time.sign_in.nil? %> </p>
+			 	<p>Sign in:  <%= @time.sign_in.strftime "%B %e at %l:%M %p" unless @time.sign_in.nil? %> </p>
 				<p>Sign out: <%= @time.sign_out.strftime "%B %e at %l:%M %p" unless @time.sign_out.nil? %> </p>
 				 </div>
 			  <% else %>
@@ -65,7 +66,7 @@
 					</div>
 				</div>
 				<div class="modal-footer">
-					<div class="waves-effect waves-light btn blue darken-2 modal-close onClick="history.go(0)"">
+					<div class="waves-effect waves-light btn blue darken-2 modal-close" onClick="history.go(0)">
 						<%= form.submit "Update Attendee", class: "white-text" %>
 					</div>
 				</div>

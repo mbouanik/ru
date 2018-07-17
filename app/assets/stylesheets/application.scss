@@ -1,5 +1,10 @@
 // @import "materialize";
 // @import "materialize/extras/nouislider";
+
+
+.brand-logo{
+	left: 10px;
+}
 body {
   display: flex;
   min-height: 100vh;
@@ -14,11 +19,20 @@ main {
   flex: 1 0 auto;
 }
 
-.section{
-flex-direction: row;
-background:  url(parallax1.jpg)
-
+.login{
+	position: relative;
+	top: 0px;
+	// opacity: 1;
 }
+
+.section{
+	position: relative;
+	top: 300px;
+	height: 500px;
+	opacity: .6;
+	background:  url(parallax1.jpg)
+}
+
 .parallax-container{
 	flex:  1 0 auto;
 }
@@ -26,20 +40,32 @@ background:  url(parallax1.jpg)
 	float: left;
 	width: 33.3%;
 	// border: 1px solid #ccc;
-	padding: 0;
-	margin: 0;
-	border-radius: 15px;
+	// padding: 0;
+	// margin: 0;
+	// border-radius: 15px;
 	// box-sizing: border-box;
 	// display: inline-block;
 
 }
-
-.card-image{
+.new_attendee{
+	position: relative;
+	padding-right:   50;
+}
+// .card-content{
+// 	position: rela
+// }
+// .card-title{
+// 	position: relative;
+// 	top: 2px;
+// 	left:  300px;
+// }
+.picture_index{
 	// border: 1px solid #ddd;
-    border-radius: 50px;
-    // padding: 15px;
-    // width: 350px;
-
+    // border-radius: 10px;
+	// height: px
+    padding: 10px;
+	// padding-right: 20px;
+	// margin: 2    // width: 350px;
 }
 .card_attedee{
 	background: url(img_attendee);
@@ -58,7 +84,7 @@ background:  url(parallax1.jpg)
 	// box-sizing: border-box;
 	// display: inline-block;
 	background: url(img_attendee);
-		width: 100%; height: 200px;
+		width: 100%; height: 250px;
 		display: flex;
 	    border-style: solid;
 		border-radius: 15px;

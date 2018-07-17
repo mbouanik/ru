@@ -4,11 +4,19 @@
 	<%= link_to 'Update Sign_out', sign_out_path(id: @attendee.id), class: 'btn btn-outline-primary', remote: true %>
 </p> -->
 
+<div class="">
+	<table class="time-stamps highlight white centered" id="sign_in<%=@attendee.id%>">
+		<!-- <thead> -->
+			<!-- <tr> -->
 
-<table class="highlight white centered">
-	<tbody>
-		<td><%= @attendee.sign_in.strftime "%B %e at %l:%M %p" unless @attendee.sign_in.nil? %></td>
-		<td><span id='sign_out<%=@attendee.id %>'> <%= @attendee.sign_out.strftime "%B %e at %l:%M %p" unless @attendee.sign_out.nil?%></td>
-		<td><%= link_to 'Update Sign_out', sign_out_path(id: @attendee.id), class: 'waves-effect waves-light btn blue darken-2', remote: true %></td>
-	</tbody>
-</table>
+
+			<!-- </tr> -->
+
+		<!-- </thead> -->
+		<tbody>
+			<td><%= @attendee.sign_in.strftime "%B %e at %l:%M %p" unless @attendee.sign_in.nil? %></td>
+			<td><span id='sign_out<%=@attendee.id%>'> <%= @attendee.sign_out.strftime "%B %e at %l:%M %p" unless @attendee.sign_out.nil?%></td>
+			<td><%= link_to 'Update Sign_out', sign_out_path(id: @attendee.id), class: 'waves-effect waves-light btn blue darken-2', remote: true %></td>
+		</tbody>
+	</table>
+</div>

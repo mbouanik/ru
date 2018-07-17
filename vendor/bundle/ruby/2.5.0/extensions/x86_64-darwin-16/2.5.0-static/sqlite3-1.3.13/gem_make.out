@@ -1,108 +1,44 @@
 current directory: /Users/mbouanik/ru/vendor/bundle/ruby/2.5.0/gems/sqlite3-1.3.13/ext/sqlite3
-/goinfre/versions/2.5.1/bin/ruby -r ./siteconf20180716-22801-mwzbz8.rb extconf.rb
-Error: /Users/mbouanik/.brew/Library/Taps/homebrew/homebrew-core/Formula/sqlite.rb:94: syntax error, unexpected <<
-      s += <<~EOS
-             ^
-/Users/mbouanik/.brew/Library/Taps/homebrew/homebrew-core/Formula/sqlite.rb:95: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
-...ctions for applications calling the sqlite3 API functions:
-...                               ^
-/Users/mbouanik/.brew/Library/Taps/homebrew/homebrew-core/Formula/sqlite.rb:97: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
-          In your application, call sqlite3_en...
-                 ^
-/Users/mbouanik/.brew/Library/Taps/homebrew/homebrew-core/Formula/sqlite.rb:97: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
-...l sqlite3_enable_load_extension(db,1) to
-...                               ^
-/Users/mbouanik/.brew/Library/Taps/homebrew/homebrew-core/Formula/sqlite.rb:97: syntax error, unexpected tIDENTIFIER, expecting keyword_end
-/Users/mbouanik/.brew/Library/Taps/homebrew/homebrew-core/Formula/sqlite.rb:100: unknown regexp options - qlt
-/Users/mbouanik/.brew/Library/Taps/homebrew/homebrew-core/Formula/sqlite.rb:101: syntax error, unexpected tIDENTIFIER, expecting keyword_end
-          Select statements may now use these functions, as in
-                           ^
-/Users/mbouanik/.brew/Library/Taps/homebrew/homebrew-core/Formula/sqlite.rb:101: syntax error, unexpected keyword_in, expecting keyword_end
-/Users/mbouanik/.brew/Library/Taps/homebrew/homebrew-core/Formula/sqlite.rb:102: syntax error, unexpected tCONSTANT, expecting keyword_end
-... cos(radians(inclination)) FROM satsum WHERE satnum = 25544;
-...                               ^
-/Users/mbouanik/.brew/Library/Taps/homebrew/homebrew-core/Formula/sqlite.rb:104: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
-        Usage instructions for the sqlite3 program:
+/goinfre/versions/2.5.1/bin/ruby -r ./siteconf20180717-65878-1fmjxgd.rb extconf.rb
+checking for sqlite3.h... yes
+checking for pthread_create() in -lpthread... yes
+checking for sqlite3_libversion_number() in -lsqlite3... yes
+checking for rb_proc_arity()... yes
+checking for rb_integer_pack()... yes
+checking for sqlite3_initialize()... yes
+checking for sqlite3_backup_init()... yes
+checking for sqlite3_column_database_name()... no
+checking for sqlite3_enable_load_extension()... no
+checking for sqlite3_load_extension()... no
+checking for sqlite3_open_v2()... yes
+checking for sqlite3_prepare_v2()... yes
+checking for sqlite3_int64 in sqlite3.h... yes
+checking for sqlite3_uint64 in sqlite3.h... yes
+creating Makefile
+
+current directory: /Users/mbouanik/ru/vendor/bundle/ruby/2.5.0/gems/sqlite3-1.3.13/ext/sqlite3
+make "DESTDIR=" clean
+
+current directory: /Users/mbouanik/ru/vendor/bundle/ruby/2.5.0/gems/sqlite3-1.3.13/ext/sqlite3
+make "DESTDIR="
+compiling backup.c
+compiling database.c
+database.c:233:3: warning: 'sqlite3_trace' is deprecated [-Wdeprecated-declarations]
+  sqlite3_trace(ctx->db, NIL_P(block) ? NULL : tracefunc, (void *)self);
+  ^
+/usr/include/sqlite3.h:2850:12: note: 'sqlite3_trace' has been explicitly marked deprecated here
+SQLITE_API SQLITE_DEPRECATED void *sqlite3_trace(sqlite3*,
+           ^
+/usr/include/sqlite3.h:84:43: note: expanded from macro 'SQLITE_DEPRECATED'
+# define SQLITE_DEPRECATED __attribute__((deprecated))
                                           ^
-/Users/mbouanik/.brew/Library/Taps/homebrew/homebrew-core/Formula/sqlite.rb:106: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
-          If the program is built so that loa...
-                ^
-/Users/mbouanik/.brew/Library/Taps/homebrew/homebrew-core/Formula/sqlite.rb:107: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
-          the following will work:
-                       ^
-/Users/mbouanik/.brew/Library/Taps/homebrew/homebrew-core/Formula/sqlite.rb:108: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
-...  sqlite> SELECT load_extension('#{lib}/libsqlitefunctions.d...
-...                               ^
-/Users/mbouanik/.brew/Library/Taps/homebrew/homebrew-core/Formula/sqlite.rb:109: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
-           sqlite> select cos(radians(45));
-                             ^
-/Users/mbouanik/.brew/Library/Taps/homebrew/homebrew-core/Formula/sqlite.rb:117: syntax error, unexpected <<
-        s += <<~EOS
-               ^
-/Users/mbouanik/.brew/Library/Taps/homebrew/homebrew-core/Formula/sqlite.rb:123: syntax error, unexpected unary-, expecting keyword_do or '{' or '('
-            sed -i~ 's/\\\\040/ /g' #{user_history}
-                 ^
-/Users/mbouanik/.brew/Library/Taps/homebrew/homebrew-core/Formula/sqlite.rb:125: syntax error, unexpected tIDENTIFIER, expecting keyword_end
-...fore using the `sqlite` command-line tool again. Otherwise, ...
-...                               ^
-/Users/mbouanik/.brew/Library/Taps/homebrew/homebrew-core/Formula/sqlite.rb:125: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
-... the `sqlite` command-line tool again. Otherwise, your
-...                               ^
-/Users/mbouanik/.brew/Library/Taps/homebrew/homebrew-core/Formula/sqlite.rb:136: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
-      create table students (name text, age integer);
-                                                   ^
-/Users/mbouanik/.brew/Library/Taps/homebrew/homebrew-core/Formula/sqlite.rb:137: syntax error, unexpected ',', expecting ')'
-      insert into students (name, age) values ('Bob', 14);
-                                 ^
-/Users/mbouanik/.brew/Library/Taps/homebrew/homebrew-core/Formula/sqlite.rb:138: syntax error, unexpected ',', expecting ')'
-      insert into students (name, age) values ('Sue', 12);
-                                 ^
-/Users/mbouanik/.brew/Library/Taps/homebrew/homebrew-core/Formula/sqlite.rb:139: syntax error, unexpected ',', expecting ')'
-      insert into students (name, age) values ('Tim', 13);
-                                 ^
-checking for sqlite3.h... *** extconf.rb failed ***
-Could not create Makefile due to some reason, probably lack of necessary
-libraries and/or headers.  Check the mkmf.log file for more details.  You may
-need configuration options.
+1 warning generated.
+compiling exception.c
+compiling sqlite3.c
+compiling statement.c
+linking shared-object sqlite3/sqlite3_native.bundle
+ld: warning: directory not found for option '-L/Users/mbouanik/.brew/Cellar/sqlite/3.24.0/lib'
 
-Provided configuration options:
-	--with-opt-dir
-	--without-opt-dir
-	--with-opt-include
-	--without-opt-include=${opt-dir}/include
-	--with-opt-lib
-	--without-opt-lib=${opt-dir}/lib
-	--with-make-prog
-	--without-make-prog
-	--srcdir=.
-	--curdir
-	--ruby=/goinfre/versions/2.5.1/bin/$(RUBY_BASE_NAME)
-	--with-sqlite3-config
-	--without-sqlite3-config
-	--with-pkg-config
-	--without-pkg-config
-	--with-sqlite3-dir
-	--without-sqlite3-dir
-	--with-sqlite3-include
-	--without-sqlite3-include=${sqlite3-dir}/include
-	--with-sqlite3-lib
-	--without-sqlite3-lib=${sqlite3-dir}/lib
-/goinfre/versions/2.5.1/lib/ruby/2.5.0/mkmf.rb:456:in `try_do': The compiler failed to generate an executable file. (RuntimeError)
-You have to install development tools first.
-	from /goinfre/versions/2.5.1/lib/ruby/2.5.0/mkmf.rb:590:in `try_cpp'
-	from /goinfre/versions/2.5.1/lib/ruby/2.5.0/mkmf.rb:1150:in `block in find_header'
-	from /goinfre/versions/2.5.1/lib/ruby/2.5.0/mkmf.rb:947:in `block in checking_for'
-	from /goinfre/versions/2.5.1/lib/ruby/2.5.0/mkmf.rb:350:in `block (2 levels) in postpone'
-	from /goinfre/versions/2.5.1/lib/ruby/2.5.0/mkmf.rb:320:in `open'
-	from /goinfre/versions/2.5.1/lib/ruby/2.5.0/mkmf.rb:350:in `block in postpone'
-	from /goinfre/versions/2.5.1/lib/ruby/2.5.0/mkmf.rb:320:in `open'
-	from /goinfre/versions/2.5.1/lib/ruby/2.5.0/mkmf.rb:346:in `postpone'
-	from /goinfre/versions/2.5.1/lib/ruby/2.5.0/mkmf.rb:946:in `checking_for'
-	from /goinfre/versions/2.5.1/lib/ruby/2.5.0/mkmf.rb:1149:in `find_header'
-	from extconf.rb:50:in `<main>'
-
-To see why this extension failed to compile, please check the mkmf.log which can be found here:
-
-  /Users/mbouanik/ru/vendor/bundle/ruby/2.5.0/extensions/x86_64-darwin-16/2.5.0-static/sqlite3-1.3.13/mkmf.log
-
-extconf failed, exit code 1
+current directory: /Users/mbouanik/ru/vendor/bundle/ruby/2.5.0/gems/sqlite3-1.3.13/ext/sqlite3
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 sqlite3_native.bundle ./.gem.20180717-65878-dx7uru/sqlite3

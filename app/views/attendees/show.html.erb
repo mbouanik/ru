@@ -1,7 +1,6 @@
 <!-- <p class="notice"><%= notice %></p> -->
-
 <div class="container_info  white-text">
-	<%= image_tag  "https://cdn.intra.42.fr/users/medium_#{ @attendee.login }.jpg", size: '512', class: 'responsive-img', style: 'border-radius: 100%'%>
+	<%= image_tag  "https://cdn.intra.42.fr/users/medium_#{ @attendee.login }.jpg", size: '512', class: 'responsive-img circle'%>
 	<div class="container center left">
 		<h5><strong><%= @user_quest["first_name"] %> <%= @user_quest["last_name"]%> </strong> </h5>
 
@@ -22,11 +21,11 @@
 	</div>
 </div>
 
-<p >
+<br>
 
-	<div class="card-image z-depth-2 white"  id="sign_in" >
-		<div class="card-content">
-		<table class="time-stamps highlight white centered">
+	<div class="card z-depth-2 white time-stamps " >
+		<div class="card-content" id="sign_in">
+		<table class="highlight white centered">
 			<thead>
 				<tr>
 					<th>Sign in</th>
@@ -38,22 +37,28 @@
 		<% @attendee.stamps.each do |t| %>
 
 		<tbody>
-			<div >
+			<!-- <div > -->
 				<td> <%= t.sign_in.strftime "%B %e at %l:%M %p" unless t.sign_in.nil? %> </td>
 				<td><span id='sign_out<%=t.id %>'> <%= t.sign_out.strftime "%B %e at %l:%M %p" unless t.sign_out.nil? %></td>
 				<td><%= link_to 'Update Sign_out', sign_out_path(id: t.id), class: 'waves-effect waves-light btn blue darken-2', remote: true %></td>
 		</tbody>
-		</div>
+		<!-- </div> -->
 		<% end %>
 	</table>
 	</div>
+	<div class="card-action">
+			<div  id="link" >
+		<%= link_to 'Add TimeStamp', sign_in_path(attendee_id: @attendee.id), class: 'waves-effect waves-light btn blue darken-2', remote: true %>
+
+			<%= link_to 'Back', attendees_path, class: 'waves-effect waves-light btn blue darken-2', onClick: "history.go(0)" %>
+		</div>
+	</div>
+
 </div>
 
-</p>
+<br>
 
-<div id="link" onClick="history.go(0)">
-	<%= link_to 'Add TimeStamp', sign_in_path(attendee_id: @attendee.id), class: 'waves-effect waves-light btn blue darken-2', remote: true %>
-	<%= link_to 'Back', attendees_path, class: 'waves-effect waves-light btn blue darken-2' %>
 
-</div>
+
+
 <br>
