@@ -1,0 +1,1145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0057)https://apidock.com/rails/ActiveRecord/QueryMethods/order -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" class="gr__apidock_com"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+<link rel="icon" href="https://apidock.com/images/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="https://apidock.com/images/favicon.ico" type="image/x-icon">
+
+  <link href="http://apidock.com/rails/notes.rss" rel="alternate" title="All recent notes in Ruby on Rails" type="application/rss+xml">
+  <link href="http://apidock.com/rails/notes/good.rss" rel="alternate" title="Recent good notes in Ruby on Rails" type="application/rss+xml">
+
+<link href="./order (ActiveRecord__QueryMethods) - APIdock_files/main_site.css" media="screen" rel="stylesheet" type="text/css">
+<link href="./order (ActiveRecord__QueryMethods) - APIdock_files/application.css" media="screen" rel="stylesheet" type="text/css">
+<link href="./order (ActiveRecord__QueryMethods) - APIdock_files/syntax.css" media="screen" rel="stylesheet" type="text/css">
+<script src="./order (ActiveRecord__QueryMethods) - APIdock_files/prototype.js" type="text/javascript"></script>
+<script src="./order (ActiveRecord__QueryMethods) - APIdock_files/effects.js" type="text/javascript"></script>
+<script src="./order (ActiveRecord__QueryMethods) - APIdock_files/controls.js" type="text/javascript"></script>
+<script src="./order (ActiveRecord__QueryMethods) - APIdock_files/dragdrop.js" type="text/javascript"></script>
+
+<script src="./order (ActiveRecord__QueryMethods) - APIdock_files/rails.js" type="text/javascript"></script>
+
+<script src="./order (ActiveRecord__QueryMethods) - APIdock_files/search.js" type="text/javascript"></script>
+<title>order (ActiveRecord::QueryMethods) - APIdock</title>
+    <link href="./order (ActiveRecord__QueryMethods) - APIdock_files/documentation.css" media="screen" rel="stylesheet" type="text/css">
+  <script type="text/javascript" async="" src="./order (ActiveRecord__QueryMethods) - APIdock_files/ga.js"></script></head>
+  <body data-gr-c-s-loaded="true">
+    <div id="body2">
+      <div id="header">
+  <a href="https://apidock.com/" id="apidock_logo"><img alt="Apidock_header" src="./order (ActiveRecord__QueryMethods) - APIdock_files/apidock_header.png"></a>
+  <div id="apidock_nav">
+    <ul>
+  <li class="first_tab"><a href="https://apidock.com/">Welcome</a></li>
+  <li><a href="https://apidock.com/register">Register</a></li>
+  <li><a href="https://apidock.com/projects">Projects</a></li>
+  <li><a href="https://apidock.com/faq">Help</a></li>
+  <li><a href="https://apidock.com/about">About</a></li>
+  <li class="external"><a href="http://blog.nodeta.fi/category/apidock/">Blog</a></li>
+</ul>
+
+  </div>
+  
+  <div id="header_right" class="header_login">
+    <form action="https://apidock.com/login" method="post">
+      <a href="https://apidock.com/rails/ActiveRecord/QueryMethods/order#" id="openid_header_link" onclick="Element.toggle(&quot;default_header_login&quot;);
+Element.toggle(&quot;openid_header_login&quot;);
+var openid_link = $(&#39;openid_header_link&#39;);
+if (openid_link.innerHTML == &#39;Use login / password&#39;) {
+openid_link.update(&#39;Use OpenID&#39;);
+$(&quot;login&quot;).activate();
+} else {
+openid_link.update(&#39;Use login / password&#39;);
+$(&quot;openid_url&quot;).activate();
+}; return false;">Use OpenID</a>
+      <span id="default_header_login">
+        <label for="login">Login</label>
+        <input id="login" name="login[login]" size="30" type="text">
+        <label for="password">Password</label>
+        <input id="password" name="login[password]" size="30" type="password">
+      </span>
+      <span id="openid_header_login" style="display:none;">
+        <label for="openid_url">OpenID URL</label>
+        <input id="openid_url" name="openid_url" type="text">
+      </span>
+      <label for="login_remember_me">Remember me</label><input name="login[remember_me]" type="hidden" value="0"><input id="login_remember_me" name="login[remember_me]" type="checkbox" value="1">
+      <input src="./order (ActiveRecord__QueryMethods) - APIdock_files/submit_login.png" type="image"> 
+    </form>
+  </div>
+
+</div>
+<div id="navigation" style="background-color:#9F3B25;">
+  <ul>
+    <li class="first_tab"><a href="https://apidock.com/rspec" onclick="
+          var value = $(&#39;nav_search_field&#39;).value;
+          if (fieldFocus == true &amp;&amp; value.length != 0) {
+            top.location = &#39;/rspec?q=&#39; + value;
+          } else {
+            top.location = &#39;/rspec&#39;;
+          }; return false;"><img alt="Rspec_icon_16" src="./order (ActiveRecord__QueryMethods) - APIdock_files/rspec_icon_16.png">RSpec</a></li>
+<li id="current"><a href="https://apidock.com/rails" onclick="
+          var value = $(&#39;nav_search_field&#39;).value;
+          if (fieldFocus == true &amp;&amp; value.length != 0) {
+            top.location = &#39;/rails?q=&#39; + value;
+          } else {
+            top.location = &#39;/rails&#39;;
+          }; return false;"><img alt="Rails_icon_16" src="./order (ActiveRecord__QueryMethods) - APIdock_files/rails_icon_16.png">Ruby on Rails</a></li>
+<li><a href="https://apidock.com/ruby" onclick="
+          var value = $(&#39;nav_search_field&#39;).value;
+          if (fieldFocus == true &amp;&amp; value.length != 0) {
+            top.location = &#39;/ruby?q=&#39; + value;
+          } else {
+            top.location = &#39;/ruby&#39;;
+          }; return false;"><img alt="Ruby_icon_16" src="./order (ActiveRecord__QueryMethods) - APIdock_files/ruby_icon_16.png">Ruby</a></li>
+
+  </ul>
+
+  <div id="nav_search">
+    <form action="https://apidock.com/rails/ActiveRecord/QueryMethods/order" method="post" onsubmit="return false;">
+      <input autocomplete="off" id="nav_search_field" name="nav_search_field" type="text">
+      <a class="img_link" href="https://apidock.com/rails/ActiveRecord/QueryMethods/order#" id="submit_nav_search" onclick="window.location.href = &#39;/rails/search?query=&#39; + escape($F(&#39;nav_search_field&#39;));; return false;" title="null"></a>
+    </form>
+  </div>
+</div>
+<ul id="search_results" style="display: none; top: 104px;">
+  <li></li>
+</ul>
+
+      <div id="content_wrapper">
+        <!-- @flowdock -->
+        <a id="flowdock-tab" title="The group chat tool for software developers from the guys behind APIdock" href="http://flowdock.com/tour/developers?source=apidock">Flowdock</a>
+        <!-- @flowdock -->
+        <div id="content" class="clearfix">
+          
+
+          <div id="docs_container">
+             
+<div id="docs_header">
+  <div id="title" class="clearfix">
+    <div id="title_prefix_method" class="title_prefix">
+      <span>method</span>
+    </div>
+    <div id="title_name">
+      <h1>order</h1>
+    </div>
+    <img alt="Importance_5" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_5.png" title="Very extensive documentation">
+  </div>
+  <div id="docs_info">
+
+      <strong>Ruby on Rails latest stable</strong> (v4.2.7)
+ - 
+    <a href="https://apidock.com/rails/ActiveRecord/QueryMethods/order#" onclick="var notes = $(&#39;notes&#39;);
+scroll(0, notes.cumulativeOffset().top);; return false;">8 notes</a> - 
+    Class: <span><a href="https://apidock.com/rails/ActiveRecord">ActiveRecord</a></span><span>::<a href="https://apidock.com/rails/ActiveRecord/QueryMethods">QueryMethods</a></span>
+
+    <div id="timeline" class="clearfix">
+  <ul>
+    
+            <li class="inactive">
+        <span class="label">1.0.0</span>
+            </li>   
+    
+            <li class="inactive">
+        <span class="label">1.1.1</span>
+            </li>   
+    
+            <li class="inactive">
+        <span class="label">1.1.6</span>
+            </li>   
+    
+            <li class="inactive">
+        <span class="label">1.2.0</span>
+            </li>   
+    
+            <li class="inactive">
+        <span class="label">1.2.6</span>
+            </li>   
+    
+            <li class="inactive">
+        <span class="label">2.0.0</span>
+            </li>   
+    
+            <li class="inactive">
+        <span class="label">2.0.3</span>
+            </li>   
+    
+            <li class="inactive">
+        <span class="label">2.1.0</span>
+            </li>   
+    
+            <li class="inactive">
+        <span class="label">2.2.1</span>
+            </li>   
+    
+            <li class="inactive">
+        <span class="label">2.3.2</span>
+            </li>   
+    
+            <li class="inactive">
+        <span class="label">2.3.8</span>
+            </li>   
+    
+                      <li>
+        <a href="https://apidock.com/rails/v3.0.0/ActiveRecord/QueryMethods/order" title="3.0.0"><span class="label">3.0.0</span>
+          <span class="diff" style="height:0%;">(0)</span></a>
+        
+            </li>   
+    
+                      <li>
+        <a href="https://apidock.com/rails/v3.0.5/ActiveRecord/QueryMethods/order" title="3.0.5"><span class="label">3.0.5</span>
+          <span class="diff" style="height:0%;">(0)</span></a>
+        
+            </li>   
+    
+                      <li>
+        <a href="https://apidock.com/rails/v3.0.9/ActiveRecord/QueryMethods/order" title="3.0.9"><span class="label">3.0.9</span>
+          <span class="diff" style="height:0%;">(0)</span></a>
+        
+            </li>   
+    
+                      <li>
+        <a href="https://apidock.com/rails/v3.1.0/ActiveRecord/QueryMethods/order" title="3.1.0"><span class="label">3.1.0</span>
+          <span class="diff" style="height:0%;">(0)</span></a>
+        
+            </li>   
+    
+                      <li>
+        <a href="https://apidock.com/rails/v3.2.1/ActiveRecord/QueryMethods/order" title="3.2.1"><span class="label">3.2.1</span>
+          <span class="diff" style="height:0%;">(0)</span></a>
+        
+            </li>   
+    
+                      <li>
+        <a href="https://apidock.com/rails/v3.2.3/ActiveRecord/QueryMethods/order" title="3.2.3"><span class="label">3.2.3</span>
+          <span class="diff" style="height:0%;">(0)</span></a>
+        
+            </li>   
+    
+                      <li>
+        <a href="https://apidock.com/rails/v3.2.8/ActiveRecord/QueryMethods/order" title="3.2.8"><span class="label">3.2.8</span>
+          <span class="diff" style="height:0%;">(0)</span></a>
+        
+            </li>   
+    
+                      <li>
+        <a href="https://apidock.com/rails/v3.2.13/ActiveRecord/QueryMethods/order" title="3.2.13"><span class="label">3.2.13</span>
+          <span class="diff" style="height:0%;">(0)</span></a>
+        
+            </li>   
+    
+                      <li class="positive">
+        <a href="https://apidock.com/rails/v4.0.2/ActiveRecord/QueryMethods/order" title="4.0.2"><span class="label">4.0.2</span>
+          <span class="diff" style="height:38%;">(38)</span></a>
+        
+            </li>   
+    
+                      <li>
+        <a href="https://apidock.com/rails/v4.1.8/ActiveRecord/QueryMethods/order" title="4.1.8"><span class="label">4.1.8</span>
+          <span class="diff" style="height:0%;">(0)</span></a>
+        
+            </li>   
+    
+                      <li>
+        <a href="https://apidock.com/rails/v4.2.1/ActiveRecord/QueryMethods/order" title="4.2.1"><span class="label">4.2.1</span>
+          <span class="diff" style="height:0%;">(0)</span></a>
+        
+            </li>   
+    
+                      <li class="current ">
+        <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/order" title="4.2.7"><span class="label">4.2.7</span>
+          <span class="diff" style="height:0%;">(0)</span></a>
+        
+            </li>   
+    
+    <li id="help">
+      <a href="https://apidock.com/faq#What-is-the-bar-graph-on-the-top-of-documentation-pages" class="info">What's this?</a>
+    </li>
+  </ul>
+</div>
+
+
+  </div>
+</div>
+<div id="related">
+  <div id="related_title"><h3>Related methods</h3></div>
+  <ul>
+ 
+    
+
+  <li class="related_header">Instance methods (74)</li>
+  
+<li>
+  <img alt="Importance_0_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_0_sm.png" title="No documentation">  <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/add_relations_to_bind_values">add_relations_to_bind_values</a>  		
+    <img alt="Icon_private_sm" src="./order (ActiveRecord__QueryMethods) - APIdock_files/icon_private_sm.png" title="private">
+    
+</li>
+
+<li class="deprecated">
+  <img alt="Importance_0_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_0_sm.png" title="No documentation">  <a href="https://apidock.com/rails/v3.2.13/ActiveRecord/QueryMethods/apply_modules">apply_modules</a>  		
+    <img alt="Icon_private_sm" src="./order (ActiveRecord__QueryMethods) - APIdock_files/icon_private_sm.png" title="private">
+    
+    <span class="info">(&lt;= v3.2.13)</span>
+  
+</li>
+
+<li>
+  <img alt="Importance_1_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_1_sm.png" title="Some documentation">  <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/arel">arel</a>  		
+    
+    
+</li>
+
+<li>
+  <img alt="Importance_0_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_0_sm.png" title="No documentation">  <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/arel_columns">arel_columns</a>  		
+    <img alt="Icon_private_sm" src="./order (ActiveRecord__QueryMethods) - APIdock_files/icon_private_sm.png" title="private">
+    
+</li>
+
+<li>
+  <img alt="Importance_0_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_0_sm.png" title="No documentation">  <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/array_of_strings%3F">array_of_strings?</a>  		
+    <img alt="Icon_private_sm" src="./order (ActiveRecord__QueryMethods) - APIdock_files/icon_private_sm.png" title="private">
+    
+</li>
+
+<li>
+  <img alt="Importance_0_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_0_sm.png" title="No documentation">  <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/association_for_table">association_for_table</a>  		
+    <img alt="Icon_private_sm" src="./order (ActiveRecord__QueryMethods) - APIdock_files/icon_private_sm.png" title="private">
+    
+</li>
+
+<li>
+  <img alt="Importance_0_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_0_sm.png" title="No documentation">  <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/bind">bind</a>  		
+    
+    
+</li>
+
+<li>
+  <img alt="Importance_0_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_0_sm.png" title="No documentation">  <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/bind%21">bind!</a>  		
+    
+    
+</li>
+
+<li>
+  <img alt="Importance_0_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_0_sm.png" title="No documentation">  <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/build_arel">build_arel</a>  		
+    <img alt="Icon_private_sm" src="./order (ActiveRecord__QueryMethods) - APIdock_files/icon_private_sm.png" title="private">
+    
+</li>
+
+<li>
+  <img alt="Importance_0_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_0_sm.png" title="No documentation">  <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/build_from">build_from</a>  		
+    <img alt="Icon_private_sm" src="./order (ActiveRecord__QueryMethods) - APIdock_files/icon_private_sm.png" title="private">
+    
+</li>
+
+<li>
+  <img alt="Importance_0_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_0_sm.png" title="No documentation">  <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/build_joins">build_joins</a>  		
+    <img alt="Icon_private_sm" src="./order (ActiveRecord__QueryMethods) - APIdock_files/icon_private_sm.png" title="private">
+    
+</li>
+
+<li>
+  <img alt="Importance_0_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_0_sm.png" title="No documentation">  <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/build_order">build_order</a>  		
+    <img alt="Icon_private_sm" src="./order (ActiveRecord__QueryMethods) - APIdock_files/icon_private_sm.png" title="private">
+    
+</li>
+
+<li>
+  <img alt="Importance_0_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_0_sm.png" title="No documentation">  <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/build_select">build_select</a>  		
+    <img alt="Icon_private_sm" src="./order (ActiveRecord__QueryMethods) - APIdock_files/icon_private_sm.png" title="private">
+    
+</li>
+
+<li>
+  <img alt="Importance_0_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_0_sm.png" title="No documentation">  <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/build_where">build_where</a>  		
+    <img alt="Icon_private_sm" src="./order (ActiveRecord__QueryMethods) - APIdock_files/icon_private_sm.png" title="private">
+    
+</li>
+
+<li>
+  <img alt="Importance_0_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_0_sm.png" title="No documentation">  <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/check_cached_relation">check_cached_relation</a>  		
+    
+    
+</li>
+
+<li>
+  <img alt="Importance_1_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_1_sm.png" title="Some documentation">  <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/check_if_method_has_arguments%21">check_if_method_has_arguments!</a>  		
+    <img alt="Icon_private_sm" src="./order (ActiveRecord__QueryMethods) - APIdock_files/icon_private_sm.png" title="private">
+    
+</li>
+
+<li>
+  <img alt="Importance_0_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_0_sm.png" title="No documentation">  <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/collapse_wheres">collapse_wheres</a>  		
+    <img alt="Icon_private_sm" src="./order (ActiveRecord__QueryMethods) - APIdock_files/icon_private_sm.png" title="private">
+    
+</li>
+
+<li>
+  <img alt="Importance_0_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_0_sm.png" title="No documentation">  <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/create_binds">create_binds</a>  		
+    <img alt="Icon_private_sm" src="./order (ActiveRecord__QueryMethods) - APIdock_files/icon_private_sm.png" title="private">
+    
+</li>
+
+<li>
+  <img alt="Importance_1_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_1_sm.png" title="Some documentation">  <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/create_with">create_with</a>  		
+    
+    
+</li>
+
+<li>
+  <img alt="Importance_0_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_0_sm.png" title="No documentation">  <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/create_with%21">create_with!</a>  		
+    
+    
+</li>
+
+<li>
+  <img alt="Importance_0_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_0_sm.png" title="No documentation">  <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/create_with_value">create_with_value</a>  		
+    
+    
+</li>
+
+<li>
+  <img alt="Importance_0_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_0_sm.png" title="No documentation">  <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/custom_join_ast">custom_join_ast</a>  		
+    <img alt="Icon_private_sm" src="./order (ActiveRecord__QueryMethods) - APIdock_files/icon_private_sm.png" title="private">
+    
+</li>
+
+<li class="deprecated">
+  <img alt="Importance_0_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_0_sm.png" title="No documentation">  <a href="https://apidock.com/rails/v3.0.9/ActiveRecord/QueryMethods/custom_join_sql">custom_join_sql</a>  		
+    
+    
+    <span class="info">(&lt;= v3.0.9)</span>
+  
+</li>
+
+<li>
+  <img alt="Importance_1_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_1_sm.png" title="Some documentation">  <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/distinct">distinct</a>  		
+    
+    
+</li>
+
+<li>
+  <img alt="Importance_1_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_1_sm.png" title="Some documentation">  <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/distinct%21">distinct!</a>  		
+    
+    
+</li>
+
+<li>
+  <img alt="Importance_1_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_1_sm.png" title="Some documentation">  <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/eager_load">eager_load</a>  		
+    
+    
+</li>
+
+<li>
+  <img alt="Importance_0_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_0_sm.png" title="No documentation">  <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/eager_load%21">eager_load!</a>  		
+    
+    
+</li>
+
+<li>
+  <img alt="Importance_2_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_2_sm.png" title="Moderate documentation">  <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/extending">extending</a>  		
+    
+    
+</li>
+
+<li>
+  <img alt="Importance_0_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_0_sm.png" title="No documentation">  <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/extending%21">extending!</a>  		
+    
+    
+</li>
+
+<li>
+  <img alt="Importance_2_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_2_sm.png" title="Moderate documentation">  <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/from">from</a>  		
+    
+    
+</li>
+
+<li>
+  <img alt="Importance_0_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_0_sm.png" title="No documentation">  <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/from%21">from!</a>  		
+    
+    
+</li>
+
+<li>
+  <img alt="Importance_2_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_2_sm.png" title="Moderate documentation">  <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/group">group</a>  		
+    
+    
+</li>
+
+<li>
+  <img alt="Importance_0_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_0_sm.png" title="No documentation">  <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/group%21">group!</a>  		
+    
+    
+</li>
+
+<li>
+  <img alt="Importance_1_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_1_sm.png" title="Some documentation">  <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/having">having</a>  		
+    
+    
+</li>
+
+<li>
+  <img alt="Importance_0_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_0_sm.png" title="No documentation">  <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/having%21">having!</a>  		
+    
+    
+</li>
+
+<li>
+  <img alt="Importance_3_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_3_sm.png" title="Wide documentation">  <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/includes">includes</a>  		
+    
+    
+</li>
+
+<li>
+  <img alt="Importance_0_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_0_sm.png" title="No documentation">  <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/includes%21">includes!</a>  		
+    
+    
+</li>
+
+<li>
+  <img alt="Importance_2_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_2_sm.png" title="Moderate documentation">  <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/joins">joins</a>  		
+    
+    
+</li>
+
+<li>
+  <img alt="Importance_0_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_0_sm.png" title="No documentation">  <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/joins%21">joins!</a>  		
+    
+    
+</li>
+
+<li>
+  <img alt="Importance_1_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_1_sm.png" title="Some documentation">  <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/limit">limit</a>  		
+    
+    
+</li>
+
+<li>
+  <img alt="Importance_0_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_0_sm.png" title="No documentation">  <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/limit%21">limit!</a>  		
+    
+    
+</li>
+
+<li>
+  <img alt="Importance_1_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_1_sm.png" title="Some documentation">  <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/lock">lock</a>  		
+    
+    
+</li>
+
+<li>
+  <img alt="Importance_0_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_0_sm.png" title="No documentation">  <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/lock%21">lock!</a>  		
+    
+    
+</li>
+
+<li>
+  <img alt="Importance_2_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_2_sm.png" title="Moderate documentation">  <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/none">none</a>  		
+    
+    
+</li>
+
+<li>
+  <img alt="Importance_0_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_0_sm.png" title="No documentation">  <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/none%21">none!</a>  		
+    
+    
+</li>
+
+<li>
+  <img alt="Importance_1_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_1_sm.png" title="Some documentation">  <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/offset">offset</a>  		
+    
+    
+</li>
+
+<li>
+  <img alt="Importance_0_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_0_sm.png" title="No documentation">  <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/offset%21">offset!</a>  		
+    
+    
+</li>
+
+<li>
+  <img alt="Importance_5_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_5_sm.png" title="Very extensive documentation">  <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/order">order</a>  		
+    
+    
+</li>
+
+<li>
+  <img alt="Importance_0_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_0_sm.png" title="No documentation">  <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/order%21">order!</a>  		
+    
+    
+</li>
+
+<li>
+  <img alt="Importance_1_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_1_sm.png" title="Some documentation">  <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/preload">preload</a>  		
+    
+    
+</li>
+
+<li>
+  <img alt="Importance_0_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_0_sm.png" title="No documentation">  <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/preload%21">preload!</a>  		
+    
+    
+</li>
+
+<li>
+  <img alt="Importance_0_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_0_sm.png" title="No documentation">  <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/preprocess_order_args">preprocess_order_args</a>  		
+    <img alt="Icon_private_sm" src="./order (ActiveRecord__QueryMethods) - APIdock_files/icon_private_sm.png" title="private">
+    
+</li>
+
+<li>
+  <img alt="Importance_1_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_1_sm.png" title="Some documentation">  <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/readonly">readonly</a>  		
+    
+    
+</li>
+
+<li>
+  <img alt="Importance_0_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_0_sm.png" title="No documentation">  <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/readonly%21">readonly!</a>  		
+    
+    
+</li>
+
+<li>
+  <img alt="Importance_1_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_1_sm.png" title="Some documentation">  <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/references">references</a>  		
+    
+    
+</li>
+
+<li>
+  <img alt="Importance_0_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_0_sm.png" title="No documentation">  <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/references%21">references!</a>  		
+    
+    
+</li>
+
+<li>
+  <img alt="Importance_1_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_1_sm.png" title="Some documentation">  <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/reorder">reorder</a>  		
+    
+    
+</li>
+
+<li>
+  <img alt="Importance_0_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_0_sm.png" title="No documentation">  <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/reorder%21">reorder!</a>  		
+    
+    
+</li>
+
+<li>
+  <img alt="Importance_1_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_1_sm.png" title="Some documentation">  <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/reverse_order">reverse_order</a>  		
+    
+    
+</li>
+
+<li>
+  <img alt="Importance_0_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_0_sm.png" title="No documentation">  <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/reverse_order%21">reverse_order!</a>  		
+    
+    
+</li>
+
+<li>
+  <img alt="Importance_0_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_0_sm.png" title="No documentation">  <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/reverse_sql_order">reverse_sql_order</a>  		
+    <img alt="Icon_private_sm" src="./order (ActiveRecord__QueryMethods) - APIdock_files/icon_private_sm.png" title="private">
+    
+</li>
+
+<li>
+  <img alt="Importance_2_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_2_sm.png" title="Moderate documentation">  <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/rewhere">rewhere</a>  		
+    
+    
+</li>
+
+<li>
+  <img alt="Importance_4_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_4_sm.png" title="Extensive documentation">  <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/select">select</a>  		
+    
+    
+</li>
+
+<li>
+  <img alt="Importance_0_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_0_sm.png" title="No documentation">  <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/_select%21">_select!</a>  		
+    
+    
+</li>
+
+<li class="deprecated">
+  <img alt="Importance_1_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_1_sm.png" title="Some documentation">  <a href="https://apidock.com/rails/v4.0.2/ActiveRecord/QueryMethods/select%21">select!</a>  		
+    
+    
+    <span class="info">(&lt;= v4.0.2)</span>
+  
+</li>
+
+<li>
+  <img alt="Importance_0_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_0_sm.png" title="No documentation">  <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/symbol_unscoping">symbol_unscoping</a>  		
+    <img alt="Icon_private_sm" src="./order (ActiveRecord__QueryMethods) - APIdock_files/icon_private_sm.png" title="private">
+    
+</li>
+
+<li>
+  <img alt="Importance_1_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_1_sm.png" title="Some documentation">  <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/uniq">uniq</a>  		
+    
+    
+</li>
+
+<li>
+  <img alt="Importance_1_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_1_sm.png" title="Some documentation">  <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/uniq%21">uniq!</a>  		
+    
+    
+</li>
+
+<li>
+  <img alt="Importance_2_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_2_sm.png" title="Moderate documentation">  <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/unscope">unscope</a>  		
+    
+    
+</li>
+
+<li>
+  <img alt="Importance_0_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_0_sm.png" title="No documentation">  <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/unscope%21">unscope!</a>  		
+    
+    
+</li>
+
+<li>
+  <img alt="Importance_0_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_0_sm.png" title="No documentation">  <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/validate_order_args">validate_order_args</a>  		
+    <img alt="Icon_private_sm" src="./order (ActiveRecord__QueryMethods) - APIdock_files/icon_private_sm.png" title="private">
+    
+</li>
+
+<li>
+  <img alt="Importance_5_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_5_sm.png" title="Very extensive documentation">  <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/where">where</a>  		
+    
+    
+</li>
+
+<li>
+  <img alt="Importance_0_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_0_sm.png" title="No documentation">  <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/where%21">where!</a>  		
+    
+    
+</li>
+
+<li>
+  <img alt="Importance_0_sm" class="importance" src="./order (ActiveRecord__QueryMethods) - APIdock_files/importance_0_sm.png" title="No documentation">  <a href="https://apidock.com/rails/v4.2.7/ActiveRecord/QueryMethods/where_unscoping">where_unscoping</a>  		
+    <img alt="Icon_private_sm" src="./order (ActiveRecord__QueryMethods) - APIdock_files/icon_private_sm.png" title="private">
+    
+</li>
+
+
+
+  </ul>
+  <p class="legend">
+    <img alt="Icon_private_sm" src="./order (ActiveRecord__QueryMethods) - APIdock_files/icon_private_sm.png"> = private<br>
+    <img alt="Icon_protected_sm" src="./order (ActiveRecord__QueryMethods) - APIdock_files/icon_protected_sm.png"> = protected
+  </p>
+</div>
+
+<div id="docs_body">
+  
+
+
+  <code><strong>order</strong>(*args)</code>
+  <em>public</em>
+  <div class="description">
+    
+    
+<p>Allows to specify an <a href="https://apidock.com/rails/ActiveRecord/QueryMethods/order">order</a> attribute:</p>
+
+<pre><span class="constant"><a href="https://apidock.com/rails/User">User</a></span><span class="punct">.</span><span class="ident"><a href="https://apidock.com/rails/ActiveRecord/QueryMethods/order">order</a></span><span class="punct">(</span><span class="symbol">:name</span><span class="punct">)</span>
+<span class="punct">=&gt;</span> <span class="constant">SELECT</span> <span class="punct">"</span><span class="string">users</span><span class="punct">".*</span> <span class="ident">FROM</span> <span class="punct">"</span><span class="string">users</span><span class="punct">"</span> <span class="ident">ORDER</span> <span class="ident">BY</span> <span class="punct">"</span><span class="string">users</span><span class="punct">"."</span><span class="string">name</span><span class="punct">"</span> <span class="ident">ASC</span>
+
+<span class="ident">User</span><span class="punct">.</span><span class="ident"><a href="https://apidock.com/rails/ActiveRecord/QueryMethods/order">order</a></span><span class="punct">(</span><span class="ident">email</span><span class="punct">:</span> <span class="symbol">:desc</span><span class="punct">)</span>
+<span class="punct">=&gt;</span> <span class="constant">SELECT</span> <span class="punct">"</span><span class="string">users</span><span class="punct">".*</span> <span class="ident">FROM</span> <span class="punct">"</span><span class="string">users</span><span class="punct">"</span> <span class="ident">ORDER</span> <span class="ident">BY</span> <span class="punct">"</span><span class="string">users</span><span class="punct">"."</span><span class="string">email</span><span class="punct">"</span> <span class="ident">DESC</span>
+
+<span class="ident">User</span><span class="punct">.</span><span class="ident"><a href="https://apidock.com/rails/ActiveRecord/QueryMethods/order">order</a></span><span class="punct">(</span><span class="symbol">:name</span><span class="punct">,</span> <span class="ident">email</span><span class="punct">:</span> <span class="symbol">:desc</span><span class="punct">)</span>
+<span class="punct">=&gt;</span> <span class="constant">SELECT</span> <span class="punct">"</span><span class="string">users</span><span class="punct">".*</span> <span class="ident">FROM</span> <span class="punct">"</span><span class="string">users</span><span class="punct">"</span> <span class="ident">ORDER</span> <span class="ident">BY</span> <span class="punct">"</span><span class="string">users</span><span class="punct">"."</span><span class="string">name</span><span class="punct">"</span> <span class="ident">ASC</span><span class="punct">,</span> <span class="punct">"</span><span class="string">users</span><span class="punct">"."</span><span class="string">email</span><span class="punct">"</span> <span class="ident">DESC</span>
+
+<span class="ident">User</span><span class="punct">.</span><span class="ident"><a href="https://apidock.com/rails/ActiveRecord/QueryMethods/order">order</a></span><span class="punct">('</span><span class="string">name</span><span class="punct">')</span>
+<span class="punct">=&gt;</span> <span class="constant">SELECT</span> <span class="punct">"</span><span class="string">users</span><span class="punct">".*</span> <span class="ident">FROM</span> <span class="punct">"</span><span class="string">users</span><span class="punct">"</span> <span class="ident">ORDER</span> <span class="ident">BY</span> <span class="ident">name</span>
+
+<span class="constant"><a href="https://apidock.com/rails/User">User</a></span><span class="punct">.</span><span class="ident"><a href="https://apidock.com/rails/ActiveRecord/QueryMethods/order">order</a></span><span class="punct">('</span><span class="string">name DESC</span><span class="punct">')</span>
+<span class="punct">=&gt;</span> <span class="constant">SELECT</span> <span class="punct">"</span><span class="string">users</span><span class="punct">".*</span> <span class="ident">FROM</span> <span class="punct">"</span><span class="string">users</span><span class="punct">"</span> <span class="ident">ORDER</span> <span class="ident">BY</span> <span class="ident">name</span> <span class="constant">DESC</span>
+
+<span class="constant"><a href="https://apidock.com/rails/User">User</a></span><span class="punct">.</span><span class="ident"><a href="https://apidock.com/rails/ActiveRecord/QueryMethods/order">order</a></span><span class="punct">('</span><span class="string">name DESC, email</span><span class="punct">')</span>
+<span class="punct">=&gt;</span> <span class="constant">SELECT</span> <span class="punct">"</span><span class="string">users</span><span class="punct">".*</span> <span class="ident">FROM</span> <span class="punct">"</span><span class="string">users</span><span class="punct">"</span> <span class="ident">ORDER</span> <span class="ident">BY</span> <span class="ident">name</span> <span class="constant">DESC</span><span class="punct">,</span> <span class="ident">email</span></pre>
+
+  </div>
+
+  <div class="sourcecode">
+    <a href="https://apidock.com/rails/ActiveRecord/QueryMethods/order#" id="source_link" onclick="Effect.toggle(&quot;dyn_source&quot;,&#39;blind&#39;,{duration:0.3});
+var source_link = $(&#39;source_link&#39;)
+source_link.update((source_link.innerHTML == &#39;Hide source&#39;)? &#39;Show source&#39;:&#39;Hide source&#39;);; return false;">Show source</a>    
+    <div id="dyn_source" style="display: none;">
+      <pre><span class="comment"># File activerecord/lib/active_record/relation/query_methods.rb, line 317</span>
+    <span class="keyword">def </span><span class="method">order</span><span class="punct">(*</span><span class="ident">args</span><span class="punct">)</span>
+      <span class="ident">check_if_method_has_arguments!</span><span class="punct">(</span><span class="symbol">:order</span><span class="punct">,</span> <span class="ident">args</span><span class="punct">)</span>
+      <span class="ident">spawn</span><span class="punct">.</span><span class="ident">order!</span><span class="punct">(*</span><span class="ident">args</span><span class="punct">)</span>
+    <span class="keyword">end</span></pre>
+    </div>
+  </div>
+
+</div>
+<div id="notes">
+  
+    <span class="info">
+      <a href="https://apidock.com/register">Register</a> or 
+      <a href="https://apidock.com/rails/ActiveRecord/QueryMethods/order#" onclick="scroll(0,0);
+new Effect.Pulsate(&quot;header_right&quot;,{duration:1, pulses:2});
+$(&quot;login&quot;).activate();; return false;">log in</a>
+      to add new notes.</span>
+  
+  
+  
+<div class="note" id="1271-Reorder">
+
+  <div class="note_info" id="note_info-1271">
+      <div class="info_left">
+    <span class="login"><a href="https://apidock.com/users/stevo"><img alt="Default_avatar_30" class="gravatar" src="./order (ActiveRecord__QueryMethods) - APIdock_files/16b8d429e0123bc50ba8ad27cdaa6ff4.jpeg" style="width: 30px; height: 30px;"> stevo</a> - </span> 
+    March 27, 2012 
+    
+  </div>
+
+  <div class="info_right">
+    <img alt="Loader" class="loader" id="note_loader1271" src="./order (ActiveRecord__QueryMethods) - APIdock_files/loader.gif" style="display: none;">
+    <span class="thank_text">6 thanks</span>
+     
+  </div>  
+
+  </div>
+  
+  <div class="note_content" id="note_content-1271">     
+  
+  
+  <h4><a href="https://apidock.com/rails/ActiveRecord/QueryMethods/order#1271-Reorder">Reorder</a></h4>
+
+<p>If you want to override previously set <a href="https://apidock.com/rails/ActiveRecord/QueryMethods/order">order</a> (even through
+default_scope), use <a href="https://apidock.com/rails/ActiveRecord/QueryMethods/reorder">reorder</a>() instead.</p>
+
+<p>E.g.</p>
+
+<pre><span class="constant"><a href="https://apidock.com/rails/User">User</a></span><span class="punct">.</span><span class="ident"><a href="https://apidock.com/rails/ActiveRecord/QueryMethods/order">order</a></span><span class="punct">('</span><span class="string">id ASC</span><span class="punct">').</span><span class="ident"><a href="https://apidock.com/rails/ActiveRecord/QueryMethods/reorder">reorder</a></span><span class="punct">('</span><span class="string">name DESC</span><span class="punct">')</span>
+</pre>
+
+<p>would ignore ordering by id completely</p>
+
+  
+  </div>
+</div>
+<div class="note" id="1539-Ordering-on-associations">
+
+  <div class="note_info" id="note_info-1539">
+      <div class="info_left">
+    <span class="login"><a href="https://apidock.com/users/rin"><img alt="Default_avatar_30" class="gravatar" src="./order (ActiveRecord__QueryMethods) - APIdock_files/fdc75e4cf5aa4bf67af27f5ebe19d261.jpeg" style="width: 30px; height: 30px;"> rin</a> - </span> 
+    October 28, 2014 
+    
+  </div>
+
+  <div class="info_right">
+    <img alt="Loader" class="loader" id="note_loader1539" src="./order (ActiveRecord__QueryMethods) - APIdock_files/loader.gif" style="display: none;">
+    <span class="thank_text">2 thanks</span>
+     
+  </div>  
+
+  </div>
+  
+  <div class="note_content" id="note_content-1539">     
+  
+  
+  <h4><a href="https://apidock.com/rails/ActiveRecord/QueryMethods/order#1539-Ordering-on-associations">Ordering on associations</a></h4>
+
+<p>For ordering on the attribute of an associated model you have to include
+it:</p>
+
+<pre><span class="constant">Package</span><span class="punct">.</span><span class="ident"><a href="https://apidock.com/rails/ActiveRecord/QueryMethods/includes">includes</a></span><span class="punct">(</span><span class="symbol">:package_size</span><span class="punct">).</span><span class="ident"><a href="https://apidock.com/rails/ActiveRecord/QueryMethods/order">order</a></span><span class="punct">("</span><span class="string">package_sizes.sort_order</span><span class="punct">")</span>
+</pre>
+
+  
+  </div>
+</div>
+<div class="note" id="1483-using-hash-as-order">
+
+  <div class="note_info" id="note_info-1483">
+      <div class="info_left">
+    <span class="login"><a href="https://apidock.com/users/vitaly"><img alt="Default_avatar_30" class="gravatar" src="./order (ActiveRecord__QueryMethods) - APIdock_files/996b64c2708771eb4f0c479e0d3a0646.jpeg" style="width: 30px; height: 30px;"> vitaly</a> - </span> 
+    January 12, 2014 
+    
+  </div>
+
+  <div class="info_right">
+    <img alt="Loader" class="loader" id="note_loader1483" src="./order (ActiveRecord__QueryMethods) - APIdock_files/loader.gif" style="display: none;">
+    <span class="thank_text">1 thank</span>
+     
+  </div>  
+
+  </div>
+  
+  <div class="note_content" id="note_content-1483">     
+  
+  
+  <h4><a href="https://apidock.com/rails/ActiveRecord/QueryMethods/order#1483-using-hash-as-order">using hash as order</a></h4>
+
+<p><a href="https://apidock.com/rails/ActiveRecord/QueryMethods/order">order</a> can be specified
+as a hash, e.g.:</p>
+
+<pre><span class="ident"><a href="https://apidock.com/rails/ActiveRecord/QueryMethods/order">order</a></span><span class="punct">(</span><span class="ident">id</span><span class="punct">:</span> <span class="symbol">:desc</span><span class="punct">)</span>
+</pre>
+
+<p>This will prevent “ambiguous column” errors when the <a href="https://apidock.com/rails/ActiveRecord/QueryMethods/order">order</a> is used with <a href="https://apidock.com/rails/ActiveRecord/QueryMethods/joins">joins</a> or <a href="https://apidock.com/rails/ActiveRecord/QueryMethods/includes">includes</a>.</p>
+
+  
+  </div>
+</div>
+<div class="note" id="1542-Order-with-hash-parameters-only-in-ActiveRecord-4-">
+
+  <div class="note_info" id="note_info-1542">
+      <div class="info_left">
+    <span class="login"><a href="https://apidock.com/users/spacelement"><img alt="Default_avatar_30" class="gravatar" src="./order (ActiveRecord__QueryMethods) - APIdock_files/fea701703763aa3128a79d25366f8bfa.jpeg" style="width: 30px; height: 30px;"> spacelement</a> - </span> 
+    October 30, 2014 - (v3.0.0 - v3.2.13)
+    
+  </div>
+
+  <div class="info_right">
+    <img alt="Loader" class="loader" id="note_loader1542" src="./order (ActiveRecord__QueryMethods) - APIdock_files/loader.gif" style="display: none;">
+    <span class="thank_text">1 thank</span>
+     
+  </div>  
+
+  </div>
+  
+  <div class="note_content" id="note_content-1542">     
+  
+  
+  <h4><a href="https://apidock.com/rails/ActiveRecord/QueryMethods/order#1542-Order-with-hash-parameters-only-in-ActiveRecord-4-">Order with hash parameters only in ActiveRecord &gt;= 4.0</a></h4>
+
+<p>If you use <a href="https://apidock.com/rails/ActiveRecord/QueryMethods/order">order</a> with
+hash parameters on AR3 versions it wont work.</p>
+
+  
+  </div>
+</div>
+<div class="note" id="1652-Ordering-on-associations-using-merge">
+
+  <div class="note_info" id="note_info-1652">
+      <div class="info_left">
+    <span class="login"><a href="https://apidock.com/users/svegaca"><img alt="Default_avatar_30" class="gravatar" src="./order (ActiveRecord__QueryMethods) - APIdock_files/794349372513ad17e1e61aa7fbff7f1c.jpeg" style="width: 30px; height: 30px;"> svegaca</a> - </span> 
+    March 11, 2016 - (&gt;= v4.0.2)
+    
+  </div>
+
+  <div class="info_right">
+    <img alt="Loader" class="loader" id="note_loader1652" src="./order (ActiveRecord__QueryMethods) - APIdock_files/loader.gif" style="display: none;">
+    <span class="thank_text">1 thank</span>
+     
+  </div>  
+
+  </div>
+  
+  <div class="note_content" id="note_content-1652">     
+  
+  
+  <h4><a href="https://apidock.com/rails/ActiveRecord/QueryMethods/order#1652-Ordering-on-associations-using-merge">Ordering on associations using merge</a></h4>
+
+<p>For ordering on the attribute of an associated model you can add <a href="https://apidock.com/rails/ActiveRecord/QueryMethods/joins">joins</a> to query and merge
+<a href="https://apidock.com/rails/ActiveRecord/QueryMethods/order">order</a> scope:</p>
+
+<pre><span class="constant">Product</span><span class="punct">.</span><span class="ident"><a href="https://apidock.com/rails/ActiveRecord/QueryMethods/joins">joins</a></span><span class="punct">(</span><span class="symbol">:category</span><span class="punct">).</span><span class="ident">merge</span><span class="punct">(</span><span class="constant">Category</span><span class="punct">.</span><span class="ident"><a href="https://apidock.com/rails/ActiveRecord/QueryMethods/order">order</a></span><span class="punct">(</span><span class="ident">priority</span><span class="punct">:</span> <span class="symbol">:desc</span><span class="punct">))</span>
+</pre>
+
+  
+  </div>
+</div>
+<div class="note" id="1576-reorder">
+
+  <div class="note_info" id="note_info-1576">
+      <div class="info_left">
+    <span class="login"><a href="https://apidock.com/users/bzsolt"><img alt="Default_avatar_30" class="gravatar" src="./order (ActiveRecord__QueryMethods) - APIdock_files/d250c8a4f37d4d8b284122047c81985c" style="width: 30px; height: 30px;"> bzsolt</a> - </span> 
+    February 12, 2015 
+    
+  </div>
+
+  <div class="info_right">
+    <img alt="Loader" class="loader" id="note_loader1576" src="./order (ActiveRecord__QueryMethods) - APIdock_files/loader.gif" style="display: none;">
+    <span class="thank_text">0 thanks</span>
+     
+  </div>  
+
+  </div>
+  
+  <div class="note_content" id="note_content-1576">     
+  
+  
+  <h4><a href="https://apidock.com/rails/ActiveRecord/QueryMethods/order#1576-reorder">reorder</a></h4>
+
+<p>adding to stevo’s comment that <a href="https://apidock.com/rails/ActiveRecord/QueryMethods/reorder">reorder</a> is also usefull
+when you have default scope in your model. eg:  default_scope -&gt; { <a href="https://apidock.com/rails/ActiveRecord/QueryMethods/order">order</a>(created_at: :desc)
+}</p>
+
+  
+  </div>
+</div>
+<div class="note" id="1661-Careful-with-arel-column">
+
+  <div class="note_info" id="note_info-1661">
+      <div class="info_left">
+    <span class="login"><a href="https://apidock.com/users/gamov"><img alt="Default_avatar_30" class="gravatar" src="./order (ActiveRecord__QueryMethods) - APIdock_files/4e6aa196471a575d9b92752773e51797.png" style="width: 30px; height: 30px;"> gamov</a> - </span> 
+    May 19, 2016 - (&gt;= v4.1.8)
+    
+  </div>
+
+  <div class="info_right">
+    <img alt="Loader" class="loader" id="note_loader1661" src="./order (ActiveRecord__QueryMethods) - APIdock_files/loader.gif" style="display: none;">
+    <span class="thank_text">0 thanks</span>
+     
+  </div>  
+
+  </div>
+  
+  <div class="note_content" id="note_content-1661">     
+  
+  
+  <h4><a href="https://apidock.com/rails/ActiveRecord/QueryMethods/order#1661-Careful-with-arel-column">Careful with arel column</a></h4>
+
+<p>I use what @equivalent suggests a lot but be careful, you MUST state the
+direction otherwise methods like take/last/first will fail silently!</p>
+
+<p>StatusChange.arel_table[‘created_at’]. <b>asc</b></p>
+
+<p>not:</p>
+
+<p>StatusChange.arel_table[‘created_at’]</p>
+
+  
+  </div>
+</div>
+<div class="note" id="1624-arel-table-order-by-">
+
+  <div class="note_info" id="note_info-1624">
+      <div class="info_left">
+    <span class="login"><a href="https://apidock.com/users/equivalent"><img alt="Default_avatar_30" class="gravatar" src="./order (ActiveRecord__QueryMethods) - APIdock_files/c2713a4959692f16d27d2553fb06cc4b.jpeg" style="width: 30px; height: 30px;"> equivalent</a> - </span> 
+    October  5, 2015 - (&gt;= v3.2.1)
+    
+  </div>
+
+  <div class="info_right">
+    <img alt="Loader" class="loader" id="note_loader1624" src="./order (ActiveRecord__QueryMethods) - APIdock_files/loader.gif" style="display: none;">
+    <span class="thank_text">0 thanks</span>
+     
+  </div>  
+
+  </div>
+  
+  <div class="note_content" id="note_content-1624">     
+  
+  
+  <h4><a href="https://apidock.com/rails/ActiveRecord/QueryMethods/order#1624-arel-table-order-by-">arel_table  order by </a></h4>
+
+<p>More objected way how to achieve ORDOR BY .… DESC is like this :</p>
+
+<pre><span class="keyword">class </span><span class="class"><a href="https://apidock.com/rails/User">User</a></span> <span class="punct">&lt;</span> <span class="constant"><a href="https://apidock.com/rails/ActiveRecord">ActiveRecord</a></span><span class="punct">::</span><span class="constant"><a href="https://apidock.com/rails/ActiveRecord/Base">Base</a></span>
+  <span class="ident">has_many</span> <span class="symbol">:status_changes</span>
+
+  <span class="keyword">def </span><span class="method">latest_status_change</span>
+    <span class="ident">status_changes</span>
+     <span class="punct">.</span><span class="ident"><a href="https://apidock.com/rails/ActiveRecord/QueryMethods/order">order</a></span><span class="punct">(</span><span class="constant">StatusChange</span><span class="punct">.</span><span class="ident">arel_table</span><span class="punct">['</span><span class="string">created_at</span><span class="punct">'].</span><span class="ident">desc</span><span class="punct">)</span>
+     <span class="punct">.</span><span class="ident">first</span>
+  <span class="keyword">end</span>
+<span class="keyword">end</span>
+
+<span class="keyword">class </span><span class="class">StatusChange</span> <span class="punct">&lt;</span> <span class="constant">ActiverRecord</span><span class="punct">::</span><span class="constant"><a href="https://apidock.com/rails/ActiveRecord/Base">Base</a></span>
+  <span class="ident">belongs_to</span> <span class="symbol">:user</span>
+<span class="keyword">end</span>
+</pre>
+
+<p>resulting in:</p>
+
+<pre><span class="constant">SELECT</span> <span class="punct">"</span><span class="string">status_changes</span><span class="punct">".*</span> <span class="ident">FROM</span> <span class="punct">"</span><span class="string">status_changes</span><span class="punct">"</span> <span class="ident">WHERE</span> <span class="punct">"</span><span class="string">status_changes</span><span class="punct">"."</span><span class="string">user_id</span><span class="punct">"</span> <span class="punct">=</span> <span class="number">1</span> <span class="ident">ORDER</span> <span class="ident">BY</span> <span class="punct">"</span><span class="string">status_changes</span><span class="punct">"."</span><span class="string">created_at</span><span class="punct">"</span> <span class="ident">DESC</span>
+</pre>
+
+<p>Benefits:</p>
+<ul><li>
+<p>you are strictly bound to Modelclass name =&gt; renaming table in model
+will not break the sql code (of if it will, it will explicitly break the
+syntax on Ruby level, not DB level)</p>
+</li><li>
+<p>you still have the benefit of explicitly saying what table.column the <a href="https://apidock.com/rails/ActiveRecord/QueryMethods/order">order</a> should be</p>
+</li><li>
+<p>easier to re-factor parts to Query Objects</p>
+</li></ul>
+
+  
+  </div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div id="footer">
+  <div id="footer_left">
+    <ul>
+  <li class="first_tab"><a href="https://apidock.com/">Welcome</a></li>
+  <li><a href="https://apidock.com/register">Register</a></li>
+  <li><a href="https://apidock.com/projects">Projects</a></li>
+  <li><a href="https://apidock.com/faq">Help</a></li>
+  <li><a href="https://apidock.com/about">About</a></li>
+  <li class="external"><a href="http://blog.nodeta.fi/category/apidock/">Blog</a></li>
+</ul>
+
+    <p>
+      <br>
+      APIdock release: IRON STEVE (1.4)<br>
+      If you have any comments, ideas or feedback, feel free to contact us at <script type="text/javascript">eval(decodeURIComponent('%64%6f%63%75%6d%65%6e%74%2e%77%72%69%74%65%28%27%3c%61%20%68%72%65%66%3d%5c%22%6d%61%69%6c%74%6f%3a%74%65%61%6d%40%61%70%69%64%6f%63%6b%2e%63%6f%6d%5c%22%3e%74%65%61%6d%40%61%70%69%64%6f%63%6b%2e%63%6f%6d%3c%5c%2f%61%3e%27%29%3b'))</script><a href="mailto:team@apidock.com">team@apidock.com</a>
+    </p>
+    <p class="ndt_copyright">
+      <a href="http://blog.nodeta.com/"><img alt="Go to Nodeta blog" src="./order (ActiveRecord__QueryMethods) - APIdock_files/nodeta_logo.png"></a>
+      APIdock copyright Nodeta Oy 2008-2018
+    </p>
+  </div>
+  <!-- @flowdock -->
+    <div id="footer_flowdock">
+      
+      <a href="http://www.flowdock.com/tour/developers" title="Flowdock - Team Inbox With Chat for Software Developers"><img alt="Flowdock" src="./order (ActiveRecord__QueryMethods) - APIdock_files/flowdock_promo.png"></a>
+      <a href="http://www.flowdock.com/tour/developers" title="Flowdock - Team Inbox With Chat for Software Developers"><h3>Flowdock - Team Inbox With Chat for Software Developers</h3></a>
+      <p>Check out how the team behind APIdock connects <a href="https://www.flowdock.com/pivotal_tracker">Pivotal Tracker</a>, <a href="https://www.flowdock.com/github">GitHub</a> and group chat to one workflow.</p>
+    </div>
+  <!-- /@flowdock -->
+</div>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2741725-8']);
+  _gaq.push(['_setDomainName', ".apidock.com"]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+  })();
+
+</script>
+
+    </div>
+  	<script type="text/javascript">
+var fieldFocus = true;
+var resultsContainer = $('search_results');
+new SearchField($('nav_search_field'), resultsContainer, $('submit_nav_search'), 3, document.searchKeywords, document.searchData, 'rails', '1.0.0','5.0.0.1');
+// Position the results container
+var navi = $('navigation');
+resultsContainer.setStyle({
+	top: navi.cumulativeOffset().top + navi.getHeight() + 'px'
+});
+</script>
+
+    <script type="text/javascript">
+var msgs = $$('.flash_message');
+msgs.invoke('hide');
+// Observer for messages
+document.observe('dom:loaded', function() {
+  msgs.each(function(elem) { 
+    new Effect.Appear(elem, {duration: 0.5});
+    elem.observe('click', function(event) {
+      var clicked = event.element();
+      if (clicked.match('img')) {
+        new Effect.Fade(elem, {duration: 0.3});
+        etTimeout(function(){elem.remove();}.bind(elem), 400 );
+      }
+    })
+  });
+});
+</script>
+  
+</body><span class="gr__tooltip"><span class="gr__tooltip-content"></span><i class="gr__tooltip-logo"></i><span class="gr__triangle"></span></span></html>
