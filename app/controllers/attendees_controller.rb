@@ -9,7 +9,7 @@ class AttendeesController < ApplicationController
   # GET /attendees.json
 	def index
 		@attendee = Attendee.new
-		@attendees = current_user.attendees
+		@attendees = current_user.attendees.page(params[:page])
 		@time
 
 

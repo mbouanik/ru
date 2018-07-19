@@ -19,6 +19,14 @@ main {
   flex: 1 0 auto;
 }
 
+img {
+	// max-width: 25%;
+    // height: auto;
+	// border-radius: 50%;
+}
+.sign_in_stamp{
+	padding-left: 5px;
+}
 .login{
 	position: relative;
 	top: 0px;
@@ -59,16 +67,49 @@ main {
 // 	top: 2px;
 // 	left:  300px;
 // }
-.picture_index{
-	// border: 1px solid #ddd;
-    // border-radius: 10px;
-	// height: px
-    padding: 10px;
-	// padding-right: 20px;
-	// margin: 2    // width: 350px;
+.pagination{
+	position: fixed;
+	margin-bottom: 0;
+	margin-top: 1050px;
+	margin-left: 20%;
 }
+
+.picture-index {
+	position: relative;
+  	width: 256px;
+  	height: 256px;
+ border-radius: 50%;
+  	overflow: hidden;
+ }
+.picture-index img{
+	position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 100%;
+  width: auto;
+  -webkit-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
+}
+ .card_attedee  img {
+	 // display: block;
+    // margin: 0 auto;
+    // height: 50%;
+    // width: 50%;
+    // margin: 0 0 0 -20%;
+    // -webkit-border-radius: 50%;
+    // -moz-border-radius: 50%;
+    // -ms-border-radius: 50%;
+    // -o-border-radius: 50%;
+    // border-radius: 50%
+	 // object-fit: fill;
+	 // border-radius: 50%;
+	  // max-width: initial; /* Maybe optional. See note below */
+	  // text-indent: -140px;
+  }
+
 .card_attedee{
-	background: url(img_attendee);
+	background-image:  url(img_attendee);
 }
 
 .card-title-time{
@@ -97,7 +138,7 @@ main {
 	// box-sizing: border-box;
 	// display: inline-block;
 	background: url(img_attendee);
-		width: 100%; height: 250px;
+		width: 100%; height: auto;
 		display: flex;
 	    border-style: solid;
 		border-radius: 15px;
@@ -105,9 +146,10 @@ main {
 
 }
 .time-stamps{
-	border-radius: 10px;
-	background:  url(parallax1.jpg);
-		// opacity: .6 ;
+	// border-radius: 10px;
+	background-image:  url(parallax1.jpg);
+	// background-repeat: no-repeat;
+
 
 }
 // .btn{
