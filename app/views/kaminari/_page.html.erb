@@ -1,9 +1,9 @@
 <% if page.current? %>
-  <li class="active">
+  <li class="active purple darken-4" >
     <%= content_tag :a, page %>
   </li>
 <% else %>
-  <li class="waves-effect">
+  <li class="waves-effect" onClick="history.go(0)">
     <%= link_to page, url, :rel => 'next', :remote => remote , class: 'white-text'%>
   </li>
 <% end %>

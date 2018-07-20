@@ -25,6 +25,10 @@ $( document ).on('turbolinks:load', function() {
 	$('.modal').modal();
 	$('.notice').fadeOut(3000);
 	$('.alert').fadeOut(3000);
+	$("#stamps").html("<%= j render  @stamps %>")
+	// $("#paginator").html("<%= escape_javascript(paginate(@stamp, remote: true)) %>")
+
+
 });
 
 // var ready;

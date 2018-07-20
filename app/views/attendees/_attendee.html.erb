@@ -2,83 +2,69 @@
 	<div class="row" >
 	    <div class="col s12 m12">
 	      <div class="card_attedee card  z-depth-2">
+			  <div class="card-header right">
+				   	<%= link_to 'close', attendee, method: :delete,  remote: true, class: 'material-icons red darken-4'%>
+			  </div>
 			<!-- <div class="container " > -->
 				<div class="container  picture-index ">
 					<%= link_to (image_tag  "https://cdn.intra.42.fr/users/medium_#{ attendee.login }.jpg",  class: 'picture-index'), attendee  %>
-  	 	  	</div>
+  	 	  		</div>
 			<!-- <div class=" container picture-index ">
 				<img class="picture-index " src="https://cdn.intra.42.fr/users/medium_<%=attendee.login%>.jpg" alt="" >
 			</div> -->
 	        <div class="card-content white-text">
+
 	          <span class="card-title"><%= attendee.name %></span>
 	          <!-- <%= link_to (image_tag  "https://cdn.intra.42.fr/users/medium_#{ attendee.login }.jpg", width: '64', class: "circle responsive-img"), attendee  %> -->
 			   <%=link_to (attendee.login), attendee, class: "center" %>
-			   <br>
-			   <br>
+			 	<br>
+				<br>
 
-			  <% @time = Stamp.where(:attendee_id => attendee.id).last %>
-			  <% if @time %>
-			  <div class="stamps left">
-				Sign in: <span class="sign_in_stam"><%= @time.sign_in.strftime "%B %e at %l:%M %p" unless @time.sign_in.nil? %></span>
-				 </div>
+			 <% @time = Stamp.where(:attendee_id => attendee.id).last %>
+			<% if @time %>
 				<div class="stamps left">
-				Sign out:<span class="right"><%= @time.sign_out.strftime "%B %e at %l:%M %p" unless @time.sign_out.nil? %></span>
+					Sign in: <span class="sign_in_stam"><%= @time.sign_in.strftime "%B %e at %l:%M %p" unless @time.sign_in.nil? %></span>
+				</div>
+				<div class="stamps left" >
+					Sign out: <span class="right" id='sign_out<%=@time.id%>'><%= @time.sign_out.strftime "%B %e at %l:%M %p" unless @time.sign_out.nil? %></span> <p></p>
 				</div>
 
 			  <% else %>
-			  <div class="left">
-			  	<p>Sign in: <%= " No time logged yet" %> </p>
-				<p>Sign out: <%="No time logged yet" %> </p>
+			  <div class="stamps left">
+				  Sign in: <span class="sign_in_stam"><%= " No time logged yet" %></span>
 			  </div>
+			  <div class="stamps left">
+				  Sign out:<span class="right"><%= " No time logged yet" %></span>
+			  </div>
+
 			  <% end %>
 			</div>
 			<br>
 	        <div class="card-action">
 				<!-- <a class="waves-effect waves-light btn modal-trigger" href="#modal_attendee<%=attendee.id%>">Edit</a> -->
-	         <button class="btn modal-trigger blue darken-2" data-target="modal_attendee<%=attendee.id%>" data-toggle="modal" >Edit</button>
-	          <%= link_to 'Destroy', attendee, method: :delete,  remote: true, class: 'waves-effect waves-light btn red darken-2'%>
+	         <button class="btn modal-trigger blue darken-2" data-target="modal_attendee<%=attendee.id%>" data-toggle="modal" >History</button>
+			 <%= link_to 'Update Sign out', sign_out_path(id: @time), class: 'waves-effect waves-light btn blue darken-2', remote: true %>
 	        </div>
 	      </div>
 	    </div>
 	  </div>
-
-	<%= form_for(attendee, :method => :put, remote: true) do |form| %>
+<% @stamps = Stamp.where(:attendee_id => attendee.id).order("created_at DESC").page(params[:page]).per(8)%>
 		<div class="modal" id="modal_attendee<%=attendee.id%>" tabindex="-1" role="dialog">
 			<div class="modal-dialog">
-				<div class="modal-content">
-				<div class="modal-header">
-				Edit Attendee
+				<div class="modal-content time-stamps">
+				<div class="modal-header white-text">
+				History <%= attendee.name%>
 				</div>
-				<% if attendee.errors.any? %>
-			   <div id="error_explanation">
-				 <h2><%= pluralize(attendee.errors.count, "error") %> prohibited this attendee from being saved:</h2>
 
-				 <ul>
-				 <% attendee.errors.full_messages.each do |message| %>
-				   <li><%= message %></li>
-				 <% end %>
-				 </ul>
-			   </div>
-			 <% end %>
 				<div class="modal-body">
-					<div class="input-field">
-						<%= form.text_field :name %>
-						<%= form.label :name, class: :active%>
-					</div>
+						<%= render @stamps %>
 
-					<div class="input-field">
-						<%= form.text_field :login %>
-						<%= form.label :login, class: 'active' %>
-					</div>
 				</div>
-				<div class="modal-footer">
-					<div class="waves-effect waves-light btn blue darken-2 modal-close" onClick="history.go(0)">
-						<%= form.submit "Update Attendee", class: "white-text" %>
-					</div>
+				<div class="paginate center" >
+					<%= paginate @stamps, remote: true, id: 'stamps'%>
 				</div>
+
 			</div>
 		</div>
-
-	<% end %>
 	</div>
 </div>

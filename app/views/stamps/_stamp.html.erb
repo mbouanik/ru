@@ -1,16 +1,14 @@
-<!-- <p>
-	<strong>Sign_in:</strong> <span> <%= @attendee.sign_in.strftime "%B %e at %l:%M %p" unless @attendee.sign_in.nil? %> </span>
- 	<strong>Sign_out: </strong> <span id='sign_out<%=@attendee.id %>'> <%= @attendee.sign_out.strftime "%B %e at %l:%M %p" unless @attendee.sign_out.nil? %></span>
-	<%= link_to 'Update Sign_out', sign_out_path(id: @attendee.id), class: 'btn btn-outline-primary', remote: true %>
-</p> -->
 
 
-<table class="highlight gray white-text centered">
-	<!-- <div class="card-content" > -->
+
+<table class="highlight gray white-text centered ">
+	<!-- <div class="card-content time-stamps" > -->
 		<tbody>
-			<td><%= @attendee.sign_in.strftime "%B %e at %l:%M %p" unless @attendee.sign_in.nil? %></td>
-			<td><span id='sign_out<%=@attendee.id%>'> <%= @attendee.sign_out.strftime "%B %e at %l:%M %p" unless @attendee.sign_out.nil?%> </td>
-			<td><%= link_to 'Update Sign_out', sign_out_path(id: @attendee.id), class: 'waves-effect waves-light btn blue darken-2', remote: true %></td>
+			<div class="">
+					<td><%= stamp.sign_in.strftime "%B %e at %l:%M %p" unless stamp.sign_in.nil? %></td>
+					<td> <p><span id='sign_out<%=stamp.id%>'> <%= stamp.sign_out.strftime "%B %e at %l:%M %p" unless stamp.sign_out.nil?%></p> </td>
+					<td><%= link_to 'Update Sign out', sign_out_path(id: stamp.id), class: 'waves-effect waves-light btn blue darken-2', remote: true %></td>
+				</div>
 		</tbody>
 		<!-- </div> -->
 </table>
