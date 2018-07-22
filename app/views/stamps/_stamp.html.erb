@@ -4,11 +4,14 @@
 <table class="highlight gray white-text centered ">
 	<!-- <div class="card-content time-stamps" > -->
 		<tbody>
-			<div class="">
-					<td><%= stamp.sign_in.strftime "%B %e at %l:%M %p" unless stamp.sign_in.nil? %></td>
-					<td> <p><span id='sign_out<%=stamp.id%>'> <%= stamp.sign_out.strftime "%B %e at %l:%M %p" unless stamp.sign_out.nil?%></p> </td>
-					<td><%= link_to 'Update Sign out', sign_out_path(id: stamp.id), class: 'waves-effect waves-light btn blue darken-2', remote: true %></td>
-				</div>
+			<!-- <div class=""> -->
+				<td><%= stamp.sign_in.strftime "%B %e at %l:%M %p" unless stamp.sign_in.nil? %></td>
+				<td> <span class='sign_out<%=stamp.id%>'> <%= stamp.sign_out.strftime "%B %e at %l:%M %p" unless stamp.sign_out.nil?%> </td>
+				<% if stamp.sign_out.nil? %>
+					<td id="update_sign_out<%=stamp.id%>"><%= link_to 'Update Sign out', sign_out_path(id: stamp.id), class: 'waves-effect waves-light btn blue darken-2', remote: true %></td>
+				<% end %>
+
+			<!-- </div> -->
 		</tbody>
 		<!-- </div> -->
 </table>

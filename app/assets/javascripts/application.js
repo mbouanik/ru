@@ -10,32 +10,15 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //= require jquery
-//= require jquery.turbolinks
 // = require rails-ujs
 //= require activestorage
 //= require turbolinks
 //= require materialize-sprockets
 //= require_tree .
 
-// $(document).ready(function(){
-// 	$('.modal').modal();
-// });
-
-$( document ).on('turbolinks:load', function() {
+$(document).ready(function () {
 	$('.modal').modal();
 	$('.notice').fadeOut(3000);
 	$('.alert').fadeOut(3000);
-	$("#stamps").html("<%= j render  @stamps %>")
-	// $("#paginator").html("<%= escape_javascript(paginate(@stamp, remote: true)) %>")
-
 
 });
-
-// var ready;
-// ready = function() {
-//
-//   $('.modal').modal();
-// };
-//
-// $(document).ready(ready);
-// $(document).on('page:load', ready);

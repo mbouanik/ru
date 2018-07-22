@@ -1,1 +1,3 @@
-$('#sign_out<%= @attendee.id%>').replaceWith('<%= @attendee.sign_out.strftime "%B %e at %l:%M %p" %>');
+$('.sign_out<%= @attendee.id%>').replaceWith('<%=@attendee.sign_out.strftime "%B %e at %l:%M %p" %>');
+
+$('#update_sign_out<%= @attendee.id%>').remove();

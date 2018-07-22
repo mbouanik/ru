@@ -3,7 +3,7 @@
 
 
 .brand-logo{
-	left: 10px;
+	left: 100px;
 }
 body {
   display: flex;
@@ -14,15 +14,62 @@ body {
 }
 
 main {
-
-	// opacity: .4;
   flex: 1 0 auto;
 }
+.profile_name{
+	margin-top: 2px;
+}
+.title{
+	color: #ce93d8;
+}
+.picture-hover:hover {
+  -webkit-filter: grayscale(100%);
+}
+.stats-attendee{
+	position: relative;
+	margin-top: -100px;
+	margin-left: 10px;
+	margin-right: 10px;
+	height: auto;
+	width: auto;
+}
+.info{
+	position: relative;
+	margin-top: 21px;
+	height: 120px;
+	width: auto;
+	border: 1px solid #ce93d8;
+	border-radius: 10px;
+	background:  url(parallax1.jpg);
+	opacity: .4;
+}
+.destroy-close{
+	color: red;
+}
+.login-link{
+	font-size: 16px;
+}
+.info_text{
+	padding-bottom: 10px;
+}
 
-img {
-	// max-width: 25%;
-    // height: auto;
-	// border-radius: 50%;
+.location{
+	padding-top: 40px;
+	font-size: 30px;
+}
+
+.info_profile{
+	display: inline-block;
+	padding: 5px;
+	font-size: 20px;
+
+}
+.block_info_text{
+	display: block;
+
+}
+#sign_in_title{
+	padding-left: 35px;
 }
 .sign_in_stamp{
 	padding-left: 5px;
@@ -33,29 +80,19 @@ img {
 	// opacity: 1;
 }
 .truncate{
-display: block;
-
-max-height: 670px;
-
-white-space: nowrap;
-
-overflow: hidden;
-
-text-overflow: ellipsis;
-
+	display: block;
+	max-height: 685px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .truncate1{
-display: block;
-
-max-height: 1000px;
-
-white-space: nowrap;
-
-overflow: hidden;
-
-text-overflow: ellipsis;
-
+	display: block;
+	max-height: 1127px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .section{
@@ -72,43 +109,23 @@ text-overflow: ellipsis;
 .attendee_card{
 	float: left;
 	width: 33.3%;
-	// border: 1px solid #ccc;
-	// padding: 0;
-	// margin: 0;
-	// border-radius: 15px;
-	// box-sizing: border-box;
-	// display: inline-block;
-
 }
 .new_attendee{
 	position: relative;
 	padding-right:   50;
 }
-// .card-content{
-// 	position: rela
-// }
-// .card-title{
-// 	position: relative;
-// 	top: 2px;
-// 	left:  300px;
-// }
-.pagination{
-	 // overflow: hidden;
-	// position: fixed;
-	// margin-top: 42%;
-	// margin-left: 21%;
-}
-
 
 .picture-index {
 	position: relative;
-  	width: 256px;
-  	height: 256px;
- 	border-radius: 50%;
-  	overflow: hidden;
-	// padding-top: 5px;
-	margin-top: 5px;
- }
+	width: 256px;
+	height: 256px;
+	border-radius: 50%;
+	overflow: hidden;
+	margin-top: 2px;
+	margin-bottom: 5px;
+	margin-left: 6px;
+}
+
 .picture-index img{
 	position: absolute;
   left: 50%;
@@ -119,25 +136,13 @@ text-overflow: ellipsis;
       -ms-transform: translate(-50%,-50%);
           transform: translate(-50%,-50%);
 }
- .card_attedee  img {
-	 // display: block;
-    // margin: 0 auto;
-    // height: 50%;
-    // width: 50%;
-    // margin: 0 0 0 -20%;
-    // -webkit-border-radius: 50%;
-    // -moz-border-radius: 50%;
-    // -ms-border-radius: 50%;
-    // -o-border-radius: 50%;
-    // border-radius: 50%
-	 // object-fit: fill;
-	 // border-radius: 50%;
-	  // max-width: initial; /* Maybe optional. See note below */
-	  // text-indent: -140px;
-  }
 
+.table_stamp_profile{
+	margin-left:  20px;
+}
 .card_attedee{
 	background-image:  url(img_attendee);
+
 }
 
 .card-title-time{
@@ -145,44 +150,29 @@ text-overflow: ellipsis;
 }
 
 .card-action{
+	position: relative;
+	margin-top: -15px;
 	background: url(img_attendee);
 }
-.love{
-	// background:  url(parallax1.jpg);
-		// margin: 0;
-		// opacity: .3;
+.card-action-index{
+	position: relative;
+	margin-top: -15px;
+
 }
-.time-stamps-table{
-	// background:  url(parallax1.jpg);
-		// margin: 0;
-		// opacity: .4 ;
-}
+
 .container_info{
-	// float: left;
-	// width: 33.3%;
-	// border: 1px solid #ccc;
-	// padding: 0;
-	// margin: 0
-	// box-sizing: border-box;
-	// display: inline-block;
 	background: url(img_attendee);
-		width: 100%; height: auto;
+		width: auto; height: auto;
 		display: flex;
 	    border-style: solid;
 		border-radius: 15px;
-	    border-color: white;
+	    border-color: #ba68c8 ;
 
 }
 .time-stamps{
-	// border-radius: 10px;
 	background-image:  url(parallax1.jpg);
-	// background-repeat: no-repeat;
-
-
 }
-// .btn{
-// 	border-radius: 100px;
-// }
+
 .nav-wrapper{
 	background: linear-gradient(to right, #311b92 , #d32f2f, #0d47a1 );
 }
