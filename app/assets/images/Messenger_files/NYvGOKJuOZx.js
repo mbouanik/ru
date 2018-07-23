@@ -1,0 +1,3 @@
+if (self.CavalryLogger) { CavalryLogger.start_js(["+k8ea"]); }
+
+__d("MessengerPage",["EventEmitter","EventEmitterWithHolding","EventHolder","keyMirror","performanceAbsoluteNow"],(function(a,b,c,d,e,f){"use strict";a={Events:b("keyMirror")({APP_MOUNTED:null,DATA_INITIALIZED:null,JS_LOADED:null}),addRetroactiveListener:function(a,b){return g.addRetroactiveListener(a,b)},emit:function(a){g.emitAndHold(a,b("performanceAbsoluteNow")())},removeCurrentListener:function(){g.removeCurrentListener()}};var g=new(b("EventEmitterWithHolding"))(new(b("EventEmitter"))(),new(b("EventHolder"))());e.exports=a}),null);

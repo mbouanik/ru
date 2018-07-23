@@ -1,0 +1,3 @@
+if (self.CavalryLogger) { CavalryLogger.start_js(["hsKgk"]); }
+
+__d("TimeSpentImmediateActiveSecondsLogger",["Banzai","ImmediateActiveSecondsConfig","ScriptPath"],(function(a,b,c,d,e,f){__p&&__p();var g="immediate_active_seconds",h={signal:!0,retry:!0},i=b("ImmediateActiveSecondsConfig").sampling_rate,j=b("ImmediateActiveSecondsConfig").ias_bucket,k=0;function l(a){if(i<=0)return!1;a=Math.floor(a/1e3)%i;return a===j}function a(a){if(a>=k&&a-k<1e3)return;if(l(a)){var c={activity_time_ms:a,last_activity_time_ms:k,script_path:b("ScriptPath").getTopViewEndpoint()};try{b("Banzai").post(g,c,h)}catch(a){}}k=Math.floor(a/1e3)*1e3}e.exports={maybeReportActiveSecond:a}}),null);

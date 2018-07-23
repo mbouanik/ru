@@ -1,0 +1,3 @@
+if (self.CavalryLogger) { CavalryLogger.start_js(["m9X+5"]); }
+
+__d("MessengerSearchContainerReact.bs",["ReasonReact.bs","bs_js_null_undefined","MessengerSearchContainer.react"],(function(a,b,c,d,e,f){"use strict";function a(a,c,d,e,f,g,h,i,j,k,l){return b("ReasonReact.bs").wrapJsForReason(b("MessengerSearchContainer.react"),{activeThreadID:b("bs_js_null_undefined").fromOption(a),blockedIds:b("bs_js_null_undefined").fromOption(c),filter:d,folder:e,isComposing:b("bs_js_null_undefined").fromOption(f),isLoaded:b("bs_js_null_undefined").fromOption(g),isLoading:b("bs_js_null_undefined").fromOption(h),isNewMessageActive:b("bs_js_null_undefined").fromOption(i),readReceipts:b("bs_js_null_undefined").fromOption(j),viewer:k},l)}f.make=a}),null);

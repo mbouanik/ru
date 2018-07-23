@@ -1,0 +1,3 @@
+if (self.CavalryLogger) { CavalryLogger.start_js(["VHFtX"]); }
+
+__d("MessengerErrorBoundaryReact.bs",["ReasonReact.bs","bs_js_null_undefined","MessengerErrorBoundary.react"],(function(a,b,c,d,e,f){"use strict";function a(a,c,d){return b("ReasonReact.bs").wrapJsForReason(b("MessengerErrorBoundary.react"),{className:b("bs_js_null_undefined").fromOption(a),component:b("bs_js_null_undefined").fromOption(c)},d)}f.make=a}),null);

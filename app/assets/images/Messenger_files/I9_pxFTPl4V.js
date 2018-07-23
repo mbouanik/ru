@@ -1,0 +1,3 @@
+if (self.CavalryLogger) { CavalryLogger.start_js(["B9E2h"]); }
+
+__d("UFIFeedbackStore",["FluxReduceStore","UFIDispatcherBase","UFIInstanceActionType"],(function(a,b,c,d,e,f){"use strict";__p&&__p();var g;g=babelHelpers.inherits(a,b("FluxReduceStore"));g&&g.prototype;a.prototype.getInitialState=function(){return{}};a.prototype.reduce=function(a,c){var d;switch(c.type){case b("UFIInstanceActionType").INIT:var e=c.payload;e=e.feedbacktarget?e.feedbacktarget:e.feedbacktargets&&e.feedbacktargets[0];return!e?a:babelHelpers["extends"]({},a,(d={},d[c.ftentidentifier]=babelHelpers["extends"]({orderingmodes:[],defaultcommentorderingmode:""},e),d))}return a};function a(){g.apply(this,arguments)}a.__moduleID=e.id;e.exports=new a(b("UFIDispatcherBase"))}),null);

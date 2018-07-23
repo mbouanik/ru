@@ -32,20 +32,19 @@
 <div class="navbar-fixed">
     <nav>
       <div class="nav-wrapper">
-		  <a href="/" class="brand-logo" onClick="history.go(0)">42 Hack High School </a>
+		  <a href="/" class="brand-logo nav-block" onClick="history.go(0)">42 Hack High School </a>
 
 
         <ul class="right hide-on-med-and-down">
 			<li> <% if action_name == "index" %>
-   		   <a class="newwaves-effect waves-light btn modal-trigger purple lighten-2" href="#modal1">New Attendee</a>
-   		  <% end %></li>
-    	   <!-- <% if current_user %> -->
+		   <a class="newwaves-effect waves-light btn modal-trigger purple lighten-2 nav-block" href="#modal1">New Attendee</a>
+		  <% end %></li>
+			<a class='dropdown-trigger btn blue darken-3 nav-block' href='#' data-target='dropdown1'>Logged as <%=current_user.nickname %></a>
 
-          <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
-		    <!-- <% end %> -->
-			 <!-- </div> -->
-        </ul>
-
+<!-- Dropdown Structure -->
+	<ul id='dropdown1' class='dropdown-content'>
+   		<li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
+	</ul>
       </div>
 
     </nav>

@@ -1,0 +1,3 @@
+if (self.CavalryLogger) { CavalryLogger.start_js(["Jqnoy"]); }
+
+__d("WorkGalahadNavMenuItemContent.react",["cx","FlexLayout.react","Image.react","React","XUIText.react"],(function(a,b,c,d,e,f,g){function a(a){var c=a.icon;a=a.text;if(c)return b("React").createElement(b("FlexLayout.react"),{align:"start",direction:"horizontal"},b("React").createElement(b("Image.react"),{className:"_3-90",src:c}),b("React").createElement(b("XUIText.react"),{size:"body2"},a));else return b("React").createElement(b("XUIText.react"),{size:"body2"},a)}e.exports=a}),null);

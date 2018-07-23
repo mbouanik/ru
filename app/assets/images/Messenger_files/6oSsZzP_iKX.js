@@ -1,0 +1,3 @@
+if (self.CavalryLogger) { CavalryLogger.start_js(["Wm7lw"]); }
+
+__d("MessengerTextWithEmojiInputReact.bs",["ReasonReact.bs","bs_js_null_undefined","MessengerTextWithEmojiInput.react"],(function(a,b,c,d,e,f){"use strict";function a(a,c,d,e,f,g,h,i){return b("ReasonReact.bs").wrapJsForReason(b("MessengerTextWithEmojiInput.react"),{className:b("bs_js_null_undefined").fromOption(a),onReturn:b("bs_js_null_undefined").fromOption(c),maxLength:b("bs_js_null_undefined").fromOption(d),onChange:b("bs_js_null_undefined").fromOption(e),placeholder:b("bs_js_null_undefined").fromOption(f),initialValue:b("bs_js_null_undefined").fromOption(g),showLengthIndicator:b("bs_js_null_undefined").fromOption(h)},i)}f.make=a}),null);

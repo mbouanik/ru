@@ -1,0 +1,3 @@
+if (self.CavalryLogger) { CavalryLogger.start_js(["D015d"]); }
+
+__d("UFIImageBlock.react",["cx","ImageBlock.react","React"],(function(a,b,c,d,e,f,g){"use strict";var h;h=babelHelpers.inherits(a,b("React").Component);h&&h.prototype;a.prototype.render=function(){return b("React").createElement(b("ImageBlock.react"),babelHelpers["extends"]({},this.props,{imageClassName:"UFIImageBlockImage",contentClassName:"UFIImageBlockContent"}),this.props.children)};function a(){h.apply(this,arguments)}e.exports=a}),null);

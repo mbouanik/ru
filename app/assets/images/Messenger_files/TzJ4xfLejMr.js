@@ -1,0 +1,3 @@
+if (self.CavalryLogger) { CavalryLogger.start_js(["nT4Y6"]); }
+
+__d("ArtillerySequence",["invariant"],(function(a,b,c,d,e,f,g){__p&&__p();var h=0;function a(a){"use strict";a||g(0),"description"in a||g(0),this.$1=!1,this.$2=babelHelpers["extends"]({},a,{id:(h++).toString(36)}),this.$3=[]}a.prototype.getID=function(){"use strict";return this.$2.id};a.prototype.addSegment=function(){"use strict";this.$1&&g(0);for(var a=arguments.length,b=new Array(a),c=0;c<a;c++)b[c]=arguments[c];b.forEach(function(a){this.$3.push(a.getID())}.bind(this));return this};a.prototype.setPosted=function(){"use strict";this.$1=!0;return this};a.prototype.getPostData=function(){"use strict";return babelHelpers["extends"]({},this.$2,{id:this.$2.id,segments:this.$3.slice()})};e.exports=a}),null);

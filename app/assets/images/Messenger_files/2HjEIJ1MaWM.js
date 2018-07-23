@@ -1,0 +1,3 @@
+if (self.CavalryLogger) { CavalryLogger.start_js(["D1AjV"]); }
+
+__d("MessengerGalahadGating.bs",["gkx","CurrentUser","MessengerEnvironment"],(function(a,b,c,d,e,f){"use strict";function a(){return b("gkx")("AT54UChk2NoqJXFF1MV8aQRxUoOW3ZErAtJcgLTvrnCV9rvMkUPp0medMsVOVunTnRfJjVXDEMxLY3wQwE_72fY7")}function c(){if(b("gkx")("AT54UChk2NoqJXFF1MV8aQRxUoOW3ZErAtJcgLTvrnCV9rvMkUPp0medMsVOVunTnRfJjVXDEMxLY3wQwE_72fY7")&&b("CurrentUser").isWorkUser())return b("MessengerEnvironment").facebookdotcom;else return!1}f.isGalahadEnabled=a;f.isGalahadUIEnabled=c}),null);

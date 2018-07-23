@@ -1,0 +1,3 @@
+if (self.CavalryLogger) { CavalryLogger.start_js(["WOl15"]); }
+
+__d("MessageRequestLogger.bs",["MessengerMessageRequestsTypedLogger"],(function(a,b,c,d,e,f){"use strict";function a(a,c,d){new(b("MessengerMessageRequestsTypedLogger"))().setSurface("inbox").setFolderType(d).setAction("message_requests_thread_impression").addToExtraData("threads",a).setThreadKeyList(c).log();return 0}f.logItemImpression=a}),null);

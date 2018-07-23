@@ -1,0 +1,3 @@
+if (self.CavalryLogger) { CavalryLogger.start_js(["ta9sH"]); }
+
+__d("MessengerRefreshPrompt",["fbt","CurrentUser","MessengerPromotionDataActions","Visibility","setIntervalAcrossTransitions"],(function(a,b,c,d,e,f,g){var h=1e3*60*60,i=1e3*60*60*24*3;a=function(){var a=Date.now();b("setIntervalAcrossTransitions")(function(){var c=b("CurrentUser").isWorkUser()?g._("A new version of Workplace Chat is available."):g._("A new version of Messenger is available.");Date.now()-a>i&&b("Visibility").once(b("Visibility").VISIBLE,function(){b("MessengerPromotionDataActions").setPromotionData({promotionID:null,promotionContent:c,primaryActionTitle:g._("Refresh"),instanceLogData:{},primaryActionURI:window.location.href}),a=Date.now()})},h)};e.exports=a}),null);

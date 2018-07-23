@@ -1,0 +1,3 @@
+if (self.CavalryLogger) { CavalryLogger.start_js(["MO+L9"]); }
+
+__d("WorkGalahadChannelStatusBadge.react",["cx","fbt","React"],(function(a,b,c,d,e,f,g,h){"use strict";__p&&__p();function a(a){var c=a.canToggle,d=a.onClick;a=a.unread;var e=i({canToggle:c,unread:a});return b("React").createElement("div",{"aria-label":e,className:"_2ph-"+(a?"":" _1qum")+(a?" _1qun":"")+(c?" _1quo":""),"data-hover":"tooltip","data-tooltip-alignh":"center","data-tooltip-content":e,onClick:c?function(a){a.stopPropagation(),a.preventDefault(),d&&d()}:undefined,role:c?"button":undefined},b("React").createElement("div",{className:"_1qvo"}))}function i(a){var b=a.canToggle;a=a.unread;return!b?null:a?h._("Mark as Read"):h._("Mark as Unread")}e.exports=a}),null);
