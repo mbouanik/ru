@@ -1,3 +1,0 @@
-if (self.CavalryLogger) { CavalryLogger.start_js(["SuigN"]); }
-
-__d("PageFanningInviteInlineNotif.react",["ActorURI","AsyncRequest","XPagesRemoveInviteAsyncController"],(function(a,b,c,d,e,f){"use strict";__p&&__p();a={setFanStatus:function(a,c,d,e,f){__p&&__p();d=d||function(a){if(!g)return};var g={page_id:a,reload:c};a=b("XPagesRemoveInviteAsyncController").getURIBuilder().getURI();f!==null&&f.actor_id!==null&&(a=b("ActorURI").create(a,f.actor_id));c=new(b("AsyncRequest"))().setURI(a).setData(g).setHandler(d);e&&c.setErrorHandler(e);c.send();return!1}};e.exports=a}),null);

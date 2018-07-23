@@ -1,3 +1,0 @@
-if (self.CavalryLogger) { CavalryLogger.start_js(["tUFTn"]); }
-
-__d("onAfterDisplay",["NavigationMetrics","TimeSlice","requestIdleCallback"],(function(a,b,c,d,e,f){"use strict";var g=[],h=!1;function a(a){a=b("TimeSlice").guard(a,"onAfterDisplay invocation",{propagationType:b("TimeSlice").PropagationType.ORPHAN});h?b("requestIdleCallback")(a):g.push(a)}b("NavigationMetrics").addRetroactiveListener(b("NavigationMetrics").Events.EVENT_OCCURRED,function(a,c){["all_pagelets_displayed","e2e"].indexOf(c.event)>-1&&!h&&(h=!0,g.forEach(function(a){b("requestIdleCallback")(a)}))});e.exports=a}),null);

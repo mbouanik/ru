@@ -1,3 +1,0 @@
-if (self.CavalryLogger) { CavalryLogger.start_js(["P7iE+"]); }
-
-__d("MessengerThreadListGridWrapper.react",["cx","React"],(function(a,b,c,d,e,f,g){"use strict";__p&&__p();var h;c=b("React").PropTypes;h=babelHelpers.inherits(a,b("React").PureComponent);h&&h.prototype;a.prototype.render=function(){var a=this.props.label;return b("React").createElement("div",null,b("React").createElement("h2",{className:"accessible_elem"},a),b("React").createElement("ul",{"aria-label":a,role:"grid"},this.props.children))};function a(){h.apply(this,arguments)}a.propTypes={label:c.string.isRequired};e.exports=a}),null);

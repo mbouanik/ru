@@ -1,3 +1,0 @@
-if (self.CavalryLogger) { CavalryLogger.start_js(["gzm\/I"]); }
-
-__d("NotificationAttachment.react",["cx","Image.react","React"],(function(a,b,c,d,e,f,g){"use strict";__p&&__p();var h;h=babelHelpers.inherits(a,b("React").PureComponent);h&&h.prototype;a.prototype.render=function(){var a=this.props.image;return!a?b("React").createElement("span",null):b("React").createElement(b("Image.react"),{src:a.uri,className:"_42td","aria-hidden":!0})};function a(){h.apply(this,arguments)}e.exports=a}),null);

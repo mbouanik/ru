@@ -1,3 +1,0 @@
-if (self.CavalryLogger) { CavalryLogger.start_js(["i5iwN"]); }
-
-__d("MessengerThreadlistMessageRequestsRowReact.bs",["ReasonReact.bs","MessengerThreadlistMessageRequestsRow.react"],(function(a,b,c,d,e,f){"use strict";function a(a,c,d,e,f,g,h,i){return b("ReasonReact.bs").wrapJsForReason(b("MessengerThreadlistMessageRequestsRow.react"),{onAggregationClick:a,isFocused:c,onFocus:d,pendingFolderUnseenCount:f,newMessageRequestThreads:e,aggregatedThreads:g,viewer:h},i)}f.make=a}),null);

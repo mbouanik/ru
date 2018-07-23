@@ -1,3 +1,0 @@
-if (self.CavalryLogger) { CavalryLogger.start_js(["DaD8s"]); }
-
-__d("NumberFormat",["NumberFormatConfig","intlNumUtils"],(function(a,b,c,d,e,f){__p&&__p();var g=/(\d{3})(?=\d)/g;function h(a){return(""+a).split("").reverse().join("")}function a(a,c){if(Math.abs(a).toString().length<b("NumberFormatConfig").minDigitsForThousandsSeparator)return a.toString();a=h(""+a);return h(a.replace(g,"$1"+c))}c={formatIntegerWithDelimiter:a,formatInteger:function(a){return b("intlNumUtils").formatNumberWithThousandDelimiters(a)}};e.exports=c}),null);

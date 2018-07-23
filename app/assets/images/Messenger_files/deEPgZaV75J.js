@@ -1,3 +1,0 @@
-if (self.CavalryLogger) { CavalryLogger.start_js(["MD0Ig"]); }
-
-__d("SearchI18nArabic",[],(function(a,b,c,d,e,f){"use strict";__p&&__p();var g=/[\u0600-\u06FF]/;function h(a){return g.test(a)}var i={1570:1575,1571:1575,1573:1575,1649:1575,1609:1610,1577:1607,1572:1569,1574:1569},j=[1600,1611,1612,1613,1614,1615,1616,1617,1618];function k(a){return Object.prototype.hasOwnProperty.call(i,a)?String.fromCharCode(i[a]):j.indexOf(a)!=-1?"":String.fromCharCode(a)}function a(a){if(!h(a))return a;var b=[];for(var c=0;c<a.length;c++){var d=a.charCodeAt(c);b.push(k(d))}return b.join("")}b={hasArabicCharacters:h,normalizeCharCode:k,arabicNormalization:a};e.exports=b}),null);

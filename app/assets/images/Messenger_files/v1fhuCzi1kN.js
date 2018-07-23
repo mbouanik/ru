@@ -1,3 +1,0 @@
-if (self.CavalryLogger) { CavalryLogger.start_js(["pn1L0"]); }
-
-__d("ImageBlockReact.bs",["ReasonReact.bs","ImageBlock.react","bs_js_null_undefined"],(function(a,b,c,d,e,f){"use strict";function a(a,c,d,e,f){return b("ReasonReact.bs").wrapJsForReason(b("ImageBlock.react"),{className:b("bs_js_null_undefined").fromOption(a),contentClassName:b("bs_js_null_undefined").fromOption(c),imageClassName:b("bs_js_null_undefined").fromOption(d),spacing:b("bs_js_null_undefined").fromOption(e)},f)}f.make=a}),null);

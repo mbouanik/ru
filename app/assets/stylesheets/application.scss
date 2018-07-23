@@ -1,10 +1,6 @@
 // @import "materialize";
 // @import "materialize/extras/nouislider";
 
-
-.brand-logo{
-	left: 100px;
-}
 body {
   display: flex;
   min-height: 100vh;
@@ -16,6 +12,10 @@ body {
 main {
   flex: 1 0 auto;
 }
+.brand-logo{
+	left: 100px;
+}
+
 .profile_name{
 	margin-top: 2px;
 }

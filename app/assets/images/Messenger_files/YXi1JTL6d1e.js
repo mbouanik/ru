@@ -1,3 +1,0 @@
-if (self.CavalryLogger) { CavalryLogger.start_js(["T7HoR"]); }
-
-__d("WorkchatNotificationsJewelBootloader.react",["BootloadOnRender.react","JSResource","LazyComponent.react","React"],(function(a,b,c,d,e,f){"use strict";var g;g=babelHelpers.inherits(a,b("React").PureComponent);g&&g.prototype;a.prototype.render=function(){return b("React").createElement(b("BootloadOnRender.react"),{component:b("React").createElement(b("LazyComponent.react"),this.props),loader:b("JSResource")("workchatNotificationsJewelReactComponent").__setRef("WorkchatNotificationsJewelBootloader.react"),placeholder:b("React").createElement("div",null)})};function a(){g.apply(this,arguments)}e.exports=a}),null);

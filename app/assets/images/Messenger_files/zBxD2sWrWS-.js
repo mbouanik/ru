@@ -1,3 +1,0 @@
-if (self.CavalryLogger) { CavalryLogger.start_js(["3imyH"]); }
-
-__d("MercuryRealTimeEnvironmentDropDown",["Arbiter","Bootloader","CurrentUser","FBLogger","MercurySyncDeltaHolder","MessengerMQTTGating"],(function(a,b,c,d,e,f){"use strict";var g={init:function(){b("Arbiter").subscribe("mqtt-websocket-connection-died",g.dropDownToChannel)},dropDownToChannel:function(){b("MessengerMQTTGating").turnOff(),b("MercurySyncDeltaHolder").getForFBID(b("CurrentUser").getAccountID()).getLastSeqID(),b("Bootloader").loadModules(["ChannelManager"],function(a){a.startChannelManager(),b("Arbiter").inform("messenger-mqtt-drop-down-to-channel")},"MercuryRealTimeEnvironmentDropDown"),b("FBLogger")("messenger_web_mqtt").warn("drop down to channel")}};e.exports=g}),null);

@@ -1,3 +1,0 @@
-if (self.CavalryLogger) { CavalryLogger.start_js(["re0iU"]); }
-
-__d("MenuStaticItem",["cx","DOM","MenuItemBase","React","ReactDOM","emptyFunction"],(function(a,b,c,d,e,f,g){__p&&__p();var h;c=babelHelpers.inherits(a,b("MenuItemBase"));h=c&&c.prototype;function a(a){"use strict";h.constructor.call(this),this._data=a}a.prototype._renderItemContent=function(){"use strict";var a=b("DOM").create("span",{className:"_54nc _54ah"});this._data.children?b("ReactDOM").render(b("React").createElement("span",{className:"_54nh"},this._data.children),a):b("DOM").setContent(a,b("DOM").create("span",{className:"_54nh"},this._data.markup));return a};Object.assign(a.prototype,{handleClick:b("emptyFunction")});e.exports=a}),null);

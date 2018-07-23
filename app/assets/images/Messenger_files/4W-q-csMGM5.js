@@ -1,3 +1,0 @@
-if (self.CavalryLogger) { CavalryLogger.start_js(["cZPYt"]); }
-
-__d("WorkplaceLogoReact.bs",["cx","fbt","React","LinkReact.bs","ReasonReact.bs"],(function(a,b,c,d,e,f,g,h){"use strict";var i=b("ReasonReact.bs").statelessComponent("WorkplaceLogoReact");function a(){return[i[0],i[1],i[2],i[3],i[4],i[5],i[6],i[7],function(){var a=h._("Go to Workplace News Feed");return b("ReasonReact.bs").element(0,0,b("LinkReact.bs").make(0,0,[a],["_2z9u"],0,0,0,0,0,["/feed"],0,0,0,0,["button"],0,0,["_blank"],[a],[b("React").createElement("span",{className:"_2z9t"},a)]))},i[9],i[10],i[11],i[12]]}f.component=i;f.make=a}),null);

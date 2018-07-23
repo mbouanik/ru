@@ -1,3 +1,0 @@
-if (self.CavalryLogger) { CavalryLogger.start_js(["65ae7"]); }
-
-__d("InternalNotificationOptionHandler",["invariant","AsyncDialog","URI"],(function(a,b,c,d,e,f,g){__p&&__p();function a(a,c,d){__p&&__p();var e;e=(e=c)!=null?(e=e.client_info)!=null?e.action_type:e:e;if(e==="REPORT_BUG"){d=new(b("URI"))("/ajax/bugs/employee_report").setQueryData({client_notifs:JSON.stringify(d()),notif_alert_id:a});b("AsyncDialog").bootstrap(d.toString(),null,"dialog");return!0}else if(e==="OPEN_IN_INSPECTOR"){d=(a=c)!=null?(a=a.option_display)!=null?(a=a.subtext)!=null?a.text:a:a:a;d!=null||g(0);window.open(d,"_blank");return!0}return!1}e.exports={tryHandle:a}}),null);
