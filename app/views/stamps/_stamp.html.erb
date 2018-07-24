@@ -1,6 +1,6 @@
 <table class="highlight gray white-text centered ">
 	<tbody>
-		<td>
+		<td class="center">
 			<%= stamp.sign_in.strftime "%B %e at %l:%M %p" unless stamp.sign_in.nil? %>
 		</td>
 		<td>
@@ -9,8 +9,8 @@
 			</span>
 		</td>
 		<% if stamp.sign_out.nil? %>
-			<td id="update_sign_out<%=stamp.id%>">
-				<%= link_to 'Update Sign out', sign_out_path(id: stamp.id), class: 'waves-effect waves-light btn blue darken-2', remote: true %>
+			<td class="center" id="update_sign_out<%=stamp.id%>">
+				<%= link_to 'Update now', sign_out_path(id: stamp.id), class: ' waves-effect waves-light btn-small blue darken-2', remote: true %>
 			</td>
 		<% end %>
 	</tbody>

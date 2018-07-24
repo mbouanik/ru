@@ -6,6 +6,12 @@ class AttendeesController < ApplicationController
 		@attendee = Attendee.new
 		@attendees = current_user.attendees.page(params[:page])
 		@time
+		# @a = Attendee.all
+		respond_to do |format|
+			format.html
+			format.json { @attendees}
+		end
+		# render json: @a.map(&:login)
 	end
 
 	# GET /attendees/1
@@ -45,7 +51,15 @@ class AttendeesController < ApplicationController
 	# POST /attendees
 	# POST /attendees.json
 	def create
+		client = OAuth2::Client.new( ENV["FT_ID"],  ENV["FT_SECRET"], site:"https://api.intra.42.fr")
+		token = client.client_credentials.get_token
+		@user_quest = token.get("/v2/users/" + params[:attendee][:login]).parsed
+		# if @user_quest.nil?
+		# 	errors.add( message: "cannot be nil")
+		# end
+
 		@attendee = current_user.attendees.build(attendee_params)
+		@attendee.name =  @user_quest["displayname"]
 		respond_to do |format|
 			if @attendee.save
 				format.html { redirect_to @attendee, notice: 'Attendee was successfully created.' }

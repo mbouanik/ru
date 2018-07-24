@@ -48,15 +48,17 @@
 							<% end %>
 						</table>
 				</div>
-					<div class="card-action card-action-index">
-						<button class="btn modal-trigger blue darken-2" data-target="modal_attendee<%=attendee.id%>" data-toggle="modal" >History</button>
-						<%= link_to 'Update Sign out', sign_out_path(id: @time), class: 'waves-effect waves-light btn blue darken-2', remote: true, onClick: "history.go(0)" %>
-					</div>
+				<div class="card-action card-action-index">
+					<a class="newwaves-effect waves-light btn modal-trigger purple lighten-2" href="#modal-attendee<%=attendee.id%>">
+						History
+					</a>
+					<%= link_to 'Update Sign out', sign_out_path(id: @time), class: 'waves-effect waves-light btn blue darken-2', remote: true %>
+				</div>
 			</div>
 		</div>
 	</div>
-	<% @stamps = Stamp.where(:attendee_id => attendee.id).order("created_at DESC").page().per(8)%>
-	<div class="modal" id="modal_attendee<%=attendee.id%>" >
+	<% @stamps = Stamp.where(:attendee_id => attendee.id).order("created_at DESC").page().per(10)%>
+	<div class="modal" id="modal-attendee<%=attendee.id%>" >
 		<div class="modal-dialog">
 			<div class="modal-content time-stamps">
 				<div class="modal-header white-text">

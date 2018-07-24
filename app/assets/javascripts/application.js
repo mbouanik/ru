@@ -12,14 +12,15 @@
 //= require jquery
 // = require rails-ujs
 //= require activestorage
-//= require turbolinks
 //= require materialize-sprockets
 //= require_tree .
 
 $(document).ready(function () {
 	$('.modal').modal();
 	$('.dropdown-trigger').dropdown();
-	$('.notice').fadeOut(3000);
+	$('#notice').fadeOut(3000);
 	$('.alert').fadeOut(3000);
-
+	// $('input.autocomplete').autocomplete({
+    //   data: '<%=@attendees %>'
+      // },
 });

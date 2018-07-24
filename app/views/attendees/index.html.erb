@@ -1,3 +1,20 @@
+<div class=" white-text" id="notice">
+	<%= notice %>
+</div>
+
+<!-- <div class="row ">
+	<div class="col s12">
+		<div class="row">
+			<div class="input-field col s12 white">
+				<i class="material-icons prefix">textsms</i>
+				<input type="text" id="autocomplete-input" class="autocomplete" placeholder="search">
+				<label for="autocomplete-input "></label>
+			</div>
+		</div>
+	</div>
+</div> -->
+
+
 <div class="center truncate1" id="container_attendees">
 	<%= render @attendees %>
 </div>
@@ -29,16 +46,12 @@
 			<% end %>
 		<div class="modal-body">
 			<div class="input-field">
-				<%= form.text_field :name, class: 'attendee_name'  %>
-				<%= form.label :name, class: :active%>
-			</div>
-			<div class="input-field">
 				<%= form.text_field :login, class: 'attendee_login' %>
 				<%= form.label :login, class: 'active' %>
 			</div>
 		</div>
 		<div class="modal-footer">
-			<div class="btn waves-effect waves-light  blue darken-2 modal-close" >
+			<div class="btn waves-effect waves-light  blue darken-2" >
 				<%= form.submit "Add Attendee", class: " white-text" %>
 			</div>
 		</div>
