@@ -1,9 +1,0 @@
-I"¤(function() {
-  $(document).on('page:chage', function() {
-    return $('#sign_out').click(function() {
-      return alert("Clicked");
-    });
-  });
-
-}).call(this);
-:ET

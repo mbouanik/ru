@@ -7,20 +7,20 @@
 		<div class="row">
 			<div class="input-field col s12 white">
 				<i class="material-icons prefix">textsms</i>
-				<input type="text" id="autocomplete-input" class="autocomplete" placeholder="search">
+				<input type="text" id="autocomplete-input" class="autocomplete" placeholder="search" data-url="<attendees_url" >
 				<label for="autocomplete-input "></label>
 			</div>
 		</div>
 	</div>
 </div> -->
 
-
-<div class="center truncate1" id="container_attendees">
-	<%= render @attendees %>
-</div>
-<br>
-<div class="paginate center">
-<%= paginate @attendees %>
+<div class="paginate">
+	<div class="center block-attendees-pages" id="container_attendees">
+		<%= render @attendees %>
+	</div>
+	<div class="paginate center containerblock-attendees-pages ">
+		<%= paginate @attendees %>
+	</div>
 </div>
 
 <!-- Modal Structure -->

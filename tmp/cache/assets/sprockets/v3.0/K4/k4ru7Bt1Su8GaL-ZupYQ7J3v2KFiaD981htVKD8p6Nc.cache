@@ -1,9 +1,0 @@
-I"…(function() {
-  $.ajax({
-    url: "/#modal1"
-  }).done(function(html) {
-    return $("#results").append(html);
-  });
-
-}).call(this);
-:ET

@@ -1,9 +1,0 @@
-I"…(function() {
-  $.ajax({
-    url: "/sign_in"
-  }).done(function(html) {
-    return $("#results").append(html);
-  });
-
-}).call(this);
-:ET

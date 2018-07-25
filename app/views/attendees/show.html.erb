@@ -67,13 +67,13 @@
 	<div class="card-content love time-stamps" >
 		<p class="white-text center" id="no-time-logged"><% if !@stamps.present? %> <%= " No time logged yet" %> <% end %></p>
 
-		<div class="truncate" id="sign_in">
+		<div class="" id="sign_in">
 			<%= render @stamps %>
 		</div>
 	</div>
 </div>
 
-<div class="paginate center">
+<div class="center">
 	<%= paginate @stamps %>
 </div>
 

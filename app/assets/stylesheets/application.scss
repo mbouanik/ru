@@ -100,7 +100,7 @@ main {
 .section{
 	position: relative;
 	top: 300px;
-	height: 500px;
+	min-height: 500px;
 	opacity: .6;
 	background:  url(parallax1.jpg)
 }
@@ -110,8 +110,16 @@ main {
 }
 .attendee_card{
 	float: left;
-	width: 33.3%;
+	min-width: auto;
+	min-height: auto;
+
 }
+.block-attendees-pages{
+	display: inline-block;
+	// padding-top: 10px
+
+}
+
 .new_attendee{
 	position: relative;
 	padding-right:   50;
@@ -123,45 +131,61 @@ main {
 	height: 256px;
 	border-radius: 50%;
 	overflow: hidden;
-	margin-top: 2px;
-	margin-bottom: 5px;
-	margin-left: 6px;
+	// margin-top: 3px;
+	// margin-bottom: 5px;
+	// margin-left: 20px;
 }
 
 .picture-index img{
 	position: absolute;
-  left: 50%;
-  top: 50%;
-  height: 100%;
-  width: auto;
-  -webkit-transform: translate(-50%,-50%);
-      -ms-transform: translate(-50%,-50%);
-          transform: translate(-50%,-50%);
+	left: 50%;
+	top: 50%;
+	height: 100%;
+	width: auto;
+	-webkit-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
 }
 
 .table_stamp_profile{
 	margin-left:  20px;
 }
 .card_attedee{
+	min-height: 520px;
+	min-width: 350px;
 	background-image:  url(img_attendee);
 
 }
-
+// .time-stamps-index-sign-out{
+// 	display: inline;
+// }
+// .time-stamps-index-sign-out{
+// 	display: inline;
+// }
 .card-title-time{
 	background: url(img_attendee);
 }
-
+// .btn-action{
+// 	display: inline;
+// 	// padding: auto;
+// 	width: auto;
+//
+// }
 .card-action{
-	position: relative;
-	margin-top: -15px;
+	// position: relative;
+	// margin-top: -15px;
 	background: url(img_attendee);
 }
 .card-action-index{
-	position: relative;
-	margin-top: -15px;
+	// position: relative;
+	// margin-top: -15px;
 
 }
 
+.card-block{
+	display: block;
+
+}
 .container_info{
 	background: url(img_attendee);
 		width: auto; height: auto;

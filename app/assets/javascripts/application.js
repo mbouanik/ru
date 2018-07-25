@@ -20,7 +20,11 @@ $(document).ready(function () {
 	$('.dropdown-trigger').dropdown();
 	$('#notice').fadeOut(3000);
 	$('.alert').fadeOut(3000);
-	// $('input.autocomplete').autocomplete({
-    //   data: '<%=@attendees %>'
-      // },
+	$('input.autocomplete').autocomplete({
+		data: {
+			"Apple": null,
+			"Microsoft": null,
+			"Google": 'https://placehold.it/250x250'
+		},
+	});
 });

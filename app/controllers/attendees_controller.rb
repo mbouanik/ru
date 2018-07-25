@@ -6,11 +6,11 @@ class AttendeesController < ApplicationController
 		@attendee = Attendee.new
 		@attendees = current_user.attendees.page(params[:page])
 		@time
-		# @a = Attendee.all
-		respond_to do |format|
-			format.html
-			format.json { @attendees}
-		end
+		@a = Attendee.all
+		# respond_to do |format|
+		# 	format.html
+		# 	format.json {render :index, location: @a }
+		# end
 		# render json: @a.map(&:login)
 	end
 
@@ -18,7 +18,7 @@ class AttendeesController < ApplicationController
 	# GET /attendees/1.json
 	def show
 		@attendee = current_user.attendees.find(params[:id])
-		@stamps = @attendee.stamps.order("created_at DESC").page(params[:page]).per(15)
+		@stamps = @attendee.stamps.order("created_at DESC").page(params[:page]).per(12)
 		client = OAuth2::Client.new( ENV["FT_ID"],  ENV["FT_SECRET"], site:"https://api.intra.42.fr")
 		token = client.client_credentials.get_token
 		@user_quest = token.get("/v2/users/" + @attendee.login).parsed
