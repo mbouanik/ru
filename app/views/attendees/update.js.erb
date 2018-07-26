@@ -1,4 +1,0 @@
-$('#attendee<%=@attendee.id%>').fadeOut(500, function(){
-	$(this).remove();
-	$('#container_attendees').append('<%= j render @attendee %>');
-});
