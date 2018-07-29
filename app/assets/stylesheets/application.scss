@@ -1,11 +1,10 @@
 // @import "materialize";
 // @import "materialize/extras/nouislider";
-
 body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  background:  url(attendee_background5.jpg)no-repeat fixed;
+  background:  url(attendee_background5.jpg);
   background-size: auto;
 }
 
@@ -177,9 +176,13 @@ main {
 	background: url(img_attendee);
 }
 .card-action-index{
+	height: 60px;
 	// position: relative;
 	// margin-top: -15px;
-
+}
+.btn-action-index{
+	position: relative;
+	margin-top: -5px;
 }
 
 .card-block{

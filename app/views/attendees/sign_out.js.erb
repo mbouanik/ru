@@ -1,2 +1,4 @@
-$('.sign_out<%= @attendee.id%>').replaceWith('<%=@attendee.sign_out.strftime "%B %e at %l:%M %p" %>');
-$('#update_sign_out<%= @attendee.id%>').remove();
+$('.sign_out<%=@attendee.id%>').replaceWith('<%=@attendee.sign_out.strftime "%B %e at %l:%M %p" %>');
+$('.sign_out<%=@attendee.id%>').hide().fadeIn(1000);
+$('.update_sign_out<%=@attendee.id%>').remove();
+// $('#update_sign_out<%=@attendee.id%>').replaceWith('<span id="time<%=@attendee.id %>" ><%= link_to "Add TimeStamp", sign_in_path(attendee_id: @attendee.id), class: "waves-effect waves-light btn blue darken-2", remote: true %></span>');

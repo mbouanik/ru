@@ -46,11 +46,12 @@
 	</div>
 </div>
 <br>
-<div class="" id="link" >
-	<%= link_to 'Add TimeStamp', sign_in_path(attendee_id: @attendee.id), class: 'waves-effect waves-light btn blue darken-2', remote: true %>
+<div id="time<%=@attendee.id%>" >
+	<% if @stamps.first.sign_out?%>
+		<%= link_to 'Add TimeStamp', sign_in_path(attendee_id: @attendee.id), class: 'waves-effect waves-light btn blue darken-2', remote: true %>
+	<% end %>
 	<!-- <%= link_to 'Back', attendees_path, class: 'waves-effect waves-light btn blue darken-2', onClick: "window.history.back()" %> -->
 </div>
-
 <div class="card z-depth-3 " >
 	<div class="card-title-time card-title white-text">
 			<table class=" white-text ">
@@ -63,18 +64,15 @@
 				</thead>
 			</table>
 	</div>
+	<div class="card-content time-stamps" >
+		<p class="white-text center" class="no-time-logged"><% if !@stamps.present? %> <%= " No time logged yet" %> <% end %></p>
 
-	<div class="card-content love time-stamps" >
-		<p class="white-text center" id="no-time-logged"><% if !@stamps.present? %> <%= " No time logged yet" %> <% end %></p>
-
-		<div class="" id="sign_in">
+		<div class="sign_in<%= @attendee.id %>">
 			<%= render @stamps %>
 		</div>
 	</div>
 </div>
-
 <div class="center">
 	<%= paginate @stamps %>
 </div>
-
 <br>
