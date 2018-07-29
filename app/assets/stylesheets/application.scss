@@ -145,15 +145,19 @@ main {
 	-ms-transform: translate(-50%,-50%);
 	transform: translate(-50%,-50%);
 }
-
+.img-profile{
+	position: relative;
+	margin-left: 5px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
 .table_stamp_profile{
 	margin-left:  20px;
 }
-.card_attedee{
+.card_attendee{
 	min-height: 520px;
-	min-width: 350px;
+	min-width: 360px;
 	background-image:  url(img_attendee);
-
 }
 // .time-stamps-index-sign-out{
 // 	display: inline;
@@ -170,19 +174,23 @@ main {
 // 	width: auto;
 //
 // }
+.btn-action-index{
+	position: relative;
+	margin-top: -5px;
+}
 .card-action{
 	// position: relative;
-	// margin-top: -15px;
+	height: 60px;
 	background: url(img_attendee);
 }
 .card-action-index{
-	height: 60px;
+	// height: 50px;
 	// position: relative;
 	// margin-top: -15px;
 }
 .btn-action-index{
-	position: relative;
-	margin-top: -5px;
+	// position: relative;
+	// margin-top: -5px;
 }
 
 .card-block{
