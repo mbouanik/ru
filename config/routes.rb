@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 	resources :attendees
+	get :autocomplete, controller: :attendees
 	get :search, controller: :attendees
 	root 'attendees#index'
 	get '/sign_in' => 'attendees#sign_in'

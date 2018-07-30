@@ -1,5 +1,8 @@
 // @import "materialize";
 // @import "materialize/extras/nouislider";
+/*
+*= require easy-autocomplete
+*/
 body {
   display: flex;
   min-height: 100vh;
@@ -12,6 +15,7 @@ main {
   flex: 1 0 auto;
 }
 .brand-logo{
+	margin-top: 8px;
 	left: 100px;
 }
 
@@ -44,6 +48,8 @@ main {
 }
 .destroy-close{
 	color: red;
+	position: relative;
+	margin-right: 8px;
 }
 .login-link{
 	font-size: 16px;
@@ -123,7 +129,10 @@ main {
 	position: relative;
 	padding-right:   50;
 }
-
+// .delete-button{
+// 	// position: relative;
+// 	margin-right: -5px;
+// }
 .picture-index {
 	position: relative;
 	width: 256px;
@@ -205,7 +214,19 @@ margin-left: 20%;
 
 .card-block{
 	display: block;
+}
 
+// .search-add-button{
+// 	display: inline;
+// }
+.add-new-button{
+	position: relative;
+	margin-top:  30px;
+	margin-left: 10px;
+	color: green ;
+}
+.add-timestamp-button{
+	color: #ba68c8 ;
 }
 .container_info{
 	background: url(img_attendee);
@@ -225,7 +246,8 @@ margin-left: 20%;
 }
 
 .page-footer{
-	background: linear-gradient(to right, #311b92 , #d32f2f, #0d47a1 );
+	// background: url(img_attendee);
+	// background: linear-gradient(to right, #311b92 , #d32f2f, #0d47a1 );
 }
 .table_stamp{
 	padding-left: 10px;

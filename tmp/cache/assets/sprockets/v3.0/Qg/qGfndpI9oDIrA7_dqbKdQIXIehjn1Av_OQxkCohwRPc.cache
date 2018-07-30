@@ -1,7 +1,0 @@
-I"c(function() {
-  $(document).ready(function() {
-    $('.modal').modal();
-  });
-
-}).call(this);
-:ET

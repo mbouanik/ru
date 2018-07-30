@@ -1,5 +1,0 @@
-I":(function() {
-  $('.modal').modal();
-
-}).call(this);
-:ET

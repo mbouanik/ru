@@ -5,7 +5,7 @@
 	<div class="container">
 		<div class="block_info_text profile_name">
 			<div class="info_profile" >
-				<%= @user_quest["displayname"] %> </div>  <div class="info_profile"> <%= @attendee.login %>
+				<%= @user_quest["displayname"] %> </div> <div class="info_profile"> <%= @attendee.login %>
 			</div>
 		</div>
 		<div class="info z-depth-3 center">
@@ -55,13 +55,6 @@
 						<th class="center" id="sign_in_title" >
 							Sign in
 						</th>
-						<th>
-							<span id="time<%=@attendee.id%>" >
-								<% if @stamps.first.sign_out?%>
-									<%= link_to 'add_circle', sign_in_path(attendee_id: @attendee.id), class: 'large material-icons', remote: true %>
-								<% end %>
-							</span>
-						</th>
 						<th class="center" >
 							Sign out
 						</th>
@@ -71,6 +64,13 @@
 			</table>
 	</div>
 	<div class="card-content time-stamps" >
+		<th>
+			<span id="time<%=@attendee.id%>" >
+				<% if @stamps.first.sign_out?%>
+					<%= link_to 'add_circle', sign_in_path(attendee_id: @attendee.id), class: 'large material-icons add-timestamp-button', remote: true %>
+				<% end %>
+			</span>
+		</th>
 		<p class="white-text center" class="no-time-logged"><% if !@stamps.present? %> <%= " No time logged yet" %> <% end %></p>
 
 		<div class="sign_in<%= @attendee.id %> truncate">

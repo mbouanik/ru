@@ -17,21 +17,19 @@
 			<div class="navbar-fixed">
 				<nav>
 					<div class="nav-wrapper">
-						<a href="/" class="brand-logo nav-block">
-							42 Hack High School
-						</a>
+						<div class="">
+							<a href="/" class="brand-logo nav-block" >
+								<img src="/assets/42-logo" alt="42" height="50px">
+								<!-- <%= image_tag '42-logo.svg'%> -->
+							</a>
+						</div>
+
 						<ul class="right hide-on-med-and-down">
-							<li>
-								<% if action_name == "index" %>
-									<a class="newwaves-effect waves-light btn modal-trigger purple lighten-2 nav-block" href="#modal1">
-										New Attendee
-									</a>
-								<% end %>
-							</li>
 							<a class='dropdown-trigger btn blue darken-3 nav-block' href='#' data-target='dropdown1'>
 								Logged as <%=current_user.nickname %>
 							</a>
 							<!-- Dropdown Structure -->
+							<br>
 						<ul id='dropdown1' class='dropdown-content'>
 							<li>
 								<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
@@ -47,7 +45,7 @@
 			<%= yield %>
 		</div>
 	</main>
-	<% if action_name == "index" || action_name== 'show' %>
+	<!-- <% if action_name == "index" || action_name== 'show' %>
 		<footer class="page-footer white-text">
 			<div class="footer-copyright">
 				<div class="container">
@@ -58,6 +56,6 @@
 				</div>
 			</div>
 		</footer>
-	<% end %>
+	<% end %> -->
 	</body>
 </html>

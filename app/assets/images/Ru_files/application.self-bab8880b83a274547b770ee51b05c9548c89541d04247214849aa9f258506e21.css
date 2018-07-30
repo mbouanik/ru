@@ -1,0 +1,321 @@
+/* line 3, /Users/mbouanik/ru/app/assets/stylesheets/application.scss */
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background: url(attendee_background5.jpg);
+  background-size: auto;
+}
+
+/* line 11, /Users/mbouanik/ru/app/assets/stylesheets/application.scss */
+main {
+  flex: 1 0 auto;
+}
+
+/* line 14, /Users/mbouanik/ru/app/assets/stylesheets/application.scss */
+.brand-logo {
+  margin-top: 8px;
+  left: 100px;
+}
+
+/* line 19, /Users/mbouanik/ru/app/assets/stylesheets/application.scss */
+.profile_name {
+  margin-top: 2px;
+}
+
+/* line 22, /Users/mbouanik/ru/app/assets/stylesheets/application.scss */
+.title {
+  color: #ce93d8;
+}
+
+/* line 25, /Users/mbouanik/ru/app/assets/stylesheets/application.scss */
+.picture-hover:hover {
+  -webkit-filter: grayscale(100%);
+}
+
+/* line 28, /Users/mbouanik/ru/app/assets/stylesheets/application.scss */
+.stats-attendee {
+  position: relative;
+  margin-top: -100px;
+  margin-left: 10px;
+  margin-right: 10px;
+  height: auto;
+  width: auto;
+}
+
+/* line 36, /Users/mbouanik/ru/app/assets/stylesheets/application.scss */
+.info {
+  position: relative;
+  margin-top: 21px;
+  height: 120px;
+  width: auto;
+  border: 1px solid #ce93d8;
+  border-radius: 10px;
+  background: url(parallax1.jpg);
+  opacity: .4;
+}
+
+/* line 46, /Users/mbouanik/ru/app/assets/stylesheets/application.scss */
+.destroy-close {
+  color: red;
+  position: relative;
+  margin-right: 8px;
+}
+
+/* line 51, /Users/mbouanik/ru/app/assets/stylesheets/application.scss */
+.login-link {
+  font-size: 16px;
+}
+
+/* line 54, /Users/mbouanik/ru/app/assets/stylesheets/application.scss */
+.info_text {
+  padding-bottom: 10px;
+}
+
+/* line 58, /Users/mbouanik/ru/app/assets/stylesheets/application.scss */
+.location {
+  padding-top: 40px;
+  font-size: 30px;
+}
+
+/* line 62, /Users/mbouanik/ru/app/assets/stylesheets/application.scss */
+.nav-block {
+  display: inline-block;
+}
+
+/* line 65, /Users/mbouanik/ru/app/assets/stylesheets/application.scss */
+.info_profile {
+  display: inline-block;
+  padding: 5px;
+  font-size: 20px;
+}
+
+/* line 71, /Users/mbouanik/ru/app/assets/stylesheets/application.scss */
+.block_info_text {
+  display: block;
+}
+
+/* line 75, /Users/mbouanik/ru/app/assets/stylesheets/application.scss */
+#sign_in_title {
+  padding-left: 35px;
+}
+
+/* line 78, /Users/mbouanik/ru/app/assets/stylesheets/application.scss */
+.sign_in_stamp {
+  padding-left: 5px;
+}
+
+/* line 81, /Users/mbouanik/ru/app/assets/stylesheets/application.scss */
+.login {
+  position: relative;
+  top: 0px;
+}
+
+/* line 86, /Users/mbouanik/ru/app/assets/stylesheets/application.scss */
+.truncate {
+  display: block;
+  max-height: 685px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* line 94, /Users/mbouanik/ru/app/assets/stylesheets/application.scss */
+.truncate1 {
+  display: block;
+  max-height: 1127px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* line 102, /Users/mbouanik/ru/app/assets/stylesheets/application.scss */
+.section {
+  position: relative;
+  top: 300px;
+  min-height: 500px;
+  opacity: .6;
+  background: url(parallax1.jpg);
+}
+
+/* line 110, /Users/mbouanik/ru/app/assets/stylesheets/application.scss */
+.parallax-container {
+  flex: 1 0 auto;
+}
+
+/* line 113, /Users/mbouanik/ru/app/assets/stylesheets/application.scss */
+.attendee_card {
+  float: left;
+  min-width: auto;
+  min-height: auto;
+}
+
+/* line 119, /Users/mbouanik/ru/app/assets/stylesheets/application.scss */
+.block-attendees-pages {
+  display: inline-block;
+}
+
+/* line 125, /Users/mbouanik/ru/app/assets/stylesheets/application.scss */
+.new_attendee {
+  position: relative;
+  padding-right: 50;
+}
+
+/* line 133, /Users/mbouanik/ru/app/assets/stylesheets/application.scss */
+.picture-index {
+  position: relative;
+  width: 256px;
+  height: 256px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+/* line 144, /Users/mbouanik/ru/app/assets/stylesheets/application.scss */
+.picture-index img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 100%;
+  width: auto;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+/* line 158, /Users/mbouanik/ru/app/assets/stylesheets/application.scss */
+.paginate-profile {
+  position: fixed;
+  margin-top: -15px;
+  margin-left: 20%;
+}
+
+/* line 164, /Users/mbouanik/ru/app/assets/stylesheets/application.scss */
+.img-profile {
+  position: relative;
+  margin-left: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+/* line 170, /Users/mbouanik/ru/app/assets/stylesheets/application.scss */
+.table_stamp_profile {
+  margin-left: 20px;
+}
+
+/* line 173, /Users/mbouanik/ru/app/assets/stylesheets/application.scss */
+.card_attendee {
+  min-height: 520px;
+  min-width: 360px;
+  background-image: url(img_attendee);
+}
+
+/* line 184, /Users/mbouanik/ru/app/assets/stylesheets/application.scss */
+.card-title-time {
+  background: url(img_attendee);
+}
+
+/* line 193, /Users/mbouanik/ru/app/assets/stylesheets/application.scss */
+.btn-action-index {
+  position: relative;
+  margin-top: -5px;
+}
+
+/* line 197, /Users/mbouanik/ru/app/assets/stylesheets/application.scss */
+.card-action {
+  height: 60px;
+  background: url(img_attendee);
+}
+
+/* line 212, /Users/mbouanik/ru/app/assets/stylesheets/application.scss */
+.card-block {
+  display: block;
+}
+
+/* line 216, /Users/mbouanik/ru/app/assets/stylesheets/application.scss */
+.container_info {
+  background: url(img_attendee);
+  width: auto;
+  height: auto;
+  display: flex;
+  border-style: solid;
+  border-radius: 15px;
+  border-color: #ba68c8;
+}
+
+/* line 225, /Users/mbouanik/ru/app/assets/stylesheets/application.scss */
+.time-stamps {
+  background-image: url(parallax1.jpg);
+}
+
+/* line 229, /Users/mbouanik/ru/app/assets/stylesheets/application.scss */
+.nav-wrapper {
+  background: linear-gradient(to right, #311b92, #d32f2f, #0d47a1);
+}
+
+/* line 233, /Users/mbouanik/ru/app/assets/stylesheets/application.scss */
+.page-footer {
+  background: linear-gradient(to right, #311b92, #d32f2f, #0d47a1);
+}
+
+/* line 236, /Users/mbouanik/ru/app/assets/stylesheets/application.scss */
+.table_stamp {
+  padding-left: 10px;
+}
+
+/* The alert message box */
+/* line 241, /Users/mbouanik/ru/app/assets/stylesheets/application.scss */
+.alert {
+  padding: 20px;
+  background-color: #d32f2f;
+  /* Red */
+  color: white;
+  margin-bottom: 15px;
+  border-radius: 15px;
+}
+
+/* The close button */
+/* line 250, /Users/mbouanik/ru/app/assets/stylesheets/application.scss */
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+/* line 262, /Users/mbouanik/ru/app/assets/stylesheets/application.scss */
+.closebtn:hover {
+  color: black;
+}
+
+/* line 266, /Users/mbouanik/ru/app/assets/stylesheets/application.scss */
+.notice {
+  padding: 20px;
+  background-color: #303f9f;
+  /* Red */
+  color: white;
+  margin-bottom: 15px;
+  border-radius: 15px;
+}
+
+/* The close button */
+/* line 275, /Users/mbouanik/ru/app/assets/stylesheets/application.scss */
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+/* line 287, /Users/mbouanik/ru/app/assets/stylesheets/application.scss */
+.closebtn:hover {
+  color: black;
+}
