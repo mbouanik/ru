@@ -71,8 +71,7 @@
 				<% end %>
 			</span>
 		</th>
-		<p class="white-text center" class="no-time-logged"><% if !@stamps.present? %> <%= " No time logged yet" %> <% end %></p>
-
+		<p class="white-text center no-time-logged"><% if !@stamps.present? %> <%= " No time logged yet" %> <% end %></p>
 		<div class="sign_in<%= @attendee.id %> truncate">
 			<%= render @stamps %>
 		</div>

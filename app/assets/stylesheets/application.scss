@@ -17,11 +17,19 @@ main {
 	left: 100px;
 }
 .header-search{
-	font-size: 18px;
-	color: black;
+	font-size: 20px;
+	color: grey;
+}
+.search-button-bar{
+	display: inline;
+}
+.search-button{
+	margin-top: 50px;
 }
 .search-bar{
-	background: white;
+	// background:  url(img_attendee.jpg);
+	border-radius: 10px;
+	// background: white;
 }
 .profile_name{
 	margin-top: 2px;
@@ -31,6 +39,9 @@ main {
 }
 .picture-hover:hover {
   -webkit-filter: grayscale(100%);
+}
+.search-bar{
+	
 }
 .stats-attendee{
 	position: relative;
