@@ -14,7 +14,7 @@
 						<!-- <br> <%=link_to (attendee.login), attendee, class: "login-link" %> -->
 					</div>
 					<hr>
-					<strong><%= get_pos(attendee.login) %></strong>
+
 					<% @stamps = Stamp.where(:attendee_id => attendee.id).last %>
 					<table class="white-text centered">
 						<!-- <div class=""> -->

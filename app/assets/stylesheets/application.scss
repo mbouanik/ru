@@ -1,8 +1,6 @@
-// @import "materialize";
-// @import "materialize/extras/nouislider";
-/*
-*= require easy-autocomplete
-*/
+@import "materialize";
+@import "materialize/extras/nouislider";
+
 body {
   display: flex;
   min-height: 100vh;
@@ -18,7 +16,13 @@ main {
 	margin-top: 8px;
 	left: 100px;
 }
-
+.header-search{
+	font-size: 18px;
+	color: black;
+}
+.search-bar{
+	background: white;
+}
 .profile_name{
 	margin-top: 2px;
 }
@@ -242,6 +246,7 @@ margin-left: 20%;
 }
 
 .nav-wrapper{
+	// background:  url(parallax1.jpg)
 	background: linear-gradient(to right, #311b92 , #d32f2f, #0d47a1 );
 }
 

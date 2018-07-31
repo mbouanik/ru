@@ -1,1 +1,10 @@
 
+<div class="row">
+  <div class="col">
+    <h1>Attendee</h1>
+    <% @attendees.each do |attendee| %>
+      <p><%= link_to attendee.login, attendee %></p>
+    <% end %>
+  </div>
+
+  </div>

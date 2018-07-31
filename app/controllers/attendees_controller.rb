@@ -10,10 +10,15 @@ class AttendeesController < ApplicationController
 	end
 
 	def search
+		@attendees_name = current_user.attendees.ransack(name_cont: params[:q]).result(distinct: true)
 		@attendees = current_user.attendees.ransack(login_cont: params[:q]).result(distinct: true)
+
 		respond_to do |format|
 			format.html {}
-			format.json { @attendees = @attendees.limit(5) }
+			format.json {
+				@attendees = @attendees.limit(5)
+				@attendees_name = @attendees_name.limit(5)
+			}
 		end
 	end
 

@@ -1,27 +1,37 @@
 <div class=" white-text" id="notice">
 	<%= notice %>
 </div>
-<!-- <div class="row ">
+
+
+<div class="row">
+  <div class="col s12">
+	<div class="row">
+	  <div class="input-field col s12">
+		<i class="material-icons prefix">textsms</i>
+		<input type="text" id="autocomplete-input" class="autocomplete">
+		<label for="autocomplete-input">Autocomplete</label>
+	  </div>
+	</div>
+  </div>
+</div>
+
+
+<div class="row">
 	<div class="col s12">
 		<div class="row">
-			<div class="input-field col s10 white search-add-button">
-				<i class="material-icons prefix">search</i>
-				<input type="text" id="autocomplete-input" class="autocomplete" placeholder="search" data-behavior="autocomplete">
-				<label for="autocomplete-input"></label>
-			</div>
+			<div class="input-field col s11 search-bar">
+				<%= form_with url: search_path, local: true, method: :get, html: { class: "form-inline my-2 my-lg-0" } do |form| %>
+					<%= form.text_field :q, placeholder: "Search", data: { behavior: "autocomplete" }, class: "form-control mr-sm-2 autocomplete"%>
+					</div>
+					<span class="right">
+							<%= form.button "search", class: "btn material-icons" %>
+					</span>
+
+				<% end %>
 
 		</div>
 	</div>
-</div> -->
-<!-- <%= form_with url: search_path, local: true, method: :get, html: { class: "form-inline my-2 my-lg-0" } do |form| %>
-      <%= form.text_field :q, placeholder: "Search", data: { behavior: "autocomplete" }, class: "form-control mr-sm-2" %>
-      <%= form.button "Search", class: "btn btn-outline-success my-2 my-sm-0" %>
-    <% end %> -->
-
-<!-- <%= form_with url: search_path, local: true, method: :get, html: {class: "form-inline my-2 my-lg-0"} do |form| %>
-<%= form.text_field :q, placeholder: "Search", data: { behavior: "autocomplete" }, class: "form-control mr-sm-2 autocomplete"%>
-<%= form.button "Search", class: "btn btn-outline-success my-2 my-sm-0"%>
-<% end %> -->
+</div>
 <div class="search-add-button">
 	<a class=" add-new-button large material-icons modal-trigger" href="#modal1">
 		add_circle

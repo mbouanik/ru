@@ -9,7 +9,11 @@ document.addEventListener("turbolinks:load", function() {
 		categories: [
 			{
 				listLocation: "attendees",
-				header: "<strong>Attendees</strong>",
+				header: "<strong class='header-search'>Login</strong>",
+			},
+			{
+				listLocation: "attendees_name",
+				header: "<strong class='header-search'>Name</strong>",
 			},
 		],
 		list: {
@@ -20,17 +24,8 @@ document.addEventListener("turbolinks:load", function() {
 			}
 		}
 	}
-  $input.easyAutocomplete(options)
+	$input.easyAutocomplete(options);
 });
-
-
-
-
-
-
-
-
-
 
 
 
