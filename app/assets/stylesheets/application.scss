@@ -2,6 +2,7 @@
 @import "materialize/extras/nouislider";
 
 body {
+	font-family: "helvetica";
   display: flex;
   min-height: 100vh;
   flex-direction: column;
@@ -18,7 +19,7 @@ main {
 }
 .header-search{
 	font-size: 20px;
-	color: grey;
+	color: #ce93d8;
 }
 .search-button-bar{
 	display: inline;
@@ -26,11 +27,13 @@ main {
 .search-button{
 	margin-top: 50px;
 }
-.search-bar{
-	// background:  url(img_attendee.jpg);
-	border-radius: 10px;
-	// background: white;
+
+.easy-autocomplete{
+	position: relative;
+	top: 0px;
 }
+
+
 .profile_name{
 	margin-top: 2px;
 }
@@ -40,8 +43,17 @@ main {
 .picture-hover:hover {
   -webkit-filter: grayscale(100%);
 }
-.search-bar{
-	
+.eac-item:hover{
+	background-color: #ce93d8;
+	// padding: 5px;
+}
+.eac-item:active {
+	background-color: #ce93d8;
+	// padding: 5px;
+}
+.eac-item{
+	padding: 3px;
+	margin-left: 3px;
 }
 .stats-attendee{
 	position: relative;
@@ -134,29 +146,50 @@ main {
 	min-height: auto;
 
 }
-.block-attendees-pages{
-	display: inline-block;
-	// padding-top: 10px
+
+.search-bar{
+	position: fixed;
+	z-index: 3;
+	width: 100px;
+	// margin-top: 0px;
+	// display:block;
+	// background:  url(parallax1.jpg);
+	background:  url(img_attendee.jpg);
+	border-radius: 10px;
+	// opacity: .4;
+	// background-color:  #412e8c;
 
 }
 
+.block-attendees-pages{
+
+	display: inline-block;
+	// z-index: -1;
+}
+// .paginate{
+// 	position: relative;
+// 	z-index: -1;
+//
+// }
+.easy-autocomplete-container{
+	// position: fixed;
+	// z-index: 4;
+
+	// z-index: 5;
+// display: block;
+// position: fixed;
+// height: 100%
+}
 .new_attendee{
 	position: relative;
 	padding-right:   50;
 }
-// .delete-button{
-// 	// position: relative;
-// 	margin-right: -5px;
-// }
 .picture-index {
 	position: relative;
 	width: 256px;
 	height: 256px;
 	border-radius: 50%;
 	overflow: hidden;
-	// margin-top: 3px;
-	// margin-bottom: 5px;
-	// margin-left: 20px;
 }
 
 .picture-index img{
@@ -169,10 +202,6 @@ main {
 	-ms-transform: translate(-50%,-50%);
 	transform: translate(-50%,-50%);
 }
-// .add-timestamps{
-// 	position: relative;
-// 	padding-top: 15px
-// }
 .paginate-profile{
 	position: fixed;
 margin-top: -15px;
@@ -193,21 +222,9 @@ margin-left: 20%;
 	min-width: 360px;
 	background-image:  url(img_attendee);
 }
-// .time-stamps-index-sign-out{
-// 	display: inline;
-// }
-// .time-stamps-index-sign-out{
-// 	display: inline;
-// }
 .card-title-time{
 	background: url(img_attendee);
 }
-// .btn-action{
-// 	display: inline;
-// 	// padding: auto;
-// 	width: auto;
-//
-// }
 .btn-action-index{
 	position: relative;
 	margin-top: -5px;
@@ -217,23 +234,10 @@ margin-left: 20%;
 	height: 60px;
 	background: url(img_attendee);
 }
-.card-action-index{
-	// height: 50px;
-	// position: relative;
-	// margin-top: -15px;
-}
-.btn-action-index{
-	// position: relative;
-	// margin-top: -5px;
-}
-
 .card-block{
 	display: block;
 }
 
-// .search-add-button{
-// 	display: inline;
-// }
 .add-new-button{
 	position: relative;
 	margin-top:  30px;

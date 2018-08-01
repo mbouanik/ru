@@ -11,10 +11,10 @@
 					</div>
 					<div class="card-title login-link">
 						<%= attendee.name %>
-						<!-- <br> <%=link_to (attendee.login), attendee, class: "login-link" %> -->
+						<!-- <%=link_to (attendee.login), attendee, class: "login-link" %> -->
 					</div>
 					<hr>
-
+					<%= get_pos(attendee.login) %>
 					<% @stamps = Stamp.where(:attendee_id => attendee.id).last %>
 					<table class="white-text centered">
 						<!-- <div class=""> -->
