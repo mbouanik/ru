@@ -13,11 +13,11 @@ class AttendeesController < ApplicationController
 		if params[:q] == ''
 			redirect_to '/'
 		end
-		@attendees_name = current_user.attendees.ransack(name_cont: params[:q]).result(distinct: true)
 		@attendees = current_user.attendees.ransack(login_cont: params[:q]).result(distinct: true)
+		@attendees_name = current_user.attendees.ransack(name_cont: params[:q]).result(distinct: true)
 
 		respond_to do |format|
-			format.html {}
+			format.html {render :search}
 			format.json {
 				@attendees = @attendees.limit(5)
 				@attendees_name = @attendees_name.limit(5)

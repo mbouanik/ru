@@ -152,7 +152,10 @@ main {
 	background:  url(parallax-transparent.png);
 	border-radius: 10px;
 }
-
+.search-table{
+	background:  url(parallax-transparent.png);
+	border-radius: 10px;
+}
 .block-attendees-pages{
 	display: inline-block;
 }
@@ -160,6 +163,25 @@ main {
 	position: relative;
 	padding-right:   50;
 }
+.picture-index-search {
+	position: relative;
+	width: 64px;
+	height: 64px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.picture-index-search img{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	height: 100%;
+	width: auto;
+	-webkit-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+}
+
 .picture-index {
 	position: relative;
 	width: 256px;
