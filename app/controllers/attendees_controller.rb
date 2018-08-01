@@ -10,6 +10,9 @@ class AttendeesController < ApplicationController
 	end
 
 	def search
+		if params[:q] == ''
+			redirect_to '/'
+		end
 		@attendees_name = current_user.attendees.ransack(name_cont: params[:q]).result(distinct: true)
 		@attendees = current_user.attendees.ransack(login_cont: params[:q]).result(distinct: true)
 

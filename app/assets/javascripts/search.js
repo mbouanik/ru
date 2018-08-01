@@ -6,6 +6,7 @@ document.addEventListener("turbolinks:load", function() {
 		url: function(phrase) {
 			return "/search.json?q=" + phrase;
 		},
+
 		categories: [
 			{
 				listLocation: "attendees",
