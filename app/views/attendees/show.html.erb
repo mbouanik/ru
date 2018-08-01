@@ -8,9 +8,9 @@
 				<%= @user_quest["displayname"] %> </div> <div class="info_profile"> <%= @attendee.login %>
 			</div>
 		</div>
-		<div class="info z-depth-3 center">
-		</div>
-		<div class="block_info_text center">
+		<div class="info z-depth-3 center block_info_text">
+
+		<!-- <div class="block_info_text center"> -->
 			<div class="stats-attendee center">
 				<div class="info_profile left">
 					<span class="title">
@@ -28,7 +28,7 @@
 						<%= @user_quest["cursus_users"][0]["level"].truncate(4) %>
 					</div>
 				</div>
-				<div class="info_profile right">
+				<div class="info_profile right ">
 					<span class="title">
 						Correction points
 					</span>
@@ -37,7 +37,8 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		<!-- </div> -->
+			</div>
 		<div class="location center block_info_text">
 			<div class=" block_info_text">
 				<%= get_pos(@attendee.login) %>

@@ -1,7 +1,7 @@
 class AttendeesController < ApplicationController
 	before_action :authenticate_user!, only: [:index, :create, :show, :destroy]
 	before_action :set_attendee, only: [:show, :destroy]
-	# before_action :force_json, only: [:search]
+
 # GET /attendees
 	def index
 		@attendee = Attendee.new
@@ -17,7 +17,7 @@ class AttendeesController < ApplicationController
 		@attendees_name = current_user.attendees.ransack(name_cont: params[:q]).result(distinct: true)
 
 		respond_to do |format|
-			format.html {render :search}
+			format.html {}
 			format.json {
 				@attendees = @attendees.limit(5)
 				@attendees_name = @attendees_name.limit(5)
@@ -93,9 +93,7 @@ class AttendeesController < ApplicationController
 	end
 
 	private
-	def force_json
-		request.format = :json
-	end
+
 	# Use callbacks to share common setup or constraints between actions.
 	def set_attendee
 		@attendee = current_user.attendees.find(params[:id])

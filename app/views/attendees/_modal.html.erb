@@ -1,5 +1,5 @@
 <!-- Modal Structure -->
-<div id="modal1" class="modal">
+<div id="modal1" class="modal modal-index white-text">
 	<div class="modal-content">
 		<div class="modal-header">
 			Add New Attendee
@@ -20,12 +20,12 @@
 			</div>
 			<% end %>
 		<div class="modal-body">
-			<div class="input-field">
-				<%= form.text_field :login, class: 'attendee_login' %>
+			<div class="input-field white-text">
+				<%= form.text_field :login, class: 'attendee_login white-text' %>
 				<%= form.label :login, class: 'active' %>
 			</div>
 		</div>
-		<div class="modal-footer">
+		<div class="modal-footer modal-index">
 			<div class="btn waves-effect waves-light  blue darken-2" >
 				<%= form.submit "Add Attendee", class: " white-text" %>
 			</div>

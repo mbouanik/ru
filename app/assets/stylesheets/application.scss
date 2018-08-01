@@ -54,21 +54,22 @@ main {
 }
 .stats-attendee{
 	position: relative;
-	margin-top: -100px;
-	margin-left: 10px;
-	margin-right: 10px;
+		// display: flex;
+	margin-top: 20px;
+	margin-left: 20px;
+	margin-right: 20px;
 	height: auto;
 	width: auto;
 }
 .info{
 	position: relative;
-	margin-top: 21px;
-	height: 120px;
+	display: flex;
 	width: auto;
+	height: auto;
+
 	border: 1px solid #ce93d8;
 	border-radius: 10px;
-	background:  url(parallax1.jpg);
-	opacity: .4;
+	background:  url(parallax-transparent.png);
 }
 .destroy-close{
 	color: red;
@@ -143,9 +144,12 @@ main {
 	min-height: auto;
 
 }
+.modal-index{
+		background-image:  url(parallax1.jpg);
 
+}
 .search-bar{
-	position: fixed;
+	position: absolute;
 	z-index: 3;
 	width: 100px;
 	border: 1px solid #ce93d8;
