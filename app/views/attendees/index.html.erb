@@ -3,9 +3,11 @@
 </div>
 <div class="row">
 	<div class="col s12 ">
-		<div class=" col s5 search-bar white-text">
+		<!-- <div class=" col s5  white-text ">
+		</div> -->
+		<div class=" col s5 search-bar white-text ">
 			<%= form_with url: search_path, local: true, method: :get  do |form| %>
-				<%= form.text_field :q, placeholder: "Search for attendees", data: { behavior: "autocomplete" }, class: " search-bar-placeholder white-text"%>
+				<%= form.text_field :q, placeholder: "Search for attendees", data: { behavior: "autocomplete" }, class: "white-text"%>
 			<% end %>
 		</div>
 	</div>
