@@ -13,49 +13,36 @@
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	</head>
 	<body>
-		<% if action_name == "index" || action_name== 'show' || action_name== 'search'%>
-			<div class="navbar-fixed">
-				<nav>
-					<div class="nav-wrapper">
-						<div class="">
-							<a href="/" class="brand-logo nav-block" >
-								<img src="/assets/42-logo" alt="42" height="50px">
-								<!-- <%= image_tag '42-logo.svg'%> -->
-							</a>
-						</div>
-
-						<ul class="right hide-on-med-and-down">
-							<a class='dropdown-trigger btn blue darken-3 nav-block' href='#' data-target='dropdown1'>
-								Logged as <%=current_user.nickname %>
-							</a>
-							<!-- Dropdown Structure -->
-							<br>
-						<ul id='dropdown1' class='dropdown-content'>
-							<li>
-								<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
-							</li>
-						</ul>
-					</div>
-				</nav>
+		<span>
+			<!-- <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a> -->
+			<a href="/" class="brand-logo nav-block" >
+				<img src="/assets/42-logo" alt="42" height="50px">
+			</a>
+			<div class="right aves-effect waves-light btn blue darken-3">
+				Logged as <%= current_user.nickname %><%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
 			</div>
+
+		</span>
+
+		<% if action_name == "index" || action_name== 'show' || action_name== 'search'%>
+			<ul id="slide-out" class="sidenav">
+				<li>
+					<div class="user-view">
+						<div class="background">
+							<img src="/assets/42-logo" alt="42" height="25px">
+						</div>
+						<a href="#user"><img class="circle" src="https://cdn.intra.42.fr/users/medium_<%=current_user.nickname %>.jpg"></a>
+						<a href="#name"><span class="white-text name"><%=  current_user.nickname %></span></a>
+						<a href="#email"><span class="white-text email"><%= current_user.email %></span></a>
+					</div>
+				</li>
+				<li class="red">
+					<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+				</li>
+			</ul>
 		<% end %>
-	<br>
-	<main>
 		<div class="container">
 			<%= yield %>
 		</div>
-	</main>
-	<!-- <% if action_name == "index" || action_name== 'show' %>
-		<footer class="page-footer white-text">
-			<div class="footer-copyright">
-				<div class="container">
-					© 2018 Copyright 42 Silicon Valley
-					<a class="grey-text text-lighten-4 right" href="https://www.42.us.org/">
-						42 SiliconValley
-					</a>
-				</div>
-			</div>
-		</footer>
-	<% end %> -->
 	</body>
 </html>

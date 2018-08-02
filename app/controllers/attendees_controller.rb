@@ -1,12 +1,13 @@
 class AttendeesController < ApplicationController
 	before_action :authenticate_user!, only: [:index, :create, :show, :destroy]
 	before_action :set_attendee, only: [:show, :destroy]
-
+	# before_action :force_json, only: [:search]
 # GET /attendees
 	def index
 		@attendee = Attendee.new
 		@attendees = current_user.attendees.page(params[:page])
-		@time
+		@all_attendees = current_user.attendees.count
+		@remain =  current_user.attendees.joins(:stamps).where(stamps: { sign_out: nil }).count
 	end
 
 	def search
@@ -93,7 +94,9 @@ class AttendeesController < ApplicationController
 	end
 
 	private
-
+	def force_json
+		request.format = :json
+	end
 	# Use callbacks to share common setup or constraints between actions.
 	def set_attendee
 		@attendee = current_user.attendees.find(params[:id])

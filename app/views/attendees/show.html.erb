@@ -1,6 +1,6 @@
 <div class="container_info  white-text">
-	<div class="picture-index left img-profile">
-		<%= image_tag  "https://cdn.intra.42.fr/users/medium_#{ @attendee.login }.jpg", class: 'picture-index'%>
+	<div class="picture-index-profile left img-profile">
+		<%= image_tag  "https://cdn.intra.42.fr/users/medium_#{ @attendee.login }.jpg", class: 'picture-index-profile'%>
 	</div>
 	<div class="container">
 		<div class="block_info_text profile_name">
@@ -8,9 +8,9 @@
 				<%= @user_quest["displayname"] %> </div> <div class="info_profile"> <%= @attendee.login %>
 			</div>
 		</div>
-		<div class="info z-depth-3 center block_info_text">
-
-		<!-- <div class="block_info_text center"> -->
+		<div class="info z-depth-3 center">
+		<!-- </div>
+		<div class="block_info_text center"> -->
 			<div class="stats-attendee center">
 				<div class="info_profile left">
 					<span class="title">
@@ -28,7 +28,7 @@
 						<%= @user_quest["cursus_users"][0]["level"].truncate(4) %>
 					</div>
 				</div>
-				<div class="info_profile right ">
+				<div class="info_profile right">
 					<span class="title">
 						Correction points
 					</span>
@@ -37,8 +37,7 @@
 					</div>
 				</div>
 			</div>
-		<!-- </div> -->
-			</div>
+		</div>
 		<div class="location center block_info_text">
 			<div class=" block_info_text">
 				<%= get_pos(@attendee.login) %>
@@ -48,7 +47,7 @@
 </div>
 <br>
 
-<div class="card z-depth-3 " >
+<div class="card z-depth-3 time-stamps " >
 	<div class="card-title-time card-title white-text">
 			<table class=" white-text ">
 				<thead class="">
@@ -73,12 +72,13 @@
 			</span>
 		</th>
 		<p class="white-text center no-time-logged"><% if !@stamps.present? %> <%= " No time logged yet" %> <% end %></p>
+
 		<div class="sign_in<%= @attendee.id %> truncate">
 			<%= render @stamps %>
 		</div>
 	</div>
 </div>
-<div class="center">
+<!-- <div class="center">
 	<%= paginate @stamps %>
 </div>
-<br>
+ -->
