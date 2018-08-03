@@ -5,8 +5,8 @@ class AttendeesController < ApplicationController
 	def index
 		@attendee = Attendee.new
 		@attendees = current_user.attendees.page(params[:page])
-		@all_attendees = current_user.attendees.count
 		@remain =  current_user.attendees.joins(:stamps).where(stamps: { sign_out: nil }).count
+		@all_attendees = current_user.attendees.count - @remain
 	end
 
 	def search
@@ -75,7 +75,7 @@ class AttendeesController < ApplicationController
 				format.js
 			else
 				format.html {}
-				format.json {}
+				format.json { render json: @@attendee.errors, status: :unprocessable_entity }
 				format.js
 			end
 		end

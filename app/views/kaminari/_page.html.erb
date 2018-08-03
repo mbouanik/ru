@@ -3,7 +3,7 @@
     <%= content_tag :a, page %>
   </li>
 <% else %>
-  <li class="waves-effect" \>
+  <li class="waves-effect" onclick="location.reload(false)">
     <%= link_to page, url, :rel => 'next', :remote => remote , class: 'white-text'%>
   </li>
 <% end %>

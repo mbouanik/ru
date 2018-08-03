@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<link href="https://profile.intra.42.fr/assets/42_logo_black-684989d43d629b3c0ff6fd7e1157ee04db9bb7a73fba8ec4e01543d650a1c607.png" rel="icon" type="image/svg">
 		<title>
-			Ru
+			Queen Ru
 		</title>
 		<%= csrf_meta_tags %>
 		<%= csp_meta_tag %>
@@ -14,10 +15,9 @@
 	</head>
 	<body>
 		<span>
-			<!--Side Nav Bar-->
 			<a href="#" data-target="slide-out" class="left sidenav-trigger"><i class="material-icons">menu</i></a>
 			<a href="/" class="brand-logo nav-block" >
-				<img src="/assets/42-logo" alt="42" height="50px">
+				<img onclick="location.reload(false)"  src="/assets/42-logo" alt="42" height="42px">
 			</a>
 			<% if current_user %>
 				<span class='white-text right' href='#' data-target='dropdown1'>Logged as <%= current_user.nickname unless current_user.nil? %></span>
@@ -30,9 +30,9 @@
 						<div class="background">
 							<img src="/assets/42-logo" alt="42" height="25px">
 						</div>
-						<a href="#user"><img class="circle" src="https://cdn.intra.42.fr/users/medium_<%=current_user.nickname %>.jpg"></a>
-						<a href="#name"><span class="white-text name"><%=  current_user.nickname %></span></a>
-						<a href="#email"><span class="white-text email"><%= current_user.email %></span></a>
+						<img class="picture-index" src="https://cdn.intra.42.fr/users/medium_<%=current_user.nickname %>.jpg">
+						<span class="white-text name"><%=  current_user.nickname %></span>
+						<span class="white-text email"><%= current_user.email %></span>
 					</div>
 				</li>
 				<li class="red">

@@ -9,7 +9,9 @@ body {
   background:  url(parallax1.jpg);
   background-size: auto;
 }
-
+.modal-index{
+	background-image: url(parallax1.jpg);
+}
 .btn-logged{
 margin-top: 5px;
 }
@@ -156,8 +158,12 @@ main {
 
 }
 .card_attendee{
+	border: 1px solid;
 	height: 390px;
 	width: 300px;
+}
+.card_attendee:hover{
+	border: 1px solid #ce93d8;
 }
 .picture{
 	margin-left: 28%;
@@ -258,7 +264,14 @@ object-fit: contain;
 margin-top: -15px;
 margin-left: 20%;
 }
-
+.person{
+	margin-top: 5px;
+}
+.remain{
+	position: absolute;
+	z-index: 2;
+	margin-left: -400px;
+}
 .img-profile{
 	position: relative;
 	margin-left: 5px;
@@ -297,7 +310,7 @@ margin-left: 20%;
 .add-new-button{
 	position: relative;
 	margin-top:  30px;
-	margin-left: 10px;
+	margin-left: 0px;
 	color: #ce93d8 ;
 }
 .add-timestamp-button{
