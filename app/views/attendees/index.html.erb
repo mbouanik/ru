@@ -26,10 +26,8 @@
 	<div class="center block-attendees-pages" id="container_attendees">
 		<%= render @attendees %>
 	</div>
-	<div class="center  ">
+	<div class="center" onclick="location.reload(false)">
 		<%= paginate @attendees %>
 	</div>
 </div>
-<div class="center ">
-	<%= render 'attendees/modal' %>
-</div>
+<%= render 'attendees/modal' %>
