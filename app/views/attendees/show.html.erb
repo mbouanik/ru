@@ -73,11 +73,11 @@
 		</th>
 		<p class="white-text center no-time-logged"><% if !@stamps.present? %> <%= " No time logged yet" %> <% end %></p>
 
-		<div class="sign_in<%= @attendee.id %> truncate">
+		<div class="sign_in<%= @attendee.id %> truncate block-attendees-pages">
 			<%= render @stamps %>
 		</div>
 	</div>
-</div>
-<div class="center">
-	<%= paginate @stamps %>
+	<div class="center ">
+		<%= paginate @stamps %>
+	</div>
 </div>

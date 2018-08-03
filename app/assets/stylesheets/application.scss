@@ -162,8 +162,11 @@ main {
 .picture{
 	margin-left: 28%;
 }
+#notice{
+
+}
 .search-bar{
-	position: fixed;
+	position: absolute;
 	z-index: 3;
 	max-width: 1160px;
 	border: 1px solid #ce93d8;
@@ -335,27 +338,13 @@ margin-left: 20%;
 	border-radius: 15px;
 }
 
-/* The close button */
-.closebtn {
-    margin-left: 15px;
-    color: white;
-    font-weight: bold;
-    float: right;
-    font-size: 22px;
-    line-height: 20px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-/* When moving the mouse over the close button */
-.closebtn:hover {
-    color: black;
-}
-
-.notice {
+#notice {
+	position: absolute;
+	margin-left: -500px;
+	z-index: 4;
     padding: 20px;
-    background-color: #303f9f; /* Red */
-    color: white;
+    // background-color: #ce93d8;
+    // color: white;
     margin-bottom: 15px;
 	border-radius: 15px;
 }
