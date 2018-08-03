@@ -1,10 +1,7 @@
-
-
-
  <div class="attendee_card" id="attendee<%=attendee.id%>">
 	<div class="row">
-		<div class="col s1 m12">
-			<div class="card_attendee  truncate-index z-depth-3">
+		<div class="col s6 m12">
+			<div class="card_attendee truncate-index z-depth-3">
 				<span class="row right">
 					<%= link_to 'close', attendee, method: :delete,  remote: true, class: 'material-icons destroy-close'%>
 				</span>
@@ -13,7 +10,6 @@
 						<%= link_to (image_tag  "https://cdn.intra.42.fr/users/medium_#{ attendee.login }.jpg",  class: 'picture-index'), attendee  %>
 					</div>
 				</div>
-
 				<div class=" white-text container card-block">
 					<div class=" login-link">
 						<%= attendee.name %>
@@ -53,7 +49,6 @@
 					</div>
 				</div>
 			</div>
-
 		</div>
 	</div>
 	<% @stamps = Stamp.where(:attendee_id => attendee.id).order("created_at DESC").page().per(10)%>

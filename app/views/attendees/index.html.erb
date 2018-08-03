@@ -1,7 +1,6 @@
 <div class=" white-text" id="notice">
 	<%= notice %>
 </div>
-
 <div class="row">
 	<div class="col s12 ">
 		<div class=" col m5 search-bar white-text">
@@ -11,25 +10,24 @@
 		</div>
 		<div class="search-add-button ">
 			<a class=" add-new-button large material-icons modal-trigger" href="#modal1">
-				add_circle
+				person_add
 			</a>
 		</div>
 	</div>
 </div>
-<div class="white-text remain ">
+<div class="white-text remain center">
 	<h5>
-		Remaining Attendees
-		<span><%= @remain%> / <%= @all_attendees %></span>
+		<span><%= @remain%> / <%= @all_attendees %><i class="material-icons"> person </i>
 	</h5>
 </div>
-<div class="paginate">
+<div class="">
 	<div class="center block-attendees-pages" id="container_attendees">
 		<%= render @attendees %>
 	</div>
-	<div class="paginate center container block-attendees-pages ">
+	<div class="center  ">
 		<%= paginate @attendees %>
 	</div>
 </div>
-<div class="">
+<div class="center ">
 	<%= render 'attendees/modal' %>
 </div>
