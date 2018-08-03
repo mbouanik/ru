@@ -61,7 +61,20 @@ class AttendeesController < ApplicationController
 	def create
 		client = OAuth2::Client.new( ENV["FT_UID"],  ENV["FT_SECRET"], site:"https://api.intra.42.fr")
 		token = client.client_credentials.get_token
-		@user_quest = token.get("/v2/users/" + params[:attendee][:login]).parsed
+		response = token.get("/v2/users/" + params[:attendee][:login])
+		# if response.status = 500
+			puts "----------------------------------------"
+			puts response.status
+			puts "=========================================="
+
+		# end
+		puts "----------------------------------------"
+		# errorResponse = Response.error();
+		# puts errorResponse
+		puts "----------------------------------------"
+		@user_quest = response.parsed
+
+
 		# if @user_quest.nil?
 		# 	errors.add( message: "cannot be nil")
 		# end

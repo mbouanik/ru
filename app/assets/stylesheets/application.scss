@@ -31,9 +31,6 @@ main {
 .search-button-bar{
 	display: inline;
 }
-.search-button{
-	margin-top: 50px;
-}
 
 .easy-autocomplete{
 	position: relative;
@@ -78,9 +75,7 @@ main {
 	position: relative;
 	margin-right: 8px;
 }
-.login-link{
-	// font-size: 14px;
-}
+
 .info_text{
 	padding-bottom: 10px;
 }
@@ -111,7 +106,6 @@ main {
 .login{
 	position: relative;
 	top: 0px;
-	// opacity: 1;
 }
 .truncate{
 	display: block;
@@ -147,15 +141,10 @@ main {
 	flex:  1 0 auto;
 }
 .attendee_card{
-	// position: relative;
+	position: relative;
 	float: left;
-	// width: 25%;
-	padding: 20px;
-	// margin-left: 20px;
-	// font-size: 15px;
-	// min-width: auto;
-	// min-height: auto;
-
+	padding: 10px;
+	margin-left: 60px;
 }
 .card_attendee{
 	border: 1px solid;
@@ -168,13 +157,12 @@ main {
 .picture{
 	margin-left: 28%;
 }
-#notice{
-
-}
 .search-bar{
 	position: absolute;
 	z-index: 3;
-	max-width: 1160px;
+	width: auto;
+	min-width: 400px;
+	max-width: 960px;
 	border: 1px solid #ce93d8;
 	background:  url(parallax-transparent.png);
 	border-radius: 10px;
@@ -185,10 +173,6 @@ main {
 }
 .block-attendees-pages{
 	display: inline-block;
-	// padding-left: 60px;
-}
-.search-add-button{
-	margin-left: 1100px;
 }
 .new_attendee{
 	position: relative;
@@ -225,7 +209,7 @@ main {
 
 .picture-index-profile img{
 	position: absolute;
-object-fit: contain;
+	object-fit: contain;
 	left: 50%;
 	top: 50%;
 	height: 100%;
@@ -258,17 +242,15 @@ object-fit: contain;
 }
 .paginate-profile{
 	position: fixed;
-margin-top: -15px;
-margin-left: 20%;
+	margin-top: -15px;
+	margin-left: 20%;
 }
 .person{
-	// margin-top: 5px;
 	color: #ce93d8;
 }
 .remain{
 	position: absolute;
-	z-index: 2;
-	margin-top: 15px;
+	margin-top: 20px;
 	margin-left: -400px;
 	background-image:  url(parallax-transparent.png);
 	border: 1px solid #ce93d8;
@@ -316,9 +298,11 @@ margin-left: 20%;
 }
 
 .add-new-button{
-	position: relative;
+	// position: relative;
+	// display: block;
+	// z-index: 3;
 	margin-top:  30px;
-	margin-left: 0px;
+	margin-left: 970px;
 	color: #ce93d8 ;
 }
 .add-timestamp-button{
@@ -339,13 +323,8 @@ margin-left: 20%;
 
 .sidenav{
 	background:  url(parallax1.jpg);
-	// background: linear-gradient(to right, #311b92 , #d32f2f, #0d47a1 );
 }
 
-.page-footer{
-	// background: url(img_attendee);
-	// background: linear-gradient(to right, #311b92 , #d32f2f, #0d47a1 );
-}
 .table_stamp{
 	padding-left: 10px;
 }
