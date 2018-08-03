@@ -15,18 +15,13 @@
 	<body>
 		<span>
 			<!--Side Nav Bar-->
-			<!-- <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a> -->
+			<a href="#" data-target="slide-out" class="left sidenav-trigger"><i class="material-icons">menu</i></a>
 			<a href="/" class="brand-logo nav-block" >
 				<img src="/assets/42-logo" alt="42" height="50px">
 			</a>
 			<% if current_user %>
-				<a class='dropdown-trigger waves-effect waves-light btn-small btn-logged blue darken-3 right' href='#' data-target='dropdown1'>Logged as <%= current_user.nickname unless current_user.nil? %></a>
+				<span class='white-text right' href='#' data-target='dropdown1'>Logged as <%= current_user.nickname unless current_user.nil? %></span>
 			<% end %>
-			<ul id='dropdown1' class='dropdown-content '>
-				<li>
-					<%= link_to "Sign out", destroy_user_session_path, :method => :delete%>
-				</li>
-			</ul>
 		</span>
 		<% if action_name == "index" || action_name== 'show' || action_name== 'search'%>
 			<ul id="slide-out" class="sidenav">
