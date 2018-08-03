@@ -15,11 +15,13 @@
 		</div>
 	</div>
 </div>
-<div class=" white-text remain center">
+<div class=" white-text remain">
 	<h5>
-		<i class="material-icons person"> person </i>
-		<p>Sign in <%= @remain%> </p>
-		<p>Sign out <%= @all_attendees %></p>
+		<div class="sign_in-sign_out">Sign in  <p class="center"><%=@remain%></p> </div>
+		<div class="center sign_in-sign_out">
+				<i class="material-icons person"> person </i>
+		</div>
+		<div class="sign_in-sign_out">Sign out <p class="center"><%=@all_attendees%></p> </div>
 	</h5>
 </div>
 <div class="">

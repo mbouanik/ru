@@ -179,9 +179,6 @@ main {
 	background:  url(parallax-transparent.png);
 	border-radius: 10px;
 }
-.search-bar:active{
-	color: #ce93d8;
-}
 .search-table{
 	background:  url(parallax-transparent.png);
 	border-radius: 10px;
@@ -250,7 +247,7 @@ object-fit: contain;
 
 .picture-index img{
 	position: absolute;
-object-fit: contain;
+	object-fit: contain;
 	left: 50%;
 	top: 50%;
 	height: 100%;
@@ -265,12 +262,17 @@ margin-top: -15px;
 margin-left: 20%;
 }
 .person{
-	margin-top: 5px;
+	// margin-top: 5px;
+	color: #ce93d8;
 }
 .remain{
 	position: absolute;
 	z-index: 2;
+	margin-top: 15px;
 	margin-left: -400px;
+	background-image:  url(parallax-transparent.png);
+	border: 1px solid #ce93d8;
+	border-radius: 10px;
 }
 .img-profile{
 	position: relative;
@@ -280,6 +282,12 @@ margin-left: 20%;
 }
 .table_stamp_profile{
 	margin-left:  20px;
+}
+.sign_in-sign_out{
+
+	display: inline;
+	float: left;
+	padding: 5px;
 }
 .card{
 	height: 200px;
