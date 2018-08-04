@@ -113,15 +113,15 @@ main {
 .truncate{
 	display: block;
 	max-height: 685px;
-	white-space: nowrap;
+	// white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
 
 .truncate1{
 	display: block;
-	max-height: 1127px;
-	white-space: nowrap;
+	max-height: 980px;
+	// white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
 }

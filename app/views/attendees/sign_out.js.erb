@@ -1,3 +1,4 @@
 $('.sign_out<%=@attendee.id%>').replaceWith('<%=@attendee.sign_out.strftime "%B %e at %l:%M %p" %>');
 $('.sign_out<%=@attendee.id%>').hide().fadeIn(1000);
 $('.update_sign_out<%=@attendee.id%>').remove();
+// $('.card-action-index<%=@attendee.attendee.id%>').hide().fadeIn(1000);
