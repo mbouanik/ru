@@ -1,19 +1,19 @@
 <div class=" white-text" id="notice">
 	<%= notice %>
 </div>
-<div class="row ">
+<div class="row container i">
 	<div class="col s1 m3 ">
-		<div class=" col s1 m6 search-bar white-text search-bar-button">
+		<div class=" col s1 m6 search-bar white-text search-bar-button ">
 			<%= form_with url: search_path, local: true, method: :get  do |form| %>
 				<%= form.text_field :q, placeholder: "Search for attendees", data: { behavior: "autocomplete" }, class: "white-text "%>
 			<% end %>
 		</div>
-		<div class="search-bar-button">
-			<a class=" add-new-button large material-icons modal-trigger" href="#modal1">
-				person_add
-			</a>
-		</div>
 	</div>
+</div>
+<div class="search-bar-button right">
+	<a class=" add-new-button modal-trigger" href="#modal1">
+		<i class="medium material-icons">person_add</i>
+	</a>
 </div>
 <div class=" white-text remain">
 	<h5>

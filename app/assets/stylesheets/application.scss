@@ -3,9 +3,9 @@
 
 body {
 	font-family: "helvetica";
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
+  // display: flex;
+  // min-height: 100vh;
+  // flex-direction: column;
   background:  url(parallax1.jpg);
   background-size: auto;
 }
@@ -16,7 +16,7 @@ body {
 margin-top: 5px;
 }
 main {
-  flex: 1 0 auto;
+  // flex: 1 0 auto;
 }
 .sidenav-trigger{}
 .brand-logo{
@@ -148,6 +148,7 @@ main {
 	float: left;
 	padding: 10px;
 	margin-left: 60px;
+	margin-top: 60px;
 }
 .card_attendee{
 	border: 1px solid;
@@ -160,23 +161,40 @@ main {
 .picture{
 	margin-left: 28%;
 }
+// .easy-autocomplete-container{
+// 	position: absolute;
+// 	z-index: 4;
+// 	// max-width: 800px;
+// 	min-width: 580px;
+// 	margin-top: -15px;
+// 	// margin-left: 15px;
+// 	// border: 1px solid #ce93d8;
+// 	background:  url(parallax-transparent.png);
+// 	border-radius: 10px;
+// }
 .search-bar{
 	position: absolute;
-	z-index: 3;
+	z-index: 4;
 	width: auto;
+
+	max-width: 800px;
 	min-width: 400px;
+
 	border: 1px solid #ce93d8;
 	background:  url(parallax-transparent.png);
 	border-radius: 10px;
 }
 .search-bar-button{
-display: inline;
+	display: inline;
 }
 .add-new-button{
-	position: relative;
-	margin-top:  30px;
-	margin-left: -30px;
+	position: absolute;
+	// margin-top:  30px;
+	margin-left: 10px;
 	color: #ce93d8 ;
+	// font-size: 30px ;
+	// height: auto;
+	// width: auto;
 }
 .search-table{
 	background:  url(parallax-transparent.png);

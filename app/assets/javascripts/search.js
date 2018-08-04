@@ -18,9 +18,9 @@ document.addEventListener("turbolinks:load", function() {
 			},
 		],
 		list: {
-			match: {
-				enabled: true
-			},
+			// match: {
+			// 	enabled: true
+			// },
 			maxNumberOfElements: 6,
 
 			showAnimation: {
