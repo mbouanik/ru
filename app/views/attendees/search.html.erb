@@ -1,7 +1,7 @@
 <table class="search-table highlight white-text ">
-	<thead class="">
+	<thead>
 		<tr>
-			<th class=""  >Attendee Login</th>
+			<th>Attendee Login</th>
 		</tr>
 	</thead>
 	<% @attendees.each do |attendee| %>
@@ -11,27 +11,27 @@
 					<%= link_to (image_tag  "https://cdn.intra.42.fr/users/medium_#{ attendee.login }.jpg", class: 'picture-index-search') , attendee %>
 				</div>
 			</td>
-			<td class=" ">
+			<td>
 				<%= link_to attendee.login, attendee %>
 			</td>
 		</tbody>
 	<% end %>
 </table>
 <br>
-<table class=" search-table highlight  white-text ">
-	<thead class="">
+<table class="search-table highlight  white-text ">
+	<thead>
 		<tr>
-			<th class=" "  >Attendee Name</th>
+			<th>Attendee Name</th>
 		</tr>
 	</thead>
 	<% @attendees_name.each do |attendee| %>
 		<tbody>
-			<td class="">
+			<td>
 				<div class="picture-index-search">
 					<%= link_to (image_tag  "https://cdn.intra.42.fr/users/medium_#{ attendee.login }.jpg", class: 'picture-index-search'), attendee %>
 				</div>
 			</td>
-			<td class="">
+			<td>
 				<%= link_to attendee.name, attendee %>
 			</td>
 		</tbody>

@@ -18,27 +18,19 @@
 					<div class="center">
 						<%=link_to (attendee.login), attendee, class: "login-link" %>
 					</div>
-
 					<% @stamps = Stamp.where(:attendee_id => attendee.id).last %>
 					<table class="white-text">
-						<!-- <div class=""> -->
-							<thead class="">
-								<th class="time-stamps-index-sign-in left" id="sign_in_title" >Sign in</th>
-								<th class="time-stamps-index-sign-out right" >Sign out</th>
-								<th colspan="2"></th>
-							</thead>
-						<!-- </div> -->
+						<thead class="">
+							<th class="time-stamps-index-sign-in left" id="sign_in_title" >Sign in</th>
+							<th class="time-stamps-index-sign-out right" >Sign out</th>
+							<th colspan="2"></th>
+						</thead>
 					</table>
 					<table>
 						<td class="sign_in<%=attendee.id%> truncate-stamps center  time-index">
 							<% if @stamps.nil? %>
-							<!-- <td></td> -->
-
-								<td class="center"><%= "No time logged Yet" %></td>
-
-								<!-- </td> -->
+								<td class="no-time-logged center"><%= "No time logged Yet" %></td>
 							<% else %>
-							<!-- <td class="sign_in<%=attendee.id%> truncate-stamps center time-index"> -->
 								<%= render @stamps %>
 							<% end %>
 						</td>
@@ -53,7 +45,7 @@
 							<span id="time<%=attendee.id %>" >
 								<%= link_to 'Add TimeStamp', sign_in_path(attendee_id: attendee.id), class: 'waves-effect waves-light btn blue darken-3', remote: true, onclick: "location.reload(false)" %>
 							</span>
-							<% end %>
+						<% end %>
 					</div>
 				</div>
 			</div>

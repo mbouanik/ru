@@ -9,8 +9,6 @@
 			</div>
 		</div>
 		<div class="info z-depth-3 center">
-		<!-- </div>
-		<div class="block_info_text center"> -->
 			<div class="stats-attendee center">
 				<div class="info_profile left">
 					<span class="title">
@@ -46,7 +44,6 @@
 	</div>
 </div>
 <br>
-
 <div class="card z-depth-3 time-stamps " >
 	<div class="card-title-time card-title white-text">
 			<table class=" white-text ">
@@ -71,7 +68,7 @@
 				<% end %>
 			</span>
 		</th>
-		<p class="white-text center no-time-logged"><% if !@stamps.present? %> <%= " No time logged yet" %> <% end %></p>
+		<p class="white-text center no-time-logged"><% if !@stamps.present? %> <%= " No time logged Yet" %> <% end %></p>
 
 		<div class="sign_in<%= @attendee.id %> truncate block-attendees-pages">
 			<%= render @stamps %>

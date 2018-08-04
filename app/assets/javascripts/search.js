@@ -6,7 +6,6 @@ document.addEventListener("turbolinks:load", function() {
 		url: function(phrase) {
 			return "/search.json?q=" + phrase;
 		},
-
 		categories: [
 			{
 				listLocation: "attendees",
@@ -22,17 +21,14 @@ document.addEventListener("turbolinks:load", function() {
 				enabled: true
 			},
 			maxNumberOfElements: 6,
-
 			showAnimation: {
 				type: "slide",
 				time: 300
 			},
-
 			hideAnimation: {
 				type: "slide",
 				time: 300
 			},
-
 			onChooseEvent: function() {
 				var url = $input.getSelectedItemData().url
 				$input.val("")
