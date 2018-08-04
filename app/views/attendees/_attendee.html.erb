@@ -11,11 +11,14 @@
 					</div>
 				</div>
 				<div class=" white-text container card-block">
-					<div class=" login-link">
+					<div class=" center login-link">
 						<%= attendee.name %>
 					</div>
 					<hr>
-					<%=link_to (attendee.login), attendee, class: "login-link" %>
+					<div class="center">
+						<%=link_to (attendee.login), attendee, class: "login-link" %>
+					</div>
+
 					<% @stamps = Stamp.where(:attendee_id => attendee.id).last %>
 					<table class="white-text">
 						<!-- <div class=""> -->
@@ -27,10 +30,14 @@
 						<!-- </div> -->
 					</table>
 					<table>
-						<td class="sign_in<%=attendee.id%> truncate-stamps center">
 							<% if @stamps.nil? %>
-								<%= "No time logged Yet" %>
+							<!-- <td></td> -->
+							<td class="sign_in<%=attendee.id%> truncate-stamps center  time-index">
+								<td class="center"><%= "No time logged Yet" %></td>
+
+								<!-- </td> -->
 							<% else %>
+							<!-- <td class="sign_in<%=attendee.id%> truncate-stamps center time-index"> -->
 								<%= render @stamps %>
 							<% end %>
 						</td>
