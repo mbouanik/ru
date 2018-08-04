@@ -161,40 +161,22 @@ main {
 .picture{
 	margin-left: 28%;
 }
-// .easy-autocomplete-container{
-// 	position: absolute;
-// 	z-index: 4;
-// 	// max-width: 800px;
-// 	min-width: 580px;
-// 	margin-top: -15px;
-// 	// margin-left: 15px;
-// 	// border: 1px solid #ce93d8;
-// 	background:  url(parallax-transparent.png);
-// 	border-radius: 10px;
-// }
 .search-bar{
 	position: absolute;
 	z-index: 4;
+	height: auto;
 	width: auto;
-
 	max-width: 860px;
 	min-width: 400px;
-
 	border: 1px solid #ce93d8;
 	background:  url(parallax-transparent.png);
 	border-radius: 10px;
 }
 .search-bar-button{
-	display: inline;
+	// display: inline;
 }
 .add-new-button{
-	position: absolute;
-	// margin-top:  30px;
-	margin-left: 10px;
 	color: #ce93d8 ;
-	// font-size: 30px ;
-	// height: auto;
-	// width: auto;
 }
 .search-table{
 	background:  url(parallax-transparent.png);
