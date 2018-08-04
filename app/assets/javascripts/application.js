@@ -22,6 +22,6 @@ $(document).ready(function () {
 	$('.dropdown-trigger').dropdown();
 	$('.sidenav').sidenav();
 	$('#error_explanation').show();
-	$('.notice').fadeOut(3000);
+	$('#notice').fadeOut(3000);
 	$('.alert').fadeOut(3000);
 });
