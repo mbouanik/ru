@@ -63,7 +63,7 @@
 	<div class="card-content time-stamps" >
 		<th>
 			<span id="time<%=@attendee.id%>" >
-				<% if @stamps || @stamps.first.sign_out?%>
+				<% if !@stamps.present? || @stamps.first.sign_out.present? %>
 					<%= link_to 'add_circle', sign_in_path(attendee_id: @attendee.id), class: 'large material-icons add-timestamp-button', remote: true %>
 				<% end %>
 			</span>
