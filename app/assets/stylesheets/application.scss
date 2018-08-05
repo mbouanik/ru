@@ -3,27 +3,32 @@
 
 body {
 	font-family: Helvetica;
-  // display: flex;
-  // min-height: 100vh;
-  // flex-direction: column;
-  background:  url(parallax1.jpg);
-  background-size: auto;
+	background:  url(parallax1.jpg);
+	background-size: auto;
+	background-size: cover;
 }
 .modal{
-	// background-image: url(parallax-transparent.png);
+	background-size: cover;
 	background-image: url(parallax1.jpg);
 }
 .btn-logged{
 margin-top: 5px;
 }
-main {
-  // flex: 1 0 auto;
+.sidenav-trigger{
+	margin-top: 5px;
+	margin-left: 10px;
 }
-.sidenav-trigger{}
-
+.logged-as{
+	margin-top: 5px;
+	margin-right: 10px;
+	font-size: 18px;
+}
+.logged-as-nickname{
+	color: #ce93d8;
+}
 .brand-logo{
 	margin-top: 8px;
-	margin-left:  215px;
+	margin-left:  200px;
 }
 .header-search{
 	font-style: italic;
@@ -33,12 +38,6 @@ main {
 .search-button-bar{
 	display: inline;
 }
-
-.easy-autocomplete{
-	position: relative;
-	top: 0px;
-}
-
 
 .profile_name{
 	margin-top: 2px;
@@ -126,6 +125,10 @@ main {
 	// white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
+}
+.paginate-index{
+	margin-right: 140px;
+	margin-top: 50px;
 }
 .truncate-stamps{
 	display: block;

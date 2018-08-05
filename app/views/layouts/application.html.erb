@@ -21,7 +21,7 @@
 				<img onclick="location.reload(false)"  src="/assets/42-logo" alt="42" height="42px">
 			</a>
 			<% if current_user %>
-				<span class='white-text right' href='#' data-target='dropdown1'>Logged as <%= current_user.nickname unless current_user.nil? %></span>
+				<span class='white-text logged-as right'>Logged as <span class="logged-as-nickname"><%= current_user.nickname unless current_user.nil? %></span></span>
 			<% end %>
 		</span>
 
