@@ -3,14 +3,14 @@
 		<td class="center">
 			<%= stamp.sign_in.strftime "%B %e at %l:%M %p" unless stamp.sign_in.nil? %>
 		</td>
-		<td>
+		<td class="center">
 			<span class='sign_out<%=stamp.id%>'>
 				<%= stamp.sign_out.strftime "%B %e at %l:%M %p" unless stamp.sign_out.nil?%>
 			</span>
 		</td>
 		<% if stamp.sign_out.nil? %>
 			<td class="center update_sign_out<%=stamp.id%>">
-				<%= link_to 'Update now', sign_out_path(id: stamp.id), class: ' waves-effect waves-light btn-small blue darken-2', onclick: "history.go(0)", remote: true %>
+				<%= link_to 'Update now', sign_out_path(id: stamp.id), class: ' waves-effect waves-light btn blue darken-2', onclick: "history.go(0)", remote: true %>
 			</td>
 		<% end %>
 	</tbody>

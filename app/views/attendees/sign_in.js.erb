@@ -1,4 +1,4 @@
 $('.no-time-logged').remove();
 $('.sign_in<%=@attendee.attendee.id %>').prepend('<%= j render @attendee %>');
 $('#sign_in<%=@attendee.id%>').hide().fadeIn(1000);
-$('#time<%=@attendee.attendee.id %>').remove();
+$('.time<%=@attendee.attendee.id %>').remove();

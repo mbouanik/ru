@@ -60,7 +60,7 @@ margin-top: 5px;
 }
 .stats-attendee{
 	position: relative;
-	margin-top: 20px;
+	margin-top: 24px;
 	margin-left: 20px;
 	margin-right: 20px;
 	height: auto;
@@ -69,12 +69,18 @@ margin-top: 5px;
 .info{
 	position: relative;
 	margin-top: 21px;
+	min-height: 120px;
 	height: auto;
 	width: auto;
 	border: 1px solid #ce93d8;
 	border-radius: 10px;
-	background-image: url(parallax-transparent.png);
+	background-image: url(purple-ruche.png);
 
+}
+.location-profile{
+	// position: relative;
+	margin-top: -15px;
+	padding-bottom: 5px;
 }
 .destroy-close{
 	color: red;
@@ -87,7 +93,7 @@ margin-top: 5px;
 	padding-bottom: 10px;
 }
 
-.location{
+.location-profile{
 	padding-top: 40px;
 	font-size: 30px;
 }
@@ -115,7 +121,7 @@ margin-top: 5px;
 
 .truncate{
 	display: block;
-	max-height: 685px;
+	max-height: 680px;
 	// white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -225,7 +231,6 @@ margin-top: 5px;
 	width: 256px;
 	height: 256px;
 	border-radius: 50%;
-	margin-top: 5px;
 	overflow: hidden;
 }
 
@@ -262,9 +267,7 @@ margin-top: 5px;
 	transform: translate(-50%,-50%);
 }
 .paginate-profile{
-	position: fixed;
-	margin-top: -15px;
-	margin-left: 20%;
+	margin-top: 30px;
 }
 .person{
 	color: #ce93d8;
@@ -296,12 +299,11 @@ margin-top: 5px;
 	height: 200px;
 }
 .card_attendee{
-	// min-height: 520px;
-	// min-width: 360px;
 	background-image:  url(parallax-transparent.png);
 	border-radius: 10px;
 }
 .card-title-time{
+	border-radius: 5px;
 	background: url(img_attendee);
 }
 .btn-action-index{
@@ -317,10 +319,16 @@ margin-top: 5px;
 .card-block{
 	display: block;
 }
-
-
+.f{
+	font-size: 28px;
+}
+.i{
+	position: relative;
+	margin-left: 250;
+}
 .add-timestamp-button{
 	color: #ba68c8 ;
+	z-index: 2;
 }
 .container_info{
 	background: url(img_attendee);
@@ -332,7 +340,10 @@ margin-top: 5px;
 
 }
 .time-stamps{
+	max-height: 790px;
 	background-image:  url(parallax1.jpg);
+	background-size: cover;
+	border-radius: 15px;
 }
 
 .sidenav{
