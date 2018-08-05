@@ -9,7 +9,8 @@ body {
   background:  url(parallax1.jpg);
   background-size: auto;
 }
-.modal-index{
+.modal{
+	// background-image: url(parallax-transparent.png);
 	background-image: url(parallax1.jpg);
 }
 .btn-logged{
@@ -120,7 +121,7 @@ main {
 
 .truncate1{
 	display: block;
-	max-height: 980px;
+	max-height: 1000px;
 	// white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -147,7 +148,7 @@ main {
 	float: left;
 	text-align: center;
 	width: 33.3%;
-	margin-top: 70px;
+	margin-top: 100px;
 }
 .card_attendee{
 	border: 1px solid;
@@ -164,8 +165,9 @@ main {
 	position: absolute;
 	z-index: 4;
 	height: auto;
+	min-height: 60px;
 	width: auto;
-	max-width: 860px;
+	max-width: 1114px;
 	min-width: 400px;
 	border: 1px solid #ce93d8;
 	background:  url(parallax-transparent.png);
@@ -173,6 +175,7 @@ main {
 }
 
 .add-new-button{
+
 	color: #ce93d8 ;
 }
 .search-table{
@@ -181,6 +184,7 @@ main {
 }
 .block-attendees-pages{
 	display: inline-block;
+	padding: 10px;
 }
 .new_attendee{
 	position: relative;

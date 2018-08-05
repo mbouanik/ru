@@ -1,7 +1,7 @@
 <div class=" white-text" id="notice">
 	<%= notice %>
 </div>
-<div class="row container">
+<div class="row ">
 	<div class="col s1 m3 ">
 		<div class=" col s1 m6 search-bar white-text">
 			<%= form_with url: search_path, local: true, method: :get  do |form| %>
@@ -24,12 +24,12 @@
 		<div class="sign_in-sign_out">Sign out <p class="center"><%=@all_attendees%></p> </div>
 	</h5>
 </div>
-
-	<div class="  truncate1" id="container_attendees">
-		<%= render @attendees %>
-	</div>
-	<div class="center" onclick="location.reload(false)">
-		<%= paginate @attendees %>
-	</div>
-
-<%= render 'attendees/modal' %>
+<div class=" truncate1" id="container_attendees">
+	<%= render @attendees %>
+</div>
+<div class="center" onclick="location.reload(false)">
+	<%= paginate @attendees %>
+</div>
+<div class="center">
+	<%= render 'attendees/modal' %>
+</div>
