@@ -31,7 +31,7 @@
 						<div class="background">
 							<img src="/assets/42-logo" alt="42" height="25px">
 						</div>
-						<img class="picture-index" src="https://cdn.intra.42.fr/users/medium_<%=current_user.nickname %>.jpg">
+						<%= image_tag  "https://cdn.intra.42.fr/users/medium_#{ current_user.nickname }.jpg", class: 'picture-index'%>
 						<span class="white-text name"><%=  current_user.nickname %></span>
 						<span class="white-text email"><%= current_user.email %></span>
 					</div>
