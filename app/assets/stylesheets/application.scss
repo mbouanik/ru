@@ -326,6 +326,7 @@ margin-top: 5px;
 	position: relative;
 	margin-left: 250;
 }
+
 .add-timestamp-button{
 	color: #ba68c8 ;
 	z-index: 2;
@@ -340,8 +341,10 @@ margin-top: 5px;
 
 }
 .time-stamps{
-	max-height: 790px;
-	background-image:  url(parallax1.jpg);
+	height: 800px;
+		background-image:  url(purple-ruche.png);
+		border: 1px solid #ce93d8;
+	// background-image:  url(parallax1.jpg);
 	background-size: cover;
 	border-radius: 15px;
 }
