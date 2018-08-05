@@ -4,3 +4,4 @@ $('.attendee_login').val('');
 $('#container_attendees').append('<%= j render @attendee %>');
 $('#attendee<%=@attendee.id%>').hide().fadeIn(1000);
 // location.reload(false);
+$('#error_explanation').show().fadeIn(5000);

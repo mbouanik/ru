@@ -1,7 +1,7 @@
 class AttendeesController < ApplicationController
 	before_action :authenticate_user!, only: [:index, :create, :show, :destroy]
 	before_action :set_attendee, only: [:show, :destroy]
-# GET /attendees
+
 	def index
 		@attendee = Attendee.new
 		@attendees = current_user.attendees.page(params[:page]).per(6)
@@ -56,17 +56,12 @@ class AttendeesController < ApplicationController
 		end
 	end
 
-	# POST /attendees
-	# POST /attendees.json
 	def create
 		client = OAuth2::Client.new( ENV["FT_UID"],  ENV["FT_SECRET"], site:"https://api.intra.42.fr")
 		token = client.client_credentials.get_token
 		response = token.get("/v2/users/" + params[:attendee][:login])
 		response.status
 		@user_quest = response.parsed
-		# if @user_quest.nil?
-		# 	errors.add( message: "cannot be nil")
-		# end
 		@attendee = current_user.attendees.build(attendee_params)
 		@attendee.name =  @user_quest["displayname"]
 		respond_to do |format|
@@ -82,8 +77,6 @@ class AttendeesController < ApplicationController
 		end
 	end
 
-	# DELETE /attendees/1
-	# DELETE /attendees/1.json
 	def destroy
 		@attendee.destroy
 		respond_to do |format|
