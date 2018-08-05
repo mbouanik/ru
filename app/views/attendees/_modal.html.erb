@@ -4,7 +4,7 @@
 		<div class="modal-header">
 			Add New Attendee
 		</div>
-		<%= form_for(@attendee , remote: true) do |form| %>
+		<%= form_for(@attendee , remote: true, validates: true) do |form| %>
 			<% if @attendee.errors.any? %>
 			<div class="white-text" id="error_explanation">
 				<h2>

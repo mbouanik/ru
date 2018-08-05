@@ -75,6 +75,7 @@ class AttendeesController < ApplicationController
 				format.js
 			end
 		end
+		# redirect_to pages.last
 	end
 
 	def destroy
