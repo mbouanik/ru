@@ -41,14 +41,13 @@
 				</div>
 			</div>
 		</div>
-
 	</div>
 </div>
-<br>
+<!-- <br> -->
 <div class=" z-depth-3 time-stamps " >
 	<div class="card-title-time card-title white-text">
 		<table class=" white-text ">
-			<thead class="siz">
+			<thead>
 				<tr>
 					<th class="center f i" id="sign_in_title" >
 						Sign in
@@ -61,23 +60,19 @@
 			</thead>
 		</table>
 	</div>
-	<tr class="left">
-		<span class="time<%=@attendee.id%> " >
-			<% if !@stamps.present? || @stamps.first.sign_out.present? %>
-				<i class="small material-icons"><%= link_to 'add_circle', sign_in_path(attendee_id: @attendee.id), class: ' add-timestamp-button', remote: true %></i>
-			<% end %>
-		</span>
-	</tr>
-		<% if !@stamps.present? %>
-			<p class="white-text center no-time-logged">
-				<%= " No time logged Yet" %>
-			</p>
+	<span class="time<%=@attendee.id%> " >
+		<% if !@stamps.present? || @stamps.first.sign_out.present? %>
+			<i class="small material-icons"><%= link_to 'add_circle', sign_in_path(attendee_id: @attendee.id), class: ' add-timestamp-button', remote: true %></i>
 		<% end %>
-		<div class="sign_in<%= @attendee.id %> truncate">
-			<%= render @stamps %>
-		</div>
-	<br>
-	<br>
+	</span>
+	<% if !@stamps.present? %>
+		<p class="white-text center no-time-logged">
+			<%= " No time logged Yet" %>
+		</p>
+	<% end %>
+	<div class="sign_in<%= @attendee.id %> truncate">
+		<%= render @stamps %>
+	</div>
 </div>
 <div class="center paginate-profile" onclick="location.reload(false)">
 	<%= paginate @stamps %>

@@ -26,7 +26,7 @@ class AttendeesController < ApplicationController
 	end
 
 	def show
-		@stamps = @attendee.stamps.order("created_at DESC").page(params[:page]).per(13)
+		@stamps = @attendee.stamps.order("created_at DESC").page(params[:page]).per(14)
 		client = OAuth2::Client.new( ENV["FT_UID"],  ENV["FT_SECRET"], site:"https://api.intra.42.fr")
 		token = client.client_credentials.get_token
 		@user_quest = token.get("/v2/users/" + @attendee.login).parsed

@@ -119,13 +119,7 @@ margin-top: 5px;
 	padding-left: 5px;
 }
 
-.truncate{
-	display: block;
-	max-height: 680px;
-	// white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-}
+
 
 .truncate1{
 	display: block;
@@ -333,22 +327,28 @@ margin-top: 5px;
 }
 .container_info{
 	background: url(img_attendee);
-		width: auto; height: auto;
-		display: flex;
-	    border-style: solid;
-		border-radius: 15px;
-	    border-color: #ba68c8 ;
+	width: auto; height: auto;
+	display: flex;
+	border-style: solid;
+	border-radius: 15px;
+	border-color: #ba68c8 ;
 
 }
 .time-stamps{
-	height: 800px;
-		background-image:  url(purple-ruche.png);
-		border: 1px solid #ce93d8;
-	// background-image:  url(parallax1.jpg);
+	margin-top: 50px;
+	height: 820px;
+	background-image:  url(purple-ruche.png);
+	border: 1px solid #ce93d8;
 	background-size: cover;
 	border-radius: 15px;
 }
-
+.truncate{
+	display: block;
+	max-height: 708px;
+	// white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
 .sidenav{
 	background:  url(parallax1.jpg);
 	background-size: cover;
