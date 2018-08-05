@@ -4,7 +4,7 @@ class AttendeesController < ApplicationController
 # GET /attendees
 	def index
 		@attendee = Attendee.new
-		@attendees = current_user.attendees.page(params[:page])
+		@attendees = current_user.attendees.page(params[:page]).per(6)
 		@remain =  current_user.attendees.joins(:stamps).where(stamps: { sign_out: nil }).count
 		@all_attendees = current_user.attendees.count - @remain
 	end

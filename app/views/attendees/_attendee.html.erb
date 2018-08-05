@@ -42,8 +42,8 @@
 							History
 						</a>
 						<% if @stamps.nil? || !@stamps.sign_out.nil?%>
-							<span id="time<%=attendee.id %>" >
-								<%= link_to 'Add TimeStamp', sign_in_path(attendee_id: attendee.id), class: 'waves-effect waves-light btn blue darken-3', remote: true, onclick: "location.reload(false)" %>
+							<span id="time<%=attendee.id %>" onclick="location.reload(false)" >
+								<%= link_to 'Add TimeStamp', sign_in_path(attendee_id: attendee.id), class: 'waves-effect waves-light btn blue darken-3', remote: true%>
 							</span>
 						<% end %>
 					</div>
