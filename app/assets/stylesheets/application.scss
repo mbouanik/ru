@@ -384,3 +384,19 @@ margin-top: 5px;
 .closebtn:hover {
     color: black;
 }
+
+@media (max-width: 1531px) {
+	.attendee_card{
+		float: left;
+		text-align: center;
+		width: 50%;
+	}
+
+}
+@media (max-width: 791px) {
+	.attendee_card{
+		float: none;
+		text-align: center;
+		width: 100%;
+	}
+}
