@@ -19,13 +19,21 @@
 				</ul>
 			</div>
 			<% end %>
-		<div class="">
-			<div class="input-field white-text">
-				<%= form.text_field :login, class: 'attendee_login white-text', autocomplete: "off" %>
-				<%= form.label :login, class: 'active' %>
-				<br>
+			<div class="form">
+				<div id="field-add-new">
+					<% if @attendee.errors.any? %>
+					The Form contain <%= pluralize(@attendee.errors.count, "error") %>
+					  <% @attendee.errors.full_messages.each do |msg| %>
+					  <li> <%= msg %> </li>
+					  <% end%>
+					<% end %>
+				</div>
+				<div class="input-field white-text">
+					<%= form.text_field :login, class: 'attendee_login white-text', autocomplete: "off" %>
+					<%= form.label :login, class: 'active' %>
+					<br>
+				</div>
 			</div>
-		</div>
 		<div class="right">
 			<div class="btn waves-effect waves-light  blue darken-2" >
 				<%= form.submit "Add Attendee", class: " white-text" %>

@@ -59,11 +59,22 @@ class AttendeesController < ApplicationController
 	def create
 		client = OAuth2::Client.new( ENV["FT_UID"],  ENV["FT_SECRET"], site:"https://api.intra.42.fr")
 		token = client.client_credentials.get_token
-		response = token.get("/v2/users/" + params[:attendee][:login])
-		response.status
-		@user_quest = response.parsed
 		@attendee = current_user.attendees.build(attendee_params)
-		@attendee.name =  @user_quest["displayname"]
+		begin
+			response = token.get("/v2/users/" + params[:attendee][:login])
+			@user_quest = response.parsed
+			r = "good"
+			if params[:attendee][:login] == ""
+				r = "Not valid login"
+				@attendee.login = ""
+			end
+		rescue
+			r = "Not valid login"
+			@attendee.login = ""
+		end
+		if  r == "good"
+			@attendee.name =  @user_quest["displayname"]
+		end
 		respond_to do |format|
 			if @attendee.save
 				format.html {}

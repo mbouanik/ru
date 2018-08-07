@@ -1,5 +1,14 @@
-$('.modal').modal().hide();
-$('.attendee_name').val('');
-$('.attendee_login').val('');
-$('#container_attendees').append('<%= j render @attendee %>');
-$('#attendee<%=@attendee.id%>').hide().fadeIn(1000);
+if ('<%= @attendee.errors.any? %>' == 'true'){
+	$('#field-add-new').fadeOut(1000, function(){
+		$(this).remove();
+		$('.form').prepend('<%= j render "/attendees/error_messages"%>');
+		$('.form').hide().fadeIn(1000);
+	});
+}
+	else{
+		$('.modal').modal().hide();
+		$('.attendee_login').val('');
+		$('#container_attendees').append('<%= j render @attendee %>');
+		$('#attendee<%=@attendee.id%>').hide().fadeIn(1000);
+		$('#field-add-new').fadeOut(1000)
+	}
