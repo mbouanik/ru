@@ -36,10 +36,13 @@
 						<span class="white-text email"><%= current_user.email %></span>
 					</div>
 				</li>
-				<li class="red">
-					<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+				<li class=" sign-out-button center">
+					<%= link_to "Sign out", destroy_user_session_path, :method => :delete, class: "white-text" %>
 				</li>
+				<span class="center"><%= image_tag 'wow.gif' , width: 128%></span>
+
 			</ul>
+
 		<% end %>
 		<main>
 			<div class="container">

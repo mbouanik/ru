@@ -7,6 +7,22 @@ body {
 	background-size: auto;
 	background-size: cover;
 }
+.index-sign-in{
+	position: absolute;
+	// z-index: -1;
+	margin-top: 500px;
+	margin-left: 250;
+}
+.faces-profile{
+	position: absolute;
+	z-index: -1;
+	margin-top: 500px;
+}
+.sign-out-button{
+	height: auto;
+	background-color: #d32f2f;
+	background-size: cover;
+}
 .message{
 	background-color: #d32f2f ;
 	margin-left: 25%;
@@ -182,6 +198,7 @@ margin-top: 5px;
 	height: auto;
 	min-height: 60px;
 	width: auto;
+	margin-top: 5px;
 	max-width: 1114px;
 	min-width: 400px;
 	border: 1px solid #ce93d8;
