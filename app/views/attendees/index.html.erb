@@ -1,7 +1,7 @@
 <div class=" white-text" id="notice">
 	<%= notice %>
 	<div class="index-sign-in">
-		<%= image_tag "sign_in.gif" %>
+		<%= image_tag "sign_in.gif"  unless notice.nil?%>
 	</div>
 </div>
 <div class="row ">
