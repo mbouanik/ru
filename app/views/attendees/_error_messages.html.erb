@@ -1,4 +1,4 @@
-<div d="field-add-new">
+<div id="field-add-new">
 	<% if @attendee.errors.any? %>
 		<div class="message">The Form contain <%= pluralize(@attendee.errors.count, "error") %>
 			<% @attendee.errors.full_messages.each do |msg| %>
