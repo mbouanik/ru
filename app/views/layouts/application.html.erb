@@ -21,7 +21,18 @@
 				<img onclick="location.reload(false)"  src="/assets/42-logo" alt="42" height="42px">
 			</a>
 			<% if current_user %>
-				<span class='white-text logged-as right'>Logged as <span class="logged-as-nickname"><%= current_user.nickname unless current_user.nil? %></span></span>
+				<span class='white-text logged-as right'>
+					<span class="logged-as-picture">
+						<% if current_user.nickname == "rliu" %>
+							<span><%= image_tag 'login-display.gif' , width: 64%></span>
+						<% end %>
+					</span>
+
+					Logged as
+					<span class="logged-as-nickname">
+						<%= current_user.nickname unless current_user.nil? %>
+					</span>
+				</span>
 			<% end %>
 		</span>
 
@@ -39,7 +50,9 @@
 				<li class=" sign-out-button center">
 					<%= link_to "Sign out", destroy_user_session_path, :method => :delete, class: "white-text" %>
 				</li>
-				<span class="center"><%= image_tag 'wow.gif' , width: 128%></span>
+				<% if current_user.nickname == "rliu" %>
+					<span class="center"><%= image_tag 'wow.gif' , width: 128%></span>
+				<% end %>
 
 			</ul>
 

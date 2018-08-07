@@ -7,6 +7,12 @@ body {
 	background-size: auto;
 	background-size: cover;
 }
+.thankyou{
+	position: absolute;
+	z-index: -1;
+	margin-top: 400px;
+	margin-left: 400px;
+}
 .index-sign-in{
 	position: absolute;
 	// z-index: -1;
@@ -40,8 +46,11 @@ margin-top: 5px;
 	margin-top: 5px;
 	margin-left: 10px;
 }
+.logged-as-picture{
+	margin-top: 20px;
+}
 .logged-as{
-	margin-top: 5px;
+	// margin-top: -15px;
 	margin-right: 10px;
 	font-size: 18px;
 }
