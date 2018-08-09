@@ -23,5 +23,5 @@ $(document).ready(function () {
 	$('.sidenav').sidenav();
 	$('#error_explanation').show();
 	$('#notice').fadeOut(8000);
-	$('.alert').fadeOut(3000);
+	$('#alert').fadeOut(8000);
 });

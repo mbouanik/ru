@@ -415,7 +415,23 @@ margin-top: 5px;
 .closebtn:hover {
     color: black;
 }
-
+.not-authorize{
+	position: absolute;
+	z-index: 4;
+	height: auto;
+	width: 50%;
+	margin-top: 5px;
+}
+.not-authorize-picture{
+	position: absolute;
+	z-index: 4;
+	margin-left: 40%;
+}
+.not-authorize-message{
+	// margin-right: 200px;
+	border-radius: 15px;
+	font-size: 20px;
+}
 @media (max-width: 1531px) {
 	.attendee_card{
 		float: left;

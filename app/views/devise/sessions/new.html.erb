@@ -1,3 +1,12 @@
+<div class="not-authorize white-text" id="alert">
+	<div class="not-authorize-message red center"><%= alert %></div>
+	<div class="not-authorize-picture" id="alert">
+		<%if  alert %>
+			<p><%= image_tag "fail.gif"%></p>
+		<% end %>
+	</div>
+</div>
+
 <div class="section-login">
 	<div class="login row center">
 		<h2 class="white-text ">Welcome to Hack High School Mentor</h2>
