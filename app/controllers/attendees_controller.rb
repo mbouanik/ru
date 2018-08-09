@@ -73,7 +73,7 @@ class AttendeesController < ApplicationController
 			@attendee.login = ""
 		end
 		if  r == "good"
-			# @attendee.name =  @user_quest["displayname"]
+			@attendee.name =  @user_quest["displayname"]
 		end
 		respond_to do |format|
 			if @attendee.save
