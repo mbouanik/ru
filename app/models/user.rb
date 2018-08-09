@@ -17,6 +17,6 @@ class User < ActiveRecord::Base
        user.nickname = auth.info.nickname
      end
    end
-   has_many :attendees, dependent: :delete_all
+   # has_many :attendees, dependent: :delete_all
 
 end

@@ -4,17 +4,17 @@ class AttendeesController < ApplicationController
 
 	def index
 		@attendee = Attendee.new
-		@attendees = current_user.attendees.page(params[:page]).per(6)
-		@remain =  current_user.attendees.joins(:stamps).where(stamps: { sign_out: nil }).count
-		@all_attendees = current_user.attendees.count - @remain
+		@attendees = Attendee.page(params[:page]).per(6)
+		@remain =  Attendee.joins(:stamps).where(stamps: { sign_out: nil }).count
+		@all_attendees = Attendee.count - @remain
 	end
 
 	def search
 		if params[:q] == ''
 			redirect_to '/'
 		end
-		@attendees = current_user.attendees.ransack(login_cont: params[:q]).result(distinct: true)
-		@attendees_name = current_user.attendees.ransack(name_cont: params[:q]).result(distinct: true)
+		@attendees = Attendee.ransack(login_cont: params[:q]).result(distinct: true)
+		@attendees_name = Attendee.ransack(name_cont: params[:q]).result(distinct: true)
 
 		respond_to do |format|
 			format.html {}
@@ -33,7 +33,7 @@ class AttendeesController < ApplicationController
 	end
 
 	def sign_in
-		@attendee = current_user.attendees.find(params[:attendee_id]).stamps.build
+		@attendee = Attendee.find(params[:attendee_id]).stamps.build
 		@attendee.sign_in = Time.now
 		respond_to do |format|
 			if @attendee.save
@@ -59,7 +59,7 @@ class AttendeesController < ApplicationController
 	def create
 		client = OAuth2::Client.new( ENV["FT_UID"],  ENV["FT_SECRET"], site:"https://api.intra.42.fr")
 		token = client.client_credentials.get_token
-		@attendee = current_user.attendees.build(attendee_params)
+		@attendee = Attendee.new(attendee_params)
 		begin
 			response = token.get("/v2/users/" + params[:attendee][:login])
 			@user_quest = response.parsed
@@ -101,7 +101,7 @@ class AttendeesController < ApplicationController
 	private
 	# Use callbacks to share common setup or constraints between actions.
 	def set_attendee
-		@attendee = current_user.attendees.find(params[:id])
+		@attendee = Attendee.find(params[:id])
 	end
 	# Never trust parameters from the scary internet, only allow the white list through.
 	def attendee_params

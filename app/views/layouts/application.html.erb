@@ -57,7 +57,7 @@
 				<li><a class="waves-effect" href="#!"><i class="material-icons" >feedback</i>Issues, Concerns, Requests</a></li>
 				<li><a class="waves-effect" href="#!"><i class="material-icons" >assessment</i>Data Report</a></li>
 				<li><a class="waves-effect" href="#!"><i class="material-icons" >info</i>Contact Us</a></li>
-				<li class=" sign-out-button center">
+				<li class="sign-out-button center">
 					<%= link_to "Sign out", destroy_user_session_path, :method => :delete, class: "white-text" %>
 				</li>
 				<% if queenru(current_user.nickname) %>
