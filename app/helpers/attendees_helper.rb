@@ -1,7 +1,3 @@
-require 'open-uri'
-require 'nokogiri'
-require 'json'
-require 'thread'
 module AttendeesHelper
 
 	def get_pos(id)
@@ -18,5 +14,13 @@ module AttendeesHelper
 			end
 		return location
 		# end
+	end
+
+	def queenru(login)
+		if login == "rliu"
+			return true
+		else
+			return false
+		end
 	end
 end

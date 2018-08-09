@@ -1,16 +1,16 @@
-<div class="">
+
 <div class=" white-text" id="notice">
 	<%= notice %>
 	<div class="index-sign-in">
-		<% if current_user.nickname == "rliu" %>
-		<%= image_tag "sign_in.gif"  unless notice.nil?%>
+		<% if queenru(current_user.nickname) %>
+			<%= image_tag "sign_in.gif"  unless notice.nil?%>
 		<% end %>
 	</div>
 </div>
 <div class="thankyou">
-		<% if current_user.nickname == "rliu" %>
-	<%= image_tag "thankyou.gif" %>
-		<% end %>
+	<% if queenru(current_user.nickname) %>
+		<%= image_tag "thankyou.gif" %>
+	<% end %>
 </div>
 <div class="row ">
 	<div class="col s1 m3 ">
@@ -43,7 +43,4 @@
 </div>
 <div class="center">
 	<%= render 'attendees/modal' %>
-</div>
-
-
 </div>

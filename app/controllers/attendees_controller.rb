@@ -1,5 +1,5 @@
 class AttendeesController < ApplicationController
-	before_action :authenticate_user!, only: [:index, :create, :show, :destroy]
+	before_action :authenticate_user!, only: [:index, :create, :show, :destroy, :search, :sign_in, :sign_out]
 	before_action :set_attendee, only: [:show, :destroy]
 
 	def index
@@ -73,7 +73,7 @@ class AttendeesController < ApplicationController
 			@attendee.login = ""
 		end
 		if  r == "good"
-			@attendee.name =  @user_quest["displayname"]
+			# @attendee.name =  @user_quest["displayname"]
 		end
 		respond_to do |format|
 			if @attendee.save
