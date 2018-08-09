@@ -381,10 +381,10 @@ margin-top: 5px;
 
 /* The alert message box */
 .alert {
-    padding: 20px;
-    background-color: #d32f2f ; /* Red */
-    color: white;
-    margin-bottom: 15px;
+	padding: 20px;
+	background-color: #d32f2f ; /* Red */
+	color: white;
+	margin-bottom: 15px;
 	border-radius: 15px;
 }
 
@@ -392,23 +392,22 @@ margin-top: 5px;
 	position: absolute;
 	margin-left: -500px;
 	z-index: 4;
-    padding: 20px;
-    // background-color: #ce93d8;
-    // color: white;
-    margin-bottom: 15px;
+	padding: 20px;
+	border-radius: 15px;
+	margin-bottom: 15px;
 	border-radius: 15px;
 }
 
 /* The close button */
 .closebtn {
-    margin-left: 15px;
-    color: white;
-    font-weight: bold;
-    float: right;
-    font-size: 22px;
-    line-height: 20px;
-    cursor: pointer;
-    transition: 0.3s;
+	margin-left: 15px;
+	color: white;
+	font-weight: bold;
+	float: right;
+	font-size: 22px;
+	line-height: 20px;
+	cursor: pointer;
+	transition: 0.3s;
 }
 
 /* When moving the mouse over the close button */
@@ -425,7 +424,8 @@ margin-top: 5px;
 .not-authorize-picture{
 	position: absolute;
 	z-index: 4;
-	margin-left: 40%;
+	margin-left: 20%;
+	margin-top: 30px;
 }
 .not-authorize-message{
 	// margin-right: 200px;
