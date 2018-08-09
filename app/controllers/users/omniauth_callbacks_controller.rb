@@ -17,7 +17,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
 				return true
 			else
 				redirect_to "/users/sign_in"
-				flash[:alert] = request.env["omniauth.auth"]["info"]["nickname"]  + " You're not authorize"
+				flash[:alert] = request.env["omniauth.auth"]["info"]["nickname"]  + " You're not authorized"
 			end
 		end
 end
