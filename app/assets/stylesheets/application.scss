@@ -300,8 +300,6 @@ margin-top: 5px;
 }
 .remain{
 	position: absolute;
-	margin-top: 100px;
-	margin-left: -400px;
 	background-image:  url(parallax-transparent.png);
 	border: 1px solid #ce93d8;
 	border-radius: 10px;
@@ -317,7 +315,7 @@ margin-top: 5px;
 }
 .sign_in-sign_out{
 
-	display: inline;
+	display: inline-block;
 	float: left;
 	padding: 5px;
 }

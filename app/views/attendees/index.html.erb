@@ -26,16 +26,17 @@
 	<a class=" add-new-button modal-trigger" href="#modal1">
 		<i class="medium material-icons">person_add</i>
 	</a>
+	<div class=" white-text remain">
+		<h5>
+			<div class="sign_in-sign_out">Sign in  <p class="center"><%=@remain%></p> </div>
+			<div class="center sign_in-sign_out">
+					<i class="material-icons person"> person </i>
+			</div>
+			<div class="sign_in-sign_out">Sign out <p class="center"><%=@all_attendees%></p> </div>
+		</h5>
+	</div>
 </div>
-<div class=" white-text remain">
-	<h5>
-		<div class="sign_in-sign_out">Sign in  <p class=""><%=@remain%></p> </div>
-		<div class="center sign_in-sign_out">
-				<i class="material-icons person"> person </i>
-		</div>
-		<div class="sign_in-sign_out">Sign out <p class=""><%=@all_attendees%></p> </div>
-	</h5>
-</div>
+
 <div id="container_attendees">
 	<%= render @attendees %>
 </div>
