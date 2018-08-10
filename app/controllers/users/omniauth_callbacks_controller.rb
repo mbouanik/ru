@@ -13,7 +13,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
 	end
 	private
 		def authorize_user
-			if AuthorizeUser.find_by(login: request.env["omniauth.auth"]["info"]["nickname"])
+			if AuthorizedUser.find_by(login: request.env["omniauth.auth"]["info"]["nickname"])
 				return true
 			else
 				redirect_to "/users/sign_in"

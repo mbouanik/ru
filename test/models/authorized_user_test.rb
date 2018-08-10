@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class AuthorizeUserTest < ActiveSupport::TestCase
+class AuthorizedUserTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

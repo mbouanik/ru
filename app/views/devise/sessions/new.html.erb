@@ -1,14 +1,14 @@
-<div class="not-authorize white-text" id="alert">
+<div class="not-authorize white-text container" id="alert">
 	<div class="not-authorize-message red center"><%= alert %></div>
 </div>
-<div class="not-authorize-picture">
+<div class="not-authorize-picture container center">
 	<%if alert %>
 		<p><%= image_tag "fail.gif"%></p>
 	<% end %>
 </div>
 <div class="section-login">
 	<div class="login row center">
-		<h2 class="white-text ">Welcome to Hack High School Mentor</h2>
+		<h2 class="white-text ">Welcome to Hack High School, Mentor</h2>
 		<p><%= render "devise/shared/links" %></p>
 	</div>
 </div>
