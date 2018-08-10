@@ -298,9 +298,9 @@ margin-top: 5px;
 	color: #ce93d8;
 }
 .remain{
-	position: absolute;
+	position: relative;
 	margin-top: 100px;
-	margin-left: -400px;
+	width: 200px;
 	background-image:  url(parallax-transparent.png);
 	border: 1px solid #ce93d8;
 	border-radius: 10px;
@@ -314,12 +314,7 @@ margin-top: 5px;
 .table_stamp_profile{
 	margin-left:  20px;
 }
-.sign_in-sign_out{
 
-	display: inline;
-	float: left;
-	padding: 5px;
-}
 .card{
 	height: 200px;
 }
