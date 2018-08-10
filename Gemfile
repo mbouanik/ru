@@ -43,7 +43,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 group :production do
-  gem 'pg'
+	gem 'pg'
+	gem 'rails_12factor'
 end
 
 group :development, :test do
