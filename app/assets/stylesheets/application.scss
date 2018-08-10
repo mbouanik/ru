@@ -159,8 +159,9 @@ margin-top: 5px;
 	text-overflow: ellipsis;
 }
 .paginate-index{
-	margin-right: 135px;
-	margin-top: 50px;
+	// display: inline-block;;
+	margin-left: 40%;
+	margin-top: 90%;
 }
 .truncate-stamps{
 	display: block;
@@ -188,7 +189,7 @@ margin-top: 5px;
 .attendee_card{
 	float: left;
 	text-align: center;
-	width: 33.3%;
+	width: 31%;
 	margin-top: 100px;
 }
 .card_attendee{
@@ -209,7 +210,7 @@ margin-top: 5px;
 	min-height: 60px;
 	width: auto;
 	margin-top: 5px;
-	max-width: 1114px;
+	max-width: 1090px;
 	min-width: 400px;
 	border: 1px solid #ce93d8;
 	background:  url(parallax-transparent.png);
