@@ -4,12 +4,7 @@ class AttendeesController < ApplicationController
 
 	def index
 		@attendee = Attendee.new
-<<<<<<< HEAD
-		@attendees = Attendee.page(params[:page]).per(6)
-		@last_page = @attendees.total_pages
-=======
 		@attendees = Attendee.page(params[:page]).per(12)
->>>>>>> 41527a7b8aee2b2ab3b10d45298e59480ccfe964
 		@remain =  Attendee.joins(:stamps).where(stamps: { sign_out: nil }).count
 		@all_attendees = Attendee.count - @remain
 	end
