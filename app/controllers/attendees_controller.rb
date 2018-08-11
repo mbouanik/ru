@@ -86,15 +86,6 @@ class AttendeesController < ApplicationController
 				format.js
 			end
 		end
-		b =  Attendee.count.to_f
-		puts "===============----========================"
-		puts b.to_f
-		puts (b /= 6)
-		# puts b.ceil
-		puts "===============----========================"
-		# if b.floor >
-			redirect_to("/attendees?page=" + b.ceil.to_s)
-		# end
 	end
 
 	def destroy
