@@ -8,11 +8,6 @@
 		</div>
 	</div>
 <% end %>
-<div class="thankyou">
-	<% if queenru(current_user.nickname) %>
-		<%= image_tag "thankyou.gif" %>
-	<% end %>
-</div>
 <div class="row ">
 	<div class="col s1 m3 ">
 		<div class=" col s1 m6 search-bar white-text">
@@ -28,11 +23,11 @@
 	</a>
 	<div class=" white-text remain">
 		<h5>
-			<div class="sign_in-sign_out">Sign in  <p class="center"><%=@remain%></p> </div>
+			<div class="sign_in-sign_out">IN <p class="center"><%=@remain%></p> </div>
 			<div class="center sign_in-sign_out">
 					<i class="material-icons person"> person </i>
 			</div>
-			<div class="sign_in-sign_out">Sign out <p class="center"><%=@all_attendees%></p> </div>
+			<div class="sign_in-sign_out">OUT <p class="center"><%=@all_attendees%></p> </div>
 		</h5>
 	</div>
 </div>
