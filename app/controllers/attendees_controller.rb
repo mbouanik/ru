@@ -5,6 +5,7 @@ class AttendeesController < ApplicationController
 	def index
 		@attendee = Attendee.new
 		@attendees = Attendee.page(params[:page]).per(6)
+		@last_page = @attendees.total_pages
 		@remain =  Attendee.joins(:stamps).where(stamps: { sign_out: nil }).count
 		@all_attendees = Attendee.count - @remain
 	end
@@ -86,7 +87,15 @@ class AttendeesController < ApplicationController
 				format.js
 			end
 		end
-		# redirect_to pages.last
+		b =  Attendee.count.to_f
+		puts "===============----========================"
+		puts b.to_f
+		puts (b /= 6)
+		# puts b.ceil
+		puts "===============----========================"
+		# if b.floor >
+			redirect_to("/attendees?page=" + b.ceil.to_s)
+		# end
 	end
 
 	def destroy
