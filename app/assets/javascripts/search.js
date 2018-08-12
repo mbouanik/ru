@@ -1,4 +1,5 @@
-document.addEventListener('DOMContentLoaded', function() {
+// document.addEventListener("turbolinks:load", function() {
+$(document).ready(function(){
 	$input = $("[data-behavior='autocomplete']")
 
 	var options = {
@@ -32,9 +33,11 @@ document.addEventListener('DOMContentLoaded', function() {
 			onChooseEvent: function() {
 				var url = $input.getSelectedItemData().url
 				$input.val("")
-				window.location.replace(url)
+				window.location.replace(url);
+				// Turbolinks.visit(url)
 			},
 		}
 	}
 	$input.easyAutocomplete(options);
 });
+	// window.location.replace(url);

@@ -11,6 +11,7 @@
 // about supported directives.
 //= require jquery
 //= require rails-ujs
+
 //= require jquery.easy-autocomplete
 //= require activestorage
 //= require materialize-sprockets

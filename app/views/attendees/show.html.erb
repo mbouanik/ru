@@ -3,7 +3,7 @@
 		<%= image_tag "faces.gif" %>
 	<% end %>
 </div>
-
+<% @user_quest = api(@attendee.login) %>
 <div class="container_info  white-text">
 	<div class="picture-index-profile left img-profile">
 		<%= image_tag  "https://cdn.intra.42.fr/users/medium_#{ @attendee.login }.jpg", class: 'picture-index-profile'%>

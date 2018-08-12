@@ -23,4 +23,10 @@ module AttendeesHelper
 			return false
 		end
 	end
+	def api(login)
+		client = OAuth2::Client.new( ENV["FT_UID"],  ENV["FT_SECRET"], site:"https://api.intra.42.fr")
+		token = client.client_credentials.get_token
+		return @user_quest = token.get("/v2/users/" + login).parsed
+
+	end
 end
