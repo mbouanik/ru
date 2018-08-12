@@ -6,7 +6,7 @@
 					<%= link_to 'close', attendee, method: :delete,  remote: true, class: 'material-icons destroy-close'%>
 				</span>
 				<div class="picture">
-					<div class="picture-index  center picture-hover" onclick="location.reload(false)">
+					<div class="picture-index  center picture-hover">
 						<%= link_to (image_tag  "https://cdn.intra.42.fr/users/medium_#{ attendee.login }.jpg",  class: 'picture-index'), attendee  %>
 					</div>
 				</div>

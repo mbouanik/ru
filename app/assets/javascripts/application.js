@@ -11,17 +11,14 @@
 // about supported directives.
 //= require jquery
 //= require rails-ujs
-//= require turbolinks
 //= require jquery.easy-autocomplete
 //= require activestorage
 //= require materialize-sprockets
 //= require_tree .
 
-$(document).ready(function () {
+$(document).ready(function(){
 	$('.modal').modal();
-	$('.dropdown-trigger').dropdown();
 	$('.sidenav').sidenav();
 	$('#error_explanation').show();
 	$('#notice').fadeOut(8000);
-	// $('#alert').fadeOut(8000);
 });
