@@ -3,7 +3,7 @@
 
 body {
 	font-family: Helvetica;
-	background:  url(parallax1.png);
+	background:  url("parallax1.png");
 	background-size: auto;
 	background-size: cover;
 }
@@ -38,7 +38,7 @@ body {
 }
 .modal{
 	background-size: cover;
-	background-image: url(parallax1.png);
+	background-image: url("parallax1.png");
 }
 .btn-logged{
 margin-top: 5px;
@@ -106,7 +106,7 @@ margin-top: 5px;
 	width: auto;
 	border: 1px solid #ce93d8;
 	border-radius: 10px;
-	background-image: url(purple-ruche.png);
+	background-image: url("purple-ruche.png");
 
 }
 .location-profile{
@@ -179,7 +179,7 @@ margin-top: 5px;
 	top: 300px;
 	min-height: 500px;
 	border-radius: 10px;
-	background-image: url(parallax-transparent.png);
+	background-image: url("parallax-transparent.png");
 	background-size: cover;
 }
 
@@ -213,7 +213,7 @@ margin-top: 5px;
 	max-width: 1090px;
 	min-width: 400px;
 	border: 1px solid #ce93d8;
-	background:  url(parallax-transparent.png);
+	background:  url("parallax-transparent.png");
 	border-radius: 10px;
 }
 
@@ -222,7 +222,7 @@ margin-top: 5px;
 	color: #ce93d8 ;
 }
 .search-table{
-	background:  url(purple-ruche.png);
+	background:  url("purple-ruche.png");
 	border-radius: 10px;
 }
 .block-attendees-pages{
@@ -300,7 +300,7 @@ margin-top: 5px;
 }
 .remain{
 	position: absolute;
-	background-image:  url(parallax-transparent.png);
+	background-image:  url("parallax-transparent.png");
 	border: 1px solid #ce93d8;
 	border-radius: 10px;
 }
@@ -323,12 +323,12 @@ margin-top: 5px;
 	height: 200px;
 }
 .card_attendee{
-	background-image:  url(parallax-transparent.png);
+	background-image:  url("parallax-transparent.png");
 	border-radius: 10px;
 }
 .card-title-time{
 	border-radius: 5px;
-	background: url(img_attendee.jpg);
+	background: url("img_attendee.jpg");
 }
 .btn-action-index{
 	position: relative;
@@ -348,7 +348,7 @@ margin-top: 5px;
 	z-index: 2;
 }
 .container_info{
-	background: url(img_attendee.jpg);
+	background: url("img_attendee.jpg");
 	width: auto; height: auto;
 	display: flex;
 	border-style: solid;
@@ -359,7 +359,7 @@ margin-top: 5px;
 .time-stamps{
 	margin-top: 50px;
 	height: 820px;
-	background-image:  url(purple-ruche.png);
+	background-image:  url("purple-ruche.png");
 	border: 1px solid #ce93d8;
 	background-size: cover;
 	border-radius: 15px;
