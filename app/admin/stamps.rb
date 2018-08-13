@@ -1,8 +1,12 @@
-ActiveAdmin.register AuthorizedUser do
+ActiveAdmin.register Stamp do
+	belongs_to :attendee
+
+	permit_params :sign_in, :sign_out
+
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
-permit_params :login
+# permit_params :list, :of, :attributes, :on, :model
 #
 # or
 #
