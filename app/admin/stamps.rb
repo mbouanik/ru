@@ -1,7 +1,7 @@
 ActiveAdmin.register Stamp do
 	belongs_to :attendee
-
-	permit_params :sign_in, :sign_out
+actions :all
+	permit_params :sign_in, :sign_out, :attendee_id
 
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters

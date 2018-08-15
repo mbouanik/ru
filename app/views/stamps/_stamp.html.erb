@@ -1,5 +1,5 @@
 <table class="highlight white-text centered">
-	<tbody>
+	<tbody id="dome<%=stamp.id%>">
 		<td class="center">
 			<%= stamp.sign_in.strftime "%B %e at %l:%M %p" unless stamp.sign_in.nil? %>
 		</td>
@@ -12,6 +12,8 @@
 			<td class="center update_sign_out<%=stamp.id%>">
 				<%= link_to 'Update now', sign_out_path(id: stamp.id), class: ' waves-effect waves-light btn-small blue darken-2', remote: true %>
 			</td>
+			<% elsif stamp.sign_out%>
+			<td class="right"><%= link_to "delete", stamp_delete_path(id: stamp.id), :method => :delete, class: 'material-icons destroy-close', remote: true %></td>
 		<% end %>
 	</tbody>
 </table>
