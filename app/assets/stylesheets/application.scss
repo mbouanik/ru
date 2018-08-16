@@ -457,7 +457,7 @@ margin-top: 5px;
 	}
 	.card_attendee{
 		height: 600px;
-		width: 400px;
+		width: 350px;
 	}
 	.picture-index {
 		position: relative;
@@ -467,7 +467,7 @@ margin-top: 5px;
 		overflow: hidden;
 	}
 	.picture{
-		margin-left: 80px;
+		margin-left: 40px;
 	}
 	.btn-action-index{
 		padding: 20px;
@@ -477,7 +477,7 @@ margin-top: 5px;
 	}
 
 }
-@media (max-width: 1535px) {
+@media (max-width: 1200px) {
 	body {
 		font-family: Helvetica;
 		background-image: asset-url("parallax1.png");
