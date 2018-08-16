@@ -208,7 +208,7 @@ margin-top: 5px;
 }
 .search-bar{
 	position: absolute;
-	z-index: 4;
+	z-index: 3;
 	height: auto;
 	min-height: 60px;
 	width: auto;
@@ -219,10 +219,12 @@ margin-top: 5px;
 	background-image: asset-url("purple-ruche.png");
 	border-radius: 10px;
 }
-.input-field{
-	width: auto;
-	max-width: 1090px;
-	min-width: 400px;
+.bar{
+// 	position: absolute;
+// 	z-index: 4;
+// 	margin-top: -50px;
+	// display: flex;
+	// flex:  1 1 auto;
 }
 .add-new-button{
 
