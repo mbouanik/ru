@@ -440,6 +440,12 @@ margin-top: 5px;
 }
 
 @media (max-width: 1688px) {
+	body {
+		font-family: Helvetica;
+		background-image: asset-url("parallax1.png");
+		background-size: auto;
+		background-size: center;
+	}
 	.attendee_card{
 		float: left;
 		text-align: center;
@@ -463,12 +469,22 @@ margin-top: 5px;
 	.btn-action-index{
 		padding: 20px;
 	}
+	.logged-as{
+		font-size: 25px;
+	}
 
 }
-@media (max-width: 1474px) {
+@media (max-width: 1535px) {
+	body {
+		font-family: Helvetica;
+		background-image: asset-url("parallax1.png");
+		background-size: auto;
+		background-size: center;
+	}
 	.attendee_card{
 		float: none;
 		text-align: center;
+		width: auto;
 		width: 100%;
 		font-size: 25px;
 	}
@@ -489,8 +505,10 @@ margin-top: 5px;
 	}
 	.remain{
 		position: none;
+		margin-top: 15px;
 		margin-right: 250px;
-		width: 15%;
+		min-width: 135px;
+		width: auto;
 	}
 	.logged-as{
 		font-size: 30px;
