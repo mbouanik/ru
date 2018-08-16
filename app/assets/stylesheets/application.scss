@@ -7,7 +7,10 @@ body {
 	background-size: auto;
 	background-size: cover;
 }
-
+.add-checking-elm{
+	z-index: 4;
+	display: inline-block;
+}
 .thankyou{
 	position: absolute;
 	z-index: -1;
@@ -44,7 +47,7 @@ body {
 margin-top: 5px;
 }
 .sidenav-trigger{
-	margin-top: 5px;
+	color: #ce93d8;
 	margin-left: 10px;
 }
 .logged-as-picture{
@@ -59,7 +62,7 @@ margin-top: 5px;
 	color: #ce93d8;
 }
 .brand-logo{
-	margin-top: 8px;
+	margin-top: 15px;
 	margin-left:  200px;
 }
 .header-search{
@@ -216,7 +219,11 @@ margin-top: 5px;
 	background-image: asset-url("parallax-transparent.png");
 	border-radius: 10px;
 }
-
+.bar{
+	width: auto;
+	max-width: 1090px;
+	min-width: 400px;
+}
 .add-new-button{
 
 	color: #ce93d8 ;
@@ -303,6 +310,7 @@ margin-top: 5px;
 	background-image:  asset-url("parallax-transparent.png");
 	border: 1px solid #ce93d8;
 	border-radius: 10px;
+	margin-top: 38px;
 }
 .img-profile{
 	position: relative;
@@ -430,18 +438,70 @@ margin-top: 5px;
 	border-radius: 15px;
 	font-size: 25px;
 }
-@media (max-width: 1531px) {
+
+@media (max-width: 1688px) {
 	.attendee_card{
 		float: left;
 		text-align: center;
 		width: 40%;
+		font-size: 20px;
+	}
+	.card_attendee{
+		height: 620px;
+		width: 420px;
+	}
+	.picture-index {
+		position: relative;
+		width: 256px;
+		height: 256px;
+		border-radius: 50%;
+		overflow: hidden;
+	}
+	.picture{
+		margin-left: 80px;
+	}
+	.btn-action-index{
+		padding: 20px;
 	}
 
 }
-@media (max-width: 1115px) {
+@media (max-width: 1474px) {
 	.attendee_card{
 		float: none;
 		text-align: center;
 		width: 100%;
+		font-size: 25px;
+	}
+	.card_attendee{
+		height: 700px;
+		width: 650px;
+	}
+	.picture-index {
+		position: relative;
+		width: 300px;
+		height: 300px;
+		border-radius: 50%;
+		margin-top: 5px;
+		overflow: hidden;
+	}
+	.picture{
+		margin-left: 180px;
+	}
+	.remain{
+		position: none;
+		margin-right: 250px;
+		width: 15%;
+	}
+	.logged-as{
+		font-size: 30px;
+	}
+	.card-action-index{
+		margin-top: 15px;
+	}
+	.btn-action-index{
+		padding: 15px;
+	}
+	.btn{
+		font-size: 50px;
 	}
 }
