@@ -216,10 +216,10 @@ margin-top: 5px;
 	max-width: 1090px;
 	min-width: 400px;
 	border: 1px solid #ce93d8;
-	background-image: asset-url("parallax-transparent.png");
+	background-image: asset-url("purple-ruche.png");
 	border-radius: 10px;
 }
-.bar{
+.input-field{
 	width: auto;
 	max-width: 1090px;
 	min-width: 400px;
@@ -311,6 +311,7 @@ margin-top: 5px;
 	border: 1px solid #ce93d8;
 	border-radius: 10px;
 	margin-top: 38px;
+	height: 100px;
 }
 .img-profile{
 	position: relative;
@@ -322,10 +323,10 @@ margin-top: 5px;
 	margin-left:  20px;
 }
 .sign_in-sign_out{
-
 	display: inline-block;
 	float: left;
-	padding: 5px;
+	padding: 10px;
+	margin-top: -14px;
 }
 .card{
 	height: 200px;
@@ -453,8 +454,8 @@ margin-top: 5px;
 		font-size: 20px;
 	}
 	.card_attendee{
-		height: 620px;
-		width: 420px;
+		height: 600px;
+		width: 400px;
 	}
 	.picture-index {
 		position: relative;
@@ -492,6 +493,9 @@ margin-top: 5px;
 		height: 700px;
 		width: 650px;
 	}
+	.remain{
+		margin-top: 18px;
+	}
 	.picture-index {
 		position: relative;
 		width: 300px;
@@ -502,13 +506,6 @@ margin-top: 5px;
 	}
 	.picture{
 		margin-left: 180px;
-	}
-	.remain{
-		position: none;
-		margin-top: 15px;
-		margin-right: 250px;
-		min-width: 135px;
-		width: auto;
 	}
 	.logged-as{
 		font-size: 30px;
