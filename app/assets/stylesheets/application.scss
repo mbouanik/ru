@@ -190,10 +190,18 @@ margin-top: 5px;
 	flex:  1 0 auto;
 }
 .attendee_card{
+	// display: inline-block;
 	float: left;
-	text-align: center;
-	width: 31%;
-	margin-top: 100px;
+	// text-align: center;
+	padding: 28px;
+	// padding-top: 28px;
+
+	// width: 33.3%;
+	// margin-left:  80px;
+	// margin-top: 40px;
+}
+.paginate-index{
+	margin-left: 40%;
 }
 .card_attendee{
 	border: 1px solid;
@@ -312,7 +320,7 @@ margin-top: 5px;
 	background-image:  asset-url("parallax-transparent.png");
 	border: 1px solid #ce93d8;
 	border-radius: 10px;
-	margin-top: 38px;
+	margin-top: 50px;
 	height: 100px;
 }
 .img-profile{
