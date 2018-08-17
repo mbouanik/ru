@@ -14,7 +14,7 @@
 			<%= form.text_field :q, placeholder: "Search for attendees", data: { behavior: "autocomplete" }, class: "white-text bar"%>
 		<% end %>
 	</div>
-</div>
+
 <div class="right">
 	<div class="add-checking-elm">
 		<a class=" add-new-button modal-trigger" href="#modal1">
@@ -31,12 +31,15 @@
 		</h5>
 	</div>
 </div>
-<div class=" attendee-pagination" id="container_attendees">
-	<%= render @attendees %>
 </div>
-<div class="center attendee-pagination  paginate-index">
-	<%= paginate @attendees %>
-</div>
-<div class="center">
-	<%= render 'attendees/modal' %>
+<div class="row">
+	<div class="row " id="container_attendees">
+		<%= render @attendees %>
+	</div>
+	<div class="row center   ">
+		<%= paginate @attendees %>
+	</div>
+	<div class="center">
+		<%= render 'attendees/modal' %>
+	</div>
 </div>
