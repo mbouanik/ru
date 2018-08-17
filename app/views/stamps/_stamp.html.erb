@@ -6,7 +6,6 @@
 		<td class="center">
 			<span class=' sign_out<%=stamp.id%>'>
 				<%= stamp.sign_out.strftime "%B %e at %l:%M %p" unless stamp.sign_out.nil?%>
-
 			</span>
 		</td>
 		<% if stamp.sign_out.nil? %>
@@ -14,7 +13,7 @@
 				<%= link_to 'Update now', sign_out_path(id: stamp.id), class: 'waves-effect waves-light btn-small blue darken-2', remote: true %>
 			</td>
 		<% end %>
-		<% if action_name== 'show' ||  stamp %>
+		<% if action_name== 'show' && stamp %>
 			<td class="right"><%= link_to "delete", stamp_delete_path(id: stamp.id), :method => :delete, class: 'material-icons destroy-close', remote: true %></td>
 		<% end %>
 	</tbody>
