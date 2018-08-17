@@ -161,7 +161,11 @@ margin-top: 5px;
 .paginate-index{
 	// display: inline-block;;
 	margin-left: 40%;
-	margin-top: 90%;
+
+}
+.attendee-pagination{
+	display: block;
+	float: left;
 }
 .truncate-stamps{
 	display: block;
@@ -435,6 +439,11 @@ margin-top: 5px;
 		float: left;
 		text-align: center;
 		width: 40%;
+	}
+	.paginate-index{
+		// display: inline-block;;
+		margin-left: 26%;
+
 	}
 
 }
