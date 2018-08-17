@@ -7,6 +7,10 @@ body {
 	background-size: auto;
 	background-size: cover;
 }
+.attendee-pagination{
+	display: block;
+	float: left;
+}
 .add-checking-elm{
 	z-index: 4;
 	display: inline-block;
@@ -164,7 +168,10 @@ margin-top: 5px;
 .paginate-index{
 	// display: inline-block;;
 	margin-left: 40%;
-	margin-top: 90%;
+	// margin-top: 165%;
+}
+.w{
+	display: block;
 }
 .truncate-stamps{
 	display: block;
@@ -325,7 +332,7 @@ margin-top: 5px;
 	margin-left:  20px;
 }
 .sign_in-sign_out{
-	display: inline-block;
+	display: block;
 	float: left;
 	padding: 10px;
 	margin-top: -14px;
@@ -483,7 +490,6 @@ margin-top: 5px;
 }
 .sign_out-title-timestamps{
 	font-size: 25px;
-	padding-left:  -10px;	
 }
 
 @media (max-width: 1294px) {
