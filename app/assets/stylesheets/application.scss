@@ -190,15 +190,10 @@ margin-top: 5px;
 	flex:  1 0 auto;
 }
 .attendee_card{
-	// display: inline-block;
 	float: left;
-	// text-align: center;
-	padding: 28px;
-	// padding-top: 28px;
-
-	// width: 33.3%;
-	// margin-left:  80px;
-	// margin-top: 40px;
+	text-align: center;
+	width: 33.3%;
+	margin-top: 30px;
 }
 .paginate-index{
 	margin-left: 40%;
@@ -221,18 +216,11 @@ margin-top: 5px;
 	min-height: 60px;
 	width: auto;
 	margin-top: 5px;
-	max-width: 1090px;
+	max-width: 1160px;
 	min-width: 400px;
 	border: 1px solid #ce93d8;
 	background-image: asset-url("purple-ruche.png");
 	border-radius: 10px;
-}
-.bar{
-// 	position: absolute;
-// 	z-index: 4;
-// 	margin-top: -50px;
-	// display: flex;
-	// flex:  1 1 auto;
 }
 .add-new-button{
 
