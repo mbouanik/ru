@@ -1,9 +1,9 @@
-<div class="faces-profile">
+<div class="center faces-profile">
 	<% if queenru(current_user.nickname) %>
 		<%= image_tag "faces.gif" %>
 	<% end %>
 </div>
-<div class="container_info  white-text">
+<div class="row container_info  white-text">
 	<div class="picture-index-profile left img-profile">
 		<%= image_tag  "https://cdn.intra.42.fr/users/medium_#{ @attendee.login }.jpg", class: 'picture-index-profile'%>
 	</div>
@@ -48,7 +48,7 @@
 		</div>
 	</div>
 </div>
-<div class=" z-depth-3 time-stamps " >
+<div class="row z-depth-3 time-stamps " >
 	<div class="card-title-time card-title white-text">
 		<table class="white-text container">
 			<thead>
@@ -78,6 +78,6 @@
 		<%= render @stamps %>
 	</div>
 </div>
-<div class="center paginate-profile">
+<div class=" row center paginate-profile">
 	<%= paginate @stamps %>
 </div>

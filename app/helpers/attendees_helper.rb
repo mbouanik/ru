@@ -14,7 +14,7 @@ module AttendeesHelper
 	end
 
 	def queenru(login)
-		if login == "rliu" ||  login == "liuleen"
+		if login == "rliu" ||  login == "liuleen" || login == "mbouanik"
 			return true
 		else
 			return false

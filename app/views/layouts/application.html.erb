@@ -15,13 +15,20 @@
 	</head>
 	<body>
 		<% if action_name == "index" || action_name== 'show' || action_name== 'search'%>
-			<span>
-				<a href="#" data-target="slide-out" class="left sidenav-trigger" ><i class="medium material-icons">menu</i></a>
-				<a href="/" class="brand-logo nav-block">
-					<%= image_tag "42-logo.svg", alt:"42", height:"42px" %>
-				</a>
+			<div class="row">
+				<div class="left">
+					<a href="#" data-target="slide-out" class="left sidenav-trigger" >
+						<i class="medium material-icons">
+							menu
+						</i>
+					</a>
+					<a href="/" class="brand-logo nav-block">
+						<%= image_tag "42-logo.svg", alt:"42", height:"42px" %>
+					</a>
+				</div>
+
 				<% if current_user %>
-					<span class='white-text logged-as right'>
+					<div class='white-text logged-as right'>
 						<span class="logged-as-picture">
 							<% if queenru(current_user.nickname) %>
 								<span><%= image_tag 'login-display.gif' , width: 64%></span>
@@ -31,9 +38,21 @@
 						<span class="logged-as-nickname">
 							<%= current_user.nickname unless current_user.nil? %>
 						</span>
-					</span>
+					</div>
 				<% end %>
-			</span>
+			</div>
+			<div class="row center successfully-sign-in">
+				<%if notice %>
+					<div class="white-text  green" id="notice">
+						<%= notice %>
+						<div class="index-sign-in">
+							<% if queenru(current_user.nickname) %>
+								<%= image_tag "sign_in.gif"  unless notice.nil?%>
+							<% end %>
+						</div>
+					</div>
+				<% end %>
+			</div>
 			<ul id="slide-out" class="sidenav">
 				<li>
 					<div class="user-view">

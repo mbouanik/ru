@@ -40,4 +40,3 @@ $(document).ready(function(){
 	}
 	$input.easyAutocomplete(options);
 });
-	// window.location.replace(url);
