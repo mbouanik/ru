@@ -187,12 +187,41 @@ margin-top: 5px;
 	background-image: asset-url("parallax-transparent.png");
 	background-size: cover;
 }
+.flexo{
+	// display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	 // justify-content: space-between;
+}
+.flex{
+	display: flex;
+	flex-direction: column;
+}
+.flex-flex{
+	// display: flex;
+	flex-wrap: wrap;
+	align-items: flex-end;
+	// justify-content: space-between;
+	flex-direction:column;
 
+}
+.flex-inside{
+	display: flex;
+	flex-wrap: wrap;
+	// justify-content: space-between;
+	// flex-direction:column;
+	// align-items: flex-end;
+}
+.flex-container{
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 100px;
+	// justify-content: space-between;
+	// align-items: center;
+	// flex-direction:row;
+}
 .attendee_card{
-	float: left;
-	text-align: center;
-	width: 33.3%;
-	margin-top: 30px;
+	flex-basis: 33.3%;
 }
 .paginate-index{
 	margin-left: 40%;
@@ -211,7 +240,7 @@ margin-top: 5px;
 }
 .search-bar{
 	position: absolute;
-	z-index: 3;
+	z-index: 1;
 	height: auto;
 	min-height: 60px;
 	width: auto;
@@ -304,12 +333,14 @@ margin-top: 5px;
 	color: #ce93d8;
 }
 .remain{
-	position: absolute;
+	// position: absolute;
+	// z-index: 4;
+	display: flex;
+	flex-wrap: wrap;
 	background-image:  asset-url("parallax-transparent.png");
 	border: 1px solid #ce93d8;
 	border-radius: 10px;
-	margin-top: 52px;
-	height: 100px;
+	// height: 100px;
 }
 .img-profile{
 	position: relative;
@@ -358,19 +389,12 @@ margin-top: 5px;
 	background-image: asset-url("img_attendee.jpg");
 	width: auto; height: auto;
 	display: flex;
-	margin-top: 70px;
 	border-style: solid;
 	border-radius: 15px;
 	border-color: #ba68c8 ;
 
 }
-.t{
-	display: inline-block;
-}
-.w{
-	// display: block;
-	margin-left: 185px
-}
+
 .time-stamps{
 	margin-top: 50px;
 	height: 820px;
@@ -448,16 +472,13 @@ margin-top: 5px;
 }
 
 @media (max-width: 1688px) {
-	body {
-		font-family: Helvetica;
-		background-image: asset-url("parallax1.png");
-		background-size: auto;
-		background-size: center;
-	}
+// 	body {
+// 		font-family: Helvetica;
+// 		background-image: asset-url("parallax1.png");
+// 		background-size: auto;
+// 		background-size: center;
+// 	}
 	.attendee_card{
-		float: left;
-		text-align: center;
-		width: 50%;
 		font-size: 20px;
 	}
 	.card_attendee{
@@ -474,48 +495,44 @@ margin-top: 5px;
 	.picture{
 		margin-left: 60px;
 	}
-	.btn-action-index{
-		padding: 20px;
-	}
-	.logged-as{
-		font-size: 25px;
-	}
-
-}
-
-.sign_in-title-timestamps{
-	font-size: 25px;
-}
-.sign_out-title-timestamps{
-	font-size: 25px;
-}
-button{
-	border-radius: 10px;
+// 	.btn-action-index{
+// 		padding: 20px;
+// 	}
+// 	.logged-as{
+// 		font-size: 25px;
+// 	}
+//
+// }
+//
+// .sign_in-title-timestamps{
+// 	font-size: 25px;
+// }
+// .sign_out-title-timestamps{
+// 	font-size: 25px;
+// }
+// button{
+// 	border-radius: 10px;
 }
 @media (max-width: 1344px) {
-	body {
-		font-family: Helvetica;
-		background-image: asset-url("parallax1.png");
-		background-size: auto;
-		background-size: center;
-	}
+// 	body {
+// 		font-family: Helvetica;
+// 		background-image: asset-url("parallax1.png");
+// 		background-size: auto;
+// 		background-size: center;
+// 	}
 	.attendee_card{
-		float: none;
-		text-align: center;
-		width: auto;
-		width: 100%;
 		font-size: 25px;
 	}
 	.card_attendee{
 		height: 700px;
 		width: 650px;
 	}
-	.remain{
-		margin-top: 18px;
-		height: auto;
-		max-height: 120px;
-		width: auto;
-	}
+// 	.remain{
+// 		margin-top: 18px;
+// 		height: auto;
+// 		max-height: 120px;
+// 		width: auto;
+// 	}
 	.picture-index {
 		position: relative;
 		width: 300px;
@@ -527,16 +544,16 @@ button{
 	.picture{
 		margin-left: 180px;
 	}
-	.logged-as{
-		font-size: 30px;
-	}
-	.card-action-index{
-		margin-top: 15px;
-	}
-	.btn-action-index{
-		padding: 15px;
-	}
-	.btn{
-		font-size: 50px;
-	}
+// 	.logged-as{
+// 		font-size: 30px;
+// 	}
+// 	.card-action-index{
+// 		margin-top: 15px;
+// 	}
+// 	.btn-action-index{
+// 		padding: 15px;
+// 	}
+// 	.btn{
+// 		font-size: 50px;
+// 	}
 }

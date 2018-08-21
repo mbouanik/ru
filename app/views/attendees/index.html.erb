@@ -1,34 +1,38 @@
-<div class="row">
-	<div class="col m6 search-bar white-text ">
-		<%= form_with url: search_path, local: true, method: :get  do |form| %>
-			<%= form.text_field :q, placeholder: "Search for attendees", data: { behavior: "autocomplete" }, class: "white-text bar"%>
-		<% end %>
+<div class="flexo">
+	<div class="row">
+		<div class="flex-inside">
+			<div class="search-bar white-text ">
+				<%= form_with url: search_path, local: true, method: :get  do |form| %>
+					<%= form.text_field :q, placeholder: "Search for attendees", data: { behavior: "autocomplete" }, class: "white-text bar"%>
+				<% end %>
+			</div>
+		</div>
 	</div>
-	<div class="right">
-		<div class="add-checking-elm">
+	<div class="flex-flex">
+		<div class="right flex">
 			<a class=" add-new-button modal-trigger" href="#modal1">
 				<i class="medium material-icons">person_add</i>
 			</a>
+			<div class=" white-text remain ">
+				<h5>
+					<div class="sign_in-sign_out">IN <p class="center"><%=@remain%></p> </div>
+						<div class="center sign_in-sign_out">
+							<i class="material-icons person"> person </i>
+						</div>
+					<div class="sign_in-sign_out">OUT <p class="center"><%=@all_attendees%></p> </div>
+				</h5>
+			</div>
 		</div>
-		<div class=" add-checking-elm white-text remain ">
-			<h5>
-				<div class="sign_in-sign_out">IN <p class="center"><%=@remain%></p> </div>
-				<div class="center sign_in-sign_out">
-						<i class="material-icons person"> person </i>
-				</div>
-				<div class="sign_in-sign_out">OUT <p class="center"><%=@all_attendees%></p> </div>
-			</h5>
+		<div class="row">
+			<div class="flex-container" id="container_attendees">
+				<%= render @attendees %>
+			</div>
+			<div class=" row center">
+				<%= paginate @attendees %>
+			</div>
+			<div class="">
+				<%= render 'attendees/modal' %>
+			</div>
 		</div>
-	</div>
-</div>
-<div class="row">
-	<div class="row" id="container_attendees">
-		<%= render @attendees %>
-	</div>
-	<div class=" row center">
-		<%= paginate @attendees %>
-	</div>
-	<div class="">
-		<%= render 'attendees/modal' %>
 	</div>
 </div>
