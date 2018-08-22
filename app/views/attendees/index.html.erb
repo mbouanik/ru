@@ -1,6 +1,6 @@
 <!-- <div class="flexo"> -->
 	<!-- <div class="row"> -->
-	
+
 	<!-- </div> -->
 	<div class="flex-attendee-remain-add">
 		<div class="flex-remain-add">
@@ -8,13 +8,13 @@
 				<i class="medium material-icons">person_add</i>
 			</a>
 			<div class=" white-text remain ">
-				<h5>
-					<div class="sign_in-sign_out">IN <p class="center"><%=@remain%></p> </div>
-						<div class="center sign_in-sign_out">
-							<i class="material-icons person"> person </i>
+				<div class="center">IN <span class="logged-as-nickname"><%=@remain%></span> </div>
+					<div class="center">
+						<div class="person">
+							<i class="small material-icons"> person </i>
 						</div>
-					<div class="sign_in-sign_out">OUT <p class="center"><%=@all_attendees%></p> </div>
-				</h5>
+					</div>
+				<div class="center">OUT <span class="logged-as-nickname"><%=@all_attendees%></span>  </div>
 			</div>
 		</div>
 		<div class="flex-container" id="container_attendees">
