@@ -46,8 +46,10 @@ body {
 	width: 50%;
 }
 .modal{
-	background-size: cover;
 	background-image: asset-url("purple-hack-high-school.jpg");
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
 }
 .btn-logged{
 margin-top: 5px;
@@ -86,7 +88,7 @@ margin-top: 5px;
 }
 .bar{
 	display: flex;
-	flex: 15;
+	flex: 12;
 	flex-direction: column;
 	align-items: flex-end;
 	// flex-basis: 25%
@@ -426,18 +428,17 @@ margin-top: 5px;
 	width: auto; height: auto;
 	display: flex;
 	border-style: solid;
-	border-radius: 15px;
+	border-radius: 10px;
 	border-color: #ba68c8 ;
 
 }
 
 .time-stamps{
-	margin-top: 50px;
-	height: 820px;
+	height: 830px;
 	background-image:  asset-url("purple-ruche.png");
 	border: 1px solid #ce93d8;
 	background-size: cover;
-	border-radius: 15px;
+	border-radius: 10px;
 }
 .truncate{
 	display: block;
