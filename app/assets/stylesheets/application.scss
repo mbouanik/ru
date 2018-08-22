@@ -47,7 +47,7 @@ body {
 }
 .modal{
 	background-size: cover;
-	background-image: asset-url("parallax1.png");
+	background-image: asset-url("purple-hack-high-school.jpg");
 }
 .btn-logged{
 margin-top: 5px;
@@ -184,38 +184,47 @@ margin-top: 5px;
 	top: 300px;
 	min-height: 500px;
 	border-radius: 10px;
-	background-image: asset-url("parallax-transparent.png");
+	background-image: asset-url("purple-ruche.png");
 	background-size: cover;
 }
 .flexo{
 	// display: flex;
-	flex-wrap: wrap;
+	// flex-wrap: wrap;
 	flex-direction: column;
 	 // justify-content: space-between;
 }
-.flex{
-	display: flex;
-	flex-direction: column;
-}
-.flex-flex{
-	// display: flex;
-	flex-wrap: wrap;
-	align-items: flex-end;
-	// justify-content: space-between;
-	flex-direction:column;
 
-}
+
 .flex-inside{
-	display: flex;
-	flex-wrap: wrap;
+	// display: flex;
+	// flex-wrap: wrap;
 	// justify-content: space-between;
 	// flex-direction:column;
-	// align-items: flex-end;
+	// align-items: flex-start;
 }
-.flex-container{
+.flex-attendee-remain-add{
 	display: flex;
 	flex-wrap: wrap;
-	margin-top: 100px;
+	// align-items: flex-end;
+	// justify-content: space-between;
+
+
+}
+.flex-remain-add{
+	display: flex;
+	flex: 1;
+	align-items: flex-start;
+	order: 2;
+	// flex-basis: 40%;
+	flex-direction: column;
+}
+.flex-container{
+	flex: 5;
+	order: 1;
+	display: flex;
+	flex-wrap: wrap;
+	// margin-top: -150px;
+	// align-items: flex-start;
 	// justify-content: space-between;
 	// align-items: center;
 	// flex-direction:row;
@@ -239,15 +248,16 @@ margin-top: 5px;
 	margin-top: 5px;
 }
 .search-bar{
-	position: absolute;
-	z-index: 1;
-	height: auto;
-	min-height: 60px;
-	width: auto;
+	// position: absolute;
+	// z-index: 1;
+	// height: auto;
+	// min-height: 60px;
+	// width: auto;
 	// margin-left: 220px;
 	// margin-top: 5px;
-	max-width: 1160px;
-	min-width: 400px;
+	// max-width: 1160px;
+	// min-width: 400px;
+	padding: 5px;
 	border: 1px solid #ce93d8;
 	background-image: asset-url("purple-ruche.png");
 	border-radius: 10px;
@@ -333,6 +343,8 @@ margin-top: 5px;
 	color: #ce93d8;
 }
 .remain{
+	// flex-basis: 10%;
+	// margin-right:  -180px;
 	// position: absolute;
 	// z-index: 4;
 	display: flex;
@@ -386,7 +398,7 @@ margin-top: 5px;
 	z-index: 2;
 }
 .container_info{
-	background-image: asset-url("img_attendee.jpg");
+	background-image: asset-url("purple-ruche");
 	width: auto; height: auto;
 	display: flex;
 	border-style: solid;
@@ -471,13 +483,7 @@ margin-top: 5px;
 	font-size: 25px;
 }
 
-@media (max-width: 1688px) {
-// 	body {
-// 		font-family: Helvetica;
-// 		background-image: asset-url("parallax1.png");
-// 		background-size: auto;
-// 		background-size: center;
-// 	}
+@media (max-width: 1673px) {
 	.attendee_card{
 		font-size: 20px;
 	}
@@ -498,9 +504,9 @@ margin-top: 5px;
 // 	.btn-action-index{
 // 		padding: 20px;
 // 	}
-// 	.logged-as{
-// 		font-size: 25px;
-// 	}
+	.logged-as{
+		font-size: 25px;
+	}
 //
 // }
 //
@@ -513,13 +519,7 @@ margin-top: 5px;
 // button{
 // 	border-radius: 10px;
 }
-@media (max-width: 1344px) {
-// 	body {
-// 		font-family: Helvetica;
-// 		background-image: asset-url("parallax1.png");
-// 		background-size: auto;
-// 		background-size: center;
-// 	}
+@media (max-width: 1430px) {
 	.attendee_card{
 		font-size: 25px;
 	}
@@ -527,12 +527,6 @@ margin-top: 5px;
 		height: 700px;
 		width: 650px;
 	}
-// 	.remain{
-// 		margin-top: 18px;
-// 		height: auto;
-// 		max-height: 120px;
-// 		width: auto;
-// 	}
 	.picture-index {
 		position: relative;
 		width: 300px;
@@ -544,16 +538,28 @@ margin-top: 5px;
 	.picture{
 		margin-left: 180px;
 	}
-// 	.logged-as{
-// 		font-size: 30px;
-// 	}
-// 	.card-action-index{
-// 		margin-top: 15px;
-// 	}
-// 	.btn-action-index{
-// 		padding: 15px;
-// 	}
-// 	.btn{
-// 		font-size: 50px;
-// 	}
+	.flex-remain-add{
+		display: flex;
+		flex: 1;
+		align-items: flex-start;
+		order: 1;
+		flex-direction: column;
+	}
+	.flex-container{
+		flex: 5;
+		order: 2;
+		display: flex;
+		flex-wrap: wrap;
+		// margin-top: -150px;
+		// align-items: flex-start;
+		// justify-content: space-between;
+		// align-items: center;
+		// flex-direction:row;
+	}
+	.logged-as{
+		font-size: 30px;
+	}
+	.card-action-index{
+		margin-top: 15px;
+	}
 }

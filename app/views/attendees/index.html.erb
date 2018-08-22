@@ -1,5 +1,5 @@
-<div class="flexo">
-	<div class="row">
+<!-- <div class="flexo"> -->
+	<!-- <div class="row"> -->
 		<div class="flex-inside">
 			<div class="search-bar white-text ">
 				<%= form_with url: search_path, local: true, method: :get  do |form| %>
@@ -7,9 +7,9 @@
 				<% end %>
 			</div>
 		</div>
-	</div>
-	<div class="flex-flex">
-		<div class="right flex">
+	<!-- </div> -->
+	<div class="flex-attendee-remain-add">
+		<div class="flex-remain-add">
 			<a class=" add-new-button modal-trigger" href="#modal1">
 				<i class="medium material-icons">person_add</i>
 			</a>
@@ -23,16 +23,14 @@
 				</h5>
 			</div>
 		</div>
-		<div class="row">
-			<div class="flex-container" id="container_attendees">
+		<div class="flex-container" id="container_attendees">
 				<%= render @attendees %>
-			</div>
-			<div class=" row center">
-				<%= paginate @attendees %>
-			</div>
-			<div class="">
-				<%= render 'attendees/modal' %>
-			</div>
 		</div>
 	</div>
-</div>
+	<div class=" center">
+		<%= paginate @attendees %>
+	</div>
+	<div class="">
+		<%= render 'attendees/modal' %>
+	</div>
+<!-- </div> -->

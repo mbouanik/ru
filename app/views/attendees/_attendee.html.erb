@@ -29,7 +29,7 @@
 					<table>
 						<td class="sign_in<%=attendee.id%> truncate-stamps center  time-index">
 							<% if @stamps.nil? %>
-								<td class="no-time-logged center"><%= "No time logged Yet" %></td>
+								<td class="center" id="no-time-logged<%=attendee.id%>"><%= "No time logged Yet" %></td>
 							<% else %>
 								<%= render @stamps %>
 							<% end %>
