@@ -12,10 +12,11 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
 		<!--Import Google Icon Font-->
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
 	</head>
 	<body>
 		<% if action_name == "index" || action_name== 'show' || action_name== 'search'%>
-			<div class="flex-inside">
+			<div class="flex-wrapper-nav">
 				<div class="logo-menu">
 					<a href="#" data-target="slide-out" class="left sidenav-trigger" >
 						<i class="medium material-icons">
@@ -29,7 +30,7 @@
 				<div class="bar">
 					<div class="search-bar white-text ">
 						<%= form_with url: search_path, local: true, method: :get  do |form| %>
-							<%= form.text_field :q, placeholder: "Search for attendees by name or login", data: { behavior: "autocomplete" }, class: "white-text"%>
+							<%= form.text_field :q, placeholder: "Search for attendees by name or login", data: { behavior: "autocomplete" }, class: "white-text d"%>
 						<% end %>
 					</div>
 				</div>
