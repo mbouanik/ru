@@ -13,37 +13,33 @@
 				<%= @user_quest["displayname"] %> </div> <div class="info_profile"> <%= @attendee.login %>
 			</div>
 		</div>
-		<div class="info z-depth-3 center">
-			<div class="stats-attendee center">
-				<div class="info_profile left">
-					<span class="title">
-						Grade
-					</span>
-					<div class="center">
-						<%= @user_quest["cursus_users"][0]["grade"] %>
-					</div>
-				</div>
-				<div class="info_profile center">
-					<span class="title">
-						Level
-					</span>
-					<div class="center">
-						<%= @user_quest["cursus_users"][0]["level"].truncate(4) %>
-					</div>
-				</div>
-				<div class="info_profile right">
-					<span class="title">
-						Correction points
-					</span>
-					<div class="center">
-						<%= @user_quest["correction_point"] %>
-					</div>
+		<div class="info z-depth-3 ">
+			<div class="grade center">
+				<span class="title ">
+					Grade
+				</span>
+				<div class="center">
+					<%= @user_quest["cursus_users"][0]["grade"] %>
 				</div>
 			</div>
-			<div class="location-profile center block_info_text ">
-				<div class=" block_info_text ">
-					<%= get_pos(@attendee.login) %>
+			<div class="level center">
+				<span class="title">
+					Level
+				</span>
+				<div class="">
+					<%= @user_quest["cursus_users"][0]["level"].truncate(4) %>
 				</div>
+			</div>
+			<div class="correction_point ">
+				<div class="title">
+					Correction points
+				</div>
+				<div class="center">
+					<%= @user_quest["correction_point"] %>
+				</div>
+			</div>
+			<div class="location">
+				<%= get_pos(@attendee.login) %>
 			</div>
 		</div>
 	</div>

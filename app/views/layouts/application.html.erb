@@ -18,14 +18,18 @@
 		<% if action_name == "index" || action_name== 'show' || action_name== 'search'%>
 			<div class="flex-wrapper-nav">
 				<div class="logo-menu">
-					<a href="#" data-target="slide-out" class="left sidenav-trigger" >
-						<i class="medium material-icons">
-							menu
-						</i>
-					</a>
-					<a href="/" class="brand-logo nav-block">
-						<%= image_tag "42-logo.svg", alt:"42", height:"42px" %>
-					</a>
+					<div class="menu">
+						<a href="#" data-target="slide-out" class="sidenav-trigger" >
+							<i class="medium material-icons">
+								menu
+							</i>
+						</a>
+					</div>
+					<div class="brand-logo">
+						<a href="/">
+							<%= image_tag "42-logo.svg", alt:"42", height:"42px" %>
+						</a>
+					</div>
 				</div>
 				<div class="bar">
 					<div class="search-bar white-text ">
