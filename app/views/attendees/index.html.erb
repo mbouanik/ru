@@ -1,23 +1,29 @@
 <div class="flex-attendee-remain-add">
-	<div class="flex-remain-add">
-		<a class=" add-new-button modal-trigger" href="#modal1">
-			<i class="medium material-icons">person_add</i>
-		</a>
-		<div class=" white-text remain">
+	<div class="flex-remain-add ">
+		<div class="add-new-button center">
+			<a class="modal-trigger" href="#modal1">
+				<i class="medium material-icons add-new-button-color">
+					person_add
+				</i>
+			</a>
+		</div>
+		<div class="white-text remain ">
 			<div class="center">IN <span class="logged-as-nickname"><%=@remain%></span> </div>
 				<div class="center">
 					<div class="person">
-						<i class="small material-icons"> person </i>
+						<i class="small material-icons">
+							person
+						 </i>
 					</div>
 				</div>
 			<div class="center">OUT <span class="logged-as-nickname"><%=@all_attendees%></span>  </div>
 		</div>
 	</div>
-	<div class="flex-container" id="container_attendees">
+	<div class="flex-attendee" id="container_attendees">
 			<%= render @attendees %>
 	</div>
 </div>
-<div class=" center">
+<div class="center">
 	<%= paginate @attendees %>
 </div>
 <div class="">

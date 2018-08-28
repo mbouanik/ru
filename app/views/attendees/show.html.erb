@@ -7,10 +7,13 @@
 	<div class="picture-index-profile left img-profile">
 		<%= image_tag  "https://cdn.intra.42.fr/users/medium_#{ @attendee.login }.jpg", class: 'picture-index-profile'%>
 	</div>
-	<div class="container">
-		<div class="block_info_text profile_name">
+	<div class="profile-attendee container">
+		<div class="profile_name">
 			<div class="info_profile" >
-				<%= @user_quest["displayname"] %> </div> <div class="info_profile"> <%= @attendee.login %>
+				<%= @user_quest["displayname"] %>
+			</div>
+			 <div class="info_profile">
+				<%= @attendee.login %>
 			</div>
 		</div>
 		<div class="info z-depth-3 ">
@@ -26,7 +29,7 @@
 				<span class="title">
 					Level
 				</span>
-				<div class="">
+				<div>
 					<%= @user_quest["cursus_users"][0]["level"].truncate(4) %>
 				</div>
 			</div>
