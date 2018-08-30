@@ -11,6 +11,7 @@
 // about supported directives.
 //= require jquery
 //= require rails-ujs
+//= require active_admin/base
 
 //= require jquery.easy-autocomplete
 //= require activestorage
@@ -23,3 +24,14 @@ $(document).ready(function(){
 	$('#error_explanation').show();
 	$('#notice').fadeOut(8000);
 });
+
+// $(window).on('resize', function() {
+//   var win = $(this);
+//   if (win.width() < 1279) {
+//
+//     $('.btn-action').addClass('btn-large');
+//
+//   } else {
+//     $('.btn-action').removeClass('btn-large');
+//   }
+// });

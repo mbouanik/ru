@@ -1,10 +1,12 @@
 <div id="field-add-new">
 	<% if @attendee.errors.any? %>
-		<div class="message">The Form contain <%= pluralize(@attendee.errors.count, "error") %>
+		<div class="message center">The Form contain <%= pluralize(@attendee.errors.count, "error") %>
 			<% @attendee.errors.full_messages.each do |msg| %>
 				<li> <%= msg %> </li>
 			<% end%>
 		</div>
-		<p><%= image_tag "error.gif", width: 128%></p>
+		<div class="center">
+			<p><%= image_tag "error.gif", width: 128%></p>
+		</div>
 	<% end %>
 </div>

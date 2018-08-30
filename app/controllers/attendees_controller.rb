@@ -88,6 +88,15 @@ class AttendeesController < ApplicationController
 		end
 	end
 
+	def stamp_destroy
+		Stamp.find(params[:id]).destroy
+		respond_to do |format|
+			format.html {}
+			format.json {}
+			format.js
+		end
+	end
+
 	def destroy
 		@attendee.destroy
 		respond_to do |format|

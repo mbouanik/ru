@@ -1,45 +1,31 @@
-<%if notice %>
-	<div class=" white-text successfully-sign-in green" id="notice">
-		<%= notice %>
-		<div class="index-sign-in">
-			<% if queenru(current_user.nickname) %>
-				<%= image_tag "sign_in.gif"  unless notice.nil?%>
-			<% end %>
+<div class="flex-attendee-remain-add">
+	<div class="flex-remain-add ">
+		<div class="add-new-button center">
+			<a class="modal-trigger" href="#modal1">
+				<i class="medium material-icons add-new-button-color">
+					person_add
+				</i>
+			</a>
+		</div>
+		<div class="white-text remain ">
+			<div class="center">IN <span class="logged-as-nickname"><%=@remain%></span> </div>
+				<div class="center">
+					<div class="person">
+						<i class="small material-icons">
+							person
+						 </i>
+					</div>
+				</div>
+			<div class="center">OUT <span class="logged-as-nickname"><%=@all_attendees%></span>  </div>
 		</div>
 	</div>
-<% end %>
-<div class="row ">
-	<div class="col m6 search-bar white-text ">
-		<%= form_with url: search_path, local: true, method: :get  do |form| %>
-			<%= form.text_field :q, placeholder: "Search for attendees", data: { behavior: "autocomplete" }, class: "white-text bar"%>
-		<% end %>
-	</div>
-
-<div class="right">
-	<div class="add-checking-elm">
-		<a class=" add-new-button modal-trigger" href="#modal1">
-			<i class="medium material-icons">person_add</i>
-		</a>
-	</div>
-	<div class=" add-checking-elm white-text remain">
-		<h5>
-			<div class="sign_in-sign_out">IN <p class="center"><%=@remain%></p> </div>
-			<div class="center sign_in-sign_out">
-					<i class="material-icons person"> person </i>
-			</div>
-			<div class="sign_in-sign_out">OUT <p class="center"><%=@all_attendees%></p> </div>
-		</h5>
+	<div class="flex-attendee" id="container_attendees">
+			<%= render @attendees %>
 	</div>
 </div>
+<div class="center">
+	<%= paginate @attendees %>
 </div>
-<div class="row">
-	<div class="row " id="container_attendees">
-		<%= render @attendees %>
-	</div>
-	<div class="row center   ">
-		<%= paginate @attendees %>
-	</div>
-	<div class="center">
-		<%= render 'attendees/modal' %>
-	</div>
+<div class="">
+	<%= render 'attendees/modal' %>
 </div>

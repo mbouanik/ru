@@ -1,62 +1,61 @@
-<div class="faces-profile">
+<div class="center faces-profile">
 	<% if queenru(current_user.nickname) %>
 		<%= image_tag "faces.gif" %>
 	<% end %>
 </div>
-<div class="container_info  white-text">
+<div class="row container_info  white-text">
 	<div class="picture-index-profile left img-profile">
 		<%= image_tag  "https://cdn.intra.42.fr/users/medium_#{ @attendee.login }.jpg", class: 'picture-index-profile'%>
 	</div>
-	<div class="container">
-		<div class="block_info_text profile_name">
+	<div class="profile-attendee container">
+		<div class="profile_name">
 			<div class="info_profile" >
-				<%= @user_quest["displayname"] %> </div> <div class="info_profile"> <%= @attendee.login %>
+				<%= @user_quest["displayname"] %>
+			</div>
+			 <div class="info_profile">
+				<%= @attendee.login %>
 			</div>
 		</div>
-		<div class="info z-depth-3 center">
-			<div class="stats-attendee center">
-				<div class="info_profile left">
-					<span class="title">
-						Grade
-					</span>
-					<div class="center">
-						<%= @user_quest["cursus_users"][0]["grade"] %>
-					</div>
-				</div>
-				<div class="info_profile center">
-					<span class="title">
-						Level
-					</span>
-					<div class="center">
-						<%= @user_quest["cursus_users"][0]["level"].truncate(4) %>
-					</div>
-				</div>
-				<div class="info_profile right">
-					<span class="title">
-						Correction points
-					</span>
-					<div class="center">
-						<%= @user_quest["correction_point"] %>
-					</div>
+		<div class="info z-depth-3 ">
+			<div class="grade center">
+				<span class="title ">
+					Grade
+				</span>
+				<div class="center">
+					<%= @user_quest["cursus_users"][0]["grade"] %>
 				</div>
 			</div>
-			<div class="location-profile center block_info_text ">
-				<div class=" block_info_text ">
-					<%= get_pos(@attendee.login) %>
+			<div class="level center">
+				<span class="title">
+					Level
+				</span>
+				<div>
+					<%= @user_quest["cursus_users"][0]["level"].truncate(4) %>
 				</div>
+			</div>
+			<div class="correction_point ">
+				<div class="title">
+					Correction points
+				</div>
+				<div class="center">
+					<%= @user_quest["correction_point"] %>
+				</div>
+			</div>
+			<div class="location">
+				<%= get_pos(@attendee.login) %>
 			</div>
 		</div>
 	</div>
 </div>
-<div class=" z-depth-3 time-stamps " >
+<div class="row z-depth-3 time-stamps " >
 	<div class="card-title-time card-title white-text">
-		<table class=" white-text ">
+		<table class="white-text container">
 			<thead>
 				<tr>
-					<th class="center f i" id="sign_in_title" >
+					<th class=" sign_in-title-timestamps " id="sign_in_title" >
 						Sign in
 					</th>
-					<th class="center f" >
+					<th class="sign_out-title-timestamps center" >
 						Sign out
 					</th>
 					<th colspan="3"></th>
@@ -78,6 +77,6 @@
 		<%= render @stamps %>
 	</div>
 </div>
-<div class="center paginate-profile">
+<div class=" row center paginate-profile">
 	<%= paginate @stamps %>
 </div>

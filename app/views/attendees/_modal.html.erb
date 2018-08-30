@@ -1,7 +1,7 @@
 <!-- Modal Structure -->
-<div id="modal1" class="modal modal-index white-text transparent">
+<div id="modal1" class="modal modal-index white-text fade">
 	<div class="modal-content">
-		<div class="modal-header">
+		<div class="modal-header center">
 			Add New Attendee
 		</div>
 		<%= form_for(@attendee , remote: true, validates: true) do |form| %>
@@ -29,7 +29,7 @@
 					<% end %>
 				</div>
 				<div class="input-field white-text">
-					<%= form.text_field :login, class: 'attendee_login white-text', autocomplete: "off" %>
+					<%= form.text_field :login, class: 'attendee_login white-text ', autocomplete: "off" %>
 					<%= form.label :login, class: 'active' %>
 					<br>
 				</div>
