@@ -243,19 +243,20 @@ margin-top: 5px;
 }
 .flex-remain-add{
 	grid-column: 2;
+	justify-items: end;
 	// justify-sel: end;
 	order: 2;
 }
 .flex-attendee{
 	grid-column: 1/2;
-	order: 1;
-	justify-content:space-between;
-	// justify-content: flex-start;
+	justify-items: center;
 	display: flex;
 	flex-wrap: wrap;
+	order: 1;
+	justify-content:space-between;
 }
 .attendee_card{
-	flex-basis: 25%
+	// flex-basis: 25%
 }
 .card_attendee{
 	border: 1px solid;
