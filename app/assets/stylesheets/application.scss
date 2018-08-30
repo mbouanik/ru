@@ -8,10 +8,7 @@ body {
 	background-position: center;
 	background-size: cover;
 }
-// .attendee-pagination{
-// 	display: block;
-// 	float: left;
-// }
+
 .add-checking-elm{
 	z-index: 4;
 	display: inline-block;
@@ -188,9 +185,6 @@ margin-top: 5px;
 	opacity: 0.5;
 }
 
-
-
-
 .time-index{
 	margin-top: -20px;
 }
@@ -253,6 +247,8 @@ margin-top: 5px;
 .flex-attendee{
 	grid-column: 1/4;
 	order: 1;
+	// display: grid;
+	// grid-template-columns: 1fr 1fr 1fr;
 	display: flex;
 	flex-wrap: wrap;
 }
@@ -379,20 +375,11 @@ margin-top: 5px;
 	border-radius: 5px;
 	background-image: asset-url("img_attendee.jpg");
 }
-.btn-action-index{
-	// position: relative;
-	// margin-bottom:  -5px;
+.card-action-index{
+	display: flex;
+	justify-content: space-around;
 }
-.btn-action{
-	margin-bottom:  -5px;
-	// font-size: 25px;
-	// padding: 10px;
-}
-.card-action{
-	position: relative;
-	margin-top: -50px;
-	height: 60px;
-}
+
 .card-block{
 	display: block;
 }
@@ -541,8 +528,8 @@ margin-top: 5px;
 		font-size: 25px;
 	}
 	.card_attendee{
-		height: 650px;
-		width: 550px;
+		height: 800px;
+		width: 700px;
 	}
 	.picture-index {
 		position: relative;
@@ -553,7 +540,7 @@ margin-top: 5px;
 		overflow: hidden;
 	}
 	.picture{
-		margin-left: 130px;
+		margin-left: 210px;
 	}
 	// .flex-attendee-remain-add{
 	// 	display: grid;
@@ -596,7 +583,15 @@ margin-top: 5px;
 		align-items: flex-end;
 		font-size: 20px;
 	}
+	.btn-action-index-history{
+		justify-content: center;
+	}
+	.btn-action-index-add-timestamp{
+		justify-content: center;
+	}
 	.card-action-index{
+		display: flex;
+		justify-content: space-around;
 		margin-top: 15px;
 	}
 	.logged-as{

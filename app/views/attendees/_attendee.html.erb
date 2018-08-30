@@ -27,7 +27,7 @@
 						</thead>
 					</table>
 					<table>
-						<td class="sign_in<%=attendee.id%> truncate-stamps center  time-index">
+						<td class="sign_in<%=attendee.id%> truncate-stamps center time-index">
 							<% if @stamps.nil? %>
 								<td class="center" id="no-time-logged<%=attendee.id%>"><%= "No time logged Yet" %></td>
 							<% else %>
@@ -37,13 +37,15 @@
 					</table>
 				</div>
 				<div class=" center card-action-index ">
-					<div class="btn-action-index">
-						<button class="new waves-effect waves-light btn modal-trigger purple lighten-2 btn-action" href="#modal-attendee<%=attendee.id%>">
+					<div class="btn-action-index-history">
+						<button class="new waves-effect waves-light btn modal-trigger purple lighten-2" href="#modal-attendee<%=attendee.id%>">
 							History
 						</button>
+					</div>
+					<div class="btn-action-index-add-timestamp">
 						<% if @stamps.nil? || !@stamps.sign_out.nil?%>
 							<span class="time<%=attendee.id %>" >
-								<%= link_to 'Add TimeStamp', sign_in_path(attendee_id: attendee.id), class: 'waves-effect waves-light btn blue darken-3 btn-action', remote: true%>
+								<%= link_to 'Add TimeStamp', sign_in_path(attendee_id: attendee.id), class: 'waves-effect waves-light btn blue darken-3', remote: true%>
 							</span>
 						<% end %>
 					</div>
