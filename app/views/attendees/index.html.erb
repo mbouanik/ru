@@ -1,5 +1,5 @@
 <div class="flex-attendee-remain-add">
-	<div class="flex-remain-add ">
+	<div class="flex-remain-add">
 		<div class="add-new-button center">
 			<a class="modal-trigger" href="#modal1">
 				<i class="medium material-icons add-new-button-color">
@@ -8,7 +8,7 @@
 			</a>
 		</div>
 		<div class="white-text remain ">
-			<div class="center">IN <span class="logged-as-nickname"><%=@remain%></span> </div>
+			<div class="center">IN <div class="logged-as-nickname"><%=@remain%></div> </div>
 				<div class="center">
 					<div class="person">
 						<i class="small material-icons">
@@ -16,14 +16,14 @@
 						 </i>
 					</div>
 				</div>
-			<div class="center">OUT <span class="logged-as-nickname"><%=@all_attendees%></span>  </div>
+			<div class="center">OUT <div class="logged-as-nickname"><%=@all_attendees%></div>  </div>
 		</div>
 	</div>
-	<div class="flex-attendee" id="container_attendees">
-			<%= render @attendees %>
+	<div class="flex-attendee row" id="container_attendees">
+		<%= render @attendees %>
 	</div>
 </div>
-<div class="center">
+<div class="row center">
 	<%= paginate @attendees %>
 </div>
 <div class="">
