@@ -249,26 +249,11 @@ margin-top: 5px;
 }
 .flex-remain-add{
 	grid-column: 2;
-<<<<<<< HEAD
-	justify-items: end;
-	// justify-sel: end;
-=======
 	justify-self: end;
->>>>>>> reponsive
 	order: 2;
 }
 .flex-attendee{
 	grid-column: 1/2;
-<<<<<<< HEAD
-	justify-items: center;
-	display: flex;
-	flex-wrap: wrap;
-	order: 1;
-	justify-content:space-between;
-}
-.attendee_card{
-	// flex-basis: 25%
-=======
 	order: 1;
 	display: flex;
 	flex-wrap: wrap;
@@ -278,7 +263,6 @@ margin-top: 5px;
 }
 .attendee_card{
 	flex-basis: 33.33%;
->>>>>>> reponsive
 }
 .card_attendee{
 	border: 1px solid;
