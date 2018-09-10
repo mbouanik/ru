@@ -244,21 +244,21 @@ margin-top: 5px;
 // }
 .flex-attendee-remain-add{
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-columns: 10fr 1fr;
 	grid-gap: 1em;
 }
 .flex-remain-add{
-	grid-column: 5;
+	grid-column: 2;
 	justify-self: end;
 	order: 2;
 }
 .flex-attendee{
-	grid-column: 1/5;
-	justify-self: start;
+	grid-column: 1/2;
 	order: 1;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
+	justify-content: flex-start;
 
 }
 .attendee_card{
