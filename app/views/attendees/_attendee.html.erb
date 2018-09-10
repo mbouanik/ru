@@ -1,6 +1,6 @@
  <div class="attendee_card" id="attendee<%=attendee.id%>">
 	<div class="row">
-		<!-- <div class="col s6 m12"> -->
+		<div class="col s12 m6">
 			<div class="card_attendee truncate-index z-depth-3">
 				<span class="row right">
 					<%= link_to 'close', attendee, method: :delete,  remote: true, class: 'material-icons destroy-close'%>
@@ -29,7 +29,7 @@
 					<table>
 						<td class="sign_in<%=attendee.id%> truncate-stamps center time-index">
 							<% if @stamps.nil? %>
-								<td class="center" id="no-time-logged<%=attendee.id%>"><%= "No time logged Yet" %></td>
+								<td class="center" id="no-time-logged-attendee<%=attendee.id%>"><%= "No time logged Yet" %></td>
 							<% else %>
 								<%= render @stamps %>
 							<% end %>
@@ -51,7 +51,7 @@
 					</div>
 				</div>
 			</div>
-		<!-- </div> -->
+		</div>
 	</div>
 	<% @stamps = Stamp.where(:attendee_id => attendee.id).order("created_at DESC").page().per(10)%>
 	<div class="modal" id="modal-attendee<%=attendee.id%>" >
@@ -63,9 +63,9 @@
 					</div>
 				</div>
 				<% if !@stamps.present? %>
-					<p class="white-text center no-time-logged">
+					<div class="white-text center no-time-logged" id="no-time-logged-history<%=attendee.id%>">
 						<%= " No time logged yet" %>
-					</p>
+					</div>
 				<% else %>
 					<table class="white-text centered">
 						<thead class="">

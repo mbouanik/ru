@@ -1,4 +1,6 @@
-$('#no-time-logged<%=@attendee.attendee.id %>').remove();
+$('#no-time-logged-attendee<%=@attendee.attendee.id%>').remove();
+$('#no-time-logged-history<%=@attendee.attendee.id%>').remove();
+$('#no-time-logged-profile<%=@attendee.attendee.id%>').remove();
 $('.sign_in<%=@attendee.attendee.id %>').prepend('<%= j render @attendee %>');
 $('#sign_in<%=@attendee.attendee.id%>').hide().fadeIn(1000);
 $('.time<%=@attendee.attendee.id %>').hide();
