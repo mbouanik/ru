@@ -69,7 +69,7 @@
 		<% end %>
 	</span>
 	<% if !@stamps.present? %>
-		<p class="white-text center no-time-logged">
+		<p class="white-text center no-time-logged" id="no-time-logged-profile<%=@attendee.id%>">
 			<%= " No time logged Yet" %>
 		</p>
 	<% end %>
