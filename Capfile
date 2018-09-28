@@ -34,7 +34,7 @@ require "capistrano/rails/assets"
 require "capistrano/rails/migrations"
 
 # This will add tasks to your deploy process
-require "capistrano/rails"
+#require "capistrano/rails"
 #require "capistrano/passenger"
 require "capistrano/rbenv"
 require 'capistrano/puma'
