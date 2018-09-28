@@ -35,7 +35,7 @@ require "capistrano/rails/migrations"
 
 # This will add tasks to your deploy process
 require "capistrano/rails"
-require "capistrano/passenger"
+#require "capistrano/passenger"
 require "capistrano/rbenv"
 require 'capistrano/puma'
 install_plugin Capistrano::Puma
