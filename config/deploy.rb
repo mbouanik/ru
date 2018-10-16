@@ -3,7 +3,7 @@ lock "~> 3.11.0"
 
 set :application, "h2s"
 # set :repo_url, "https://github.com/mbouanik/ru.git"
-set :repo_url, "git@gitlab.42.us.org:eileen/h2s_inNout.git"
+set :repo_url, "git@gitlab.42.us.org:eileen/hackhigh_innout.git"
 set :deploy_to, "/home/deployer/h2s"
 
 set :branch, "master"
